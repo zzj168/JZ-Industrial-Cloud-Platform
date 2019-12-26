@@ -1,0 +1,70 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="/demo/multiplefileuploader" >
+<div class="jbolt_page_title">
+	<h1>Bootstrap-fileinput组件文件上传演示</h1>
+</div>
+<div class="jbolt_page_content">
+
+<div class="row">
+
+<div class="col-12">
+<div class="card">
+<div class="card-header">多文件异步队列上传</div>
+<div class="card-body">
+<div class="alert alert-primary">
+注意：上传组件需要放在form表单外面，不随表单提交文件数据，上传组件选择文件后会显示名称，并且自动ajax上传文件后返回地址，
+然后需要设置到一个隐藏域里就可以了。具体请看multiplefileuploader.html
+</div>
+<!-- 示例代码 -->
+<form onsubmit="return FormChecker.check(this);"  id="fileuploaderForm" action="/demo/fileuploader/submit" method="post">
+	<input type="text" data-rule="required" readonly="readonly" data-tips="请在下方选择文件上传" name="fileUploaderDemo" id="fileUploaderDemo" value="#(fileUploadDemo??)" class="form-control"/>
+	<small class="text-danger">这里需要实际项目中做成隐藏域</small>
+	<br/>
+	<button  type="submit" class="btn btn-primary"><i class="fa fa-check mr-1">提交表单</i></button>
+</form>
+<fieldset class="form-page-fieldset">
+<legend>上传文件-多文件</legend>
+#if(msg)
+<div class="alert alert-danger">
+#(msg??)
+</div>
+#end
+#setLocal(inputId=RandomUtil.random(6))
+<div class="form-group text-center">
+<input type="file" id="fileInput_#(inputId)"  class="file-loading" data-max-filecount="8" data-uploadurl="/demo/multiplefileuploader/upload" data-choosebtntext="选择图片" data-theme="fa" multiple="multiple" data-multiplefileinput  name="file" accept="image/*"  data-max-filesize="300" data-extrahandler="processExtraHandler2" data-handler="processOneUploaded"/>
+</div>
+</fieldset>
+	
+</div>
+</div>
+</div>
+ 
+</div>
+</div>
+</div>
+#end
+
+#define js()
+<script>
+//处理单个文件异步上传回到信息
+function processOneUploaded(res){
+	console.log(res);
+	alert("单个文件上传成功,请看console.log");
+}
+function processExtraHandler2(input){
+	console.log("在这里初始化其他事件处理");
+	input.on("filesuccessremove",function(e,id){
+		console.log("fileID:"+id);
+		LayerMsgBox.success("调用filesuccessremove："+id,1000);
+		});
+
+	
+	input.on("filecleared",function(e){
+		LayerMsgBox.success("调用filecleared",1000);
+		});
+}
+$(function(){
+})
+</script>
+#end

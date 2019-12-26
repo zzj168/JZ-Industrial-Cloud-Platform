@@ -1,0 +1,45 @@
+#@adminDialogLayout()
+#define main()
+<div class="jbolt_page">
+<div class="jbolt_page_content">
+<table class="table table-bordered table-hover table-striped table-center">
+<thead>
+<tr><th style="width: 60px">序号</th><th style="width:80px;">头像</th><th>姓名</th><th style="width: 60px">性别</th><th>用户名</th><th>手机号</th><th style="width: 100px">是否启用</th><th  style="width: 100px">操作</th></tr>
+</thead>
+<tbody id="usersBox">
+#for(data:users)
+<tr>
+<td>#(for.index+1)</td>
+<td><img  data-photobtn tooltip data-title="点击查看大图" style="width: 60px;height: 60px;border-radius:50%;" src="#realImage(data.avatar??,'/assets/img/avatar.jpg')"/></td>
+<td>#(data.name??)</td>
+<td>#sex(data.sex??)</td>
+<td>#(data.username??)</td>
+<td>#(data.phone??)</td>
+<td>#(data.enable?'<span class="badge badge-success">启用</span>':'<span class="badge badge-light">禁用</span>')</td>
+<td><a tooltip  title="移除"  href="/admin/user/deleteRole/#(data.id)-#(roleId??)" data-confirm="此操作将影响用户登录授权，确认移除此用户？" data-handler="removeTr" class="jbolt_table_delbtn"><i class="fa fa-remove c-danger"></i></a></td>
+</tr>
+#end
+</tbody>
+</table>	
+</div>
+</div>
+#end
+#define js()
+<script type="text/javascript">
+//系统超管才能出
+#if(users!=null&&users.size()>0&&isSystemAdmin)
+//增加一个按钮-不同意
+var btnId=addParentLayerDialogBtn("清空用户","lay_danger",function(){
+	LayerMsgBox.confirm("确认清空此角色下的所有用户?",function(){
+		LayerMsgBox.loading("执行中...",10000);
+		Ajax.get("/admin/role/clearUsers/#(roleId)",function(){
+			LayerMsgBox.success("操作成功",1000,function(){
+				$("#usersBox").empty();
+				parent.$("#"+btnId).remove();
+				});
+			});
+		});
+});
+#end
+</script>
+#end

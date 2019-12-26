@@ -1,0 +1,43 @@
+<form onsubmit="return false;" id="goodsBackCategoryForm" action="#(action)" method="post" style="width:500px">
+	<input type="hidden" name="category.pid"  value="#(pid??)" />
+	#if(goodsBackCategory.id??)
+		<input type="hidden" name="category.id" value="#(goodsBackCategory.id)" />
+	#end
+	<div class="form-group">
+		<label>请输入分类名称：</label>
+		<input type="text" autocomplete="off" autofocus="autofocus"  class="form-control" data-rule="required;len<=20" data-tips="请输入名称" maxlength="20" name="category.name" value="#(goodsBackCategory.name??)">
+	</div>
+	#if(pid?? && pid>0)
+	<div class="form-group">
+		<label>上级分类：</label>
+		<input type="text" autocomplete="off"  readonly="readonly"  class="form-control"  maxlength="20"   value="#(CACHE.getGoodsBackCategoryName(pid??))">
+	</div>
+	<div class="form-group">
+		<label>关联商品类型：</label>
+		<select class="form-control" data-autoload data-url="/admin/mall/goodstype/options" data-text="=请选择=" data-value="" name="category.typeId" data-select="#(goodsBackCategory.typeId??)"></select>
+		<small  class="form-text text-danger">注意：叶子节点要设置关联的商品分类，才能在添加商品的时候设置属性</small>
+	</div>
+	#end
+	<div class="form-group row" 
+		data-radio 
+		data-rule="radio"  
+		data-value="#(goodsBackCategory.enable??)" 
+		data-name="category.enable" 
+		data-default="true">
+		<label class="col-auto col-form-label" >是否启用：</label>
+			<div class="col"  style="padding-top: 1px;">
+				<div class="radio radio-primary  radio-inline">
+					<input  id="renabletrue" type="radio" name="category.enable"   value="true"/>
+					<label for="renabletrue">启用</label>
+				</div>
+				
+				<div class="radio radio-primary  radio-inline">
+					<input  id="renablefalse" type="radio" name="category.enable"   value="false"/>
+					<label for="renablefalse">禁用</label>
+				</div>
+			</div>
+		</div>
+	<div class="form-group text-right">
+		<button class="btn btn-primary" type="button" onclick="submitGoodsBackCategoryForm()"><i class="fa fa-check mr-1"></i>确定</button>
+	</div>
+</form>

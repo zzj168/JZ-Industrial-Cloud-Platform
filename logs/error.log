@@ -1,0 +1,8 @@
+[2019-12-26 14:16:44] ERROR (com.alibaba.druid.filter.stat.StatFilter.java:478) internalAfterStatementExecute - slow sql 1004 millis. update `bom` set `materialmodel` = ? , `materialname` = ? , `materialtype` = ? , `productionprocesses` = ?  where `id` = ?[287,"存储卡",273,312,1010000019]
+
+[2019-12-26 14:23:15] ERROR (cn.jbolt.base.JBoltBaseModel.java:214) _getTable - class cn.jbolt.common.model.Customer can not mapping to database table,maybe application cannot connect to database. 
+
+[2019-12-26 14:27:52] ERROR (cn.jbolt.base.JBoltBaseModel.java:214) _getTable - class cn.jbolt.common.model.Customer can not mapping to database table,maybe application cannot connect to database. 
+
+[2019-12-26 14:30:30] ERROR (cn.jbolt.base.JBoltBaseModel.java:214) _getTable - class cn.jbolt.common.model.Customer can not mapping to database table,maybe application cannot connect to database. 
+

@@ -1,0 +1,70 @@
+<div class="row">
+<div class="col-8">
+<form onsubmit="return false;" id="brandForm" action="#(action)" method="post">
+	#if(brand.id??)
+		<input type="hidden" name="brand.id" value="#(brand.id)" />
+	#end
+	<input type="hidden" name="brand.logo" id="brandLogoInput" value="#(brand.logo??)" class="form-control"/>
+	<div class="form-group row">
+		<label class="col-2 col-form-label">中文名</label>
+		<div class="col-8">
+			<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入品牌名称 中文名" data-tips="请输入品牌名称 中文名" maxlength="20" name="brand.name" value="#(brand.name??)">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-2 col-form-label">英文名</label>
+		<div class="col-8">
+			<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入品牌名称 英文名" data-tips="请输入品牌名称 英文名" maxlength="40" name="brand.englishName" value="#(brand.englishName??)">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-2 col-form-label">网址</label>
+		<div class="col-8">
+			<input type="text" autocomplete="off"  class="form-control"  placeholder="请输入网址"  maxlength="100" name="brand.url" value="#(brand.url??)">
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-2 col-form-label">备注</label>
+		<div class="col-8">
+			<textarea   class="form-control"  placeholder="请输入备注信息 200字内"  maxlength="200" name="brand.remark" style="height:100px">#(brand.remark??)</textarea>
+		</div>
+	</div>
+	
+	<div class="form-group row" 
+		data-radio 
+		data-rule="radio"  
+		data-value="#(brand.enable??)" 
+		data-name="brand.enable" 
+		data-default="true">
+		<label class="col-auto col-form-label" >是否启用：</label>
+			<div class="col"  style="padding-top: 1px;">
+				<div class="radio radio-primary  radio-inline">
+					<input  id="renabletrue" type="radio" name="brand.enable"   value="true"/>
+					<label for="renabletrue">启用</label>
+				</div>
+				
+				<div class="radio radio-primary  radio-inline">
+					<input  id="renablefalse" type="radio" name="brand.enable"   value="false"/>
+					<label for="renablefalse">禁用</label>
+				</div>
+			</div>
+		</div>
+	</form>
+	</div>
+	<div class="col-4">
+	<fieldset class="form-page-fieldset">
+	<legend>品牌LOGO</legend>
+	<div class="form-group text-center">
+			<div class="j_img_uploder" data-url="/admin/mall/brand/uploadImage" data-value="#realImage(brand.logo??)"  data-handler="uploadFile"  data-hiddeninput="brandLogoInput"  data-area="200,200" data-maxsize="2000" style="width: 200px; height: 200px;"></div>
+	</div>
+	</fieldset>
+	</div>
+</div>
+	
+
+
+#define js()
+<script>
+</script>
+#include("/_view/_admin/common/_formjs.html",formId="brandForm")
+#end

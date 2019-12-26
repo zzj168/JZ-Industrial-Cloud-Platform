@@ -1,0 +1,73 @@
+#@adminLayout()
+#define showItems(items,level)
+#if(items??&&items.size()>0)
+#for(data:items)
+<tr>
+<td></td>
+<td class="text-left"><span class="text-danger mr-1" style="margin-left: #((level-1)*20)px">├</span>#(data.name??)</td>
+<td>
+<a  tooltip  title="添加子角色"  href="/admin/role/addItem/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="添加【#(data.name??)】的子角色" data-area="600,300" class="jbolt_table_editbtn"><i class="fa fa-plus c-info"></i></a>
+<a  tooltip  title="编辑"  href="/admin/role/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="400,260" class="jbolt_table_editbtn"><i class="fa fa-pencil c-primary"></i></a>
+<a  tooltip  title="删除"  href="/admin/role/delete/#(data.id)" data-handler="refreshPjaxContainer" class="jbolt_table_delbtn"><i class="fa fa-remove c-danger"></i></a>
+<a  tooltip  href="/admin/rolepermission/setting/#(data.id)" data-dialogbtn data-scroll="yes"  data-title="为角色【#(data.name??)】设置权限" data-area="980,80%" class="jbolt_table_btn"><i class="fa fa-cogs c-info"></i></a>
+<a  tooltip  href="/admin/role/users/#(data.id)" data-dialogbtn data-btn="close" data-scroll="yes"  data-title="角色【#(data.name??)】-用户列表" data-area="980,80%" class="jbolt_table_btn"><i class="fa fa-users c-danger"></i></a>
+</td>
+<td></td>
+</tr>
+#if(data.items&&data.items.size()>0)
+#@showItems(data.items,level+1)
+#end
+#end
+#end
+#end
+
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-9">
+	<h1>用户角色管理</h1>
+	<span> #(dataList.size()) 条记录</span>
+	</div>
+	<div class="col-3">
+		<button data-area="600,300" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增角色" data-url="/admin/role/add" class="pull-right jbolt_table_addbtn btn btn-success" ><i class="fa fa-plus"></i> 新增</button>
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content">
+<div class="table-responsive">
+<table class="table table-bordered table-hover table-striped table-center">
+<thead>
+<tr><th style="width: 60px">序号</th><th style="width: 200px">角色</th><th  style="width: 200px">操作</th><th></th></tr>
+</thead>
+<tbody>
+#for(data:dataList)
+<tr>
+<td>#(for.index+1)</td>
+<td class="text-left">#(data.name??)</td>
+<td>
+<a  tooltip  title="添加子角色"  href="/admin/role/addItem/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="添加【#(data.name??)】的子角色" data-area="600,300" class="jbolt_table_editbtn"><i class="fa fa-plus c-info"></i></a>
+<a  tooltip  title="编辑"  href="/admin/role/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="400,260" class="jbolt_table_editbtn"><i class="fa fa-pencil c-primary"></i></a>
+<a  tooltip  title="删除"  href="/admin/role/delete/#(data.id)" data-handler="refreshPjaxContainer" class="jbolt_table_delbtn"><i class="fa fa-remove c-danger"></i></a>
+<a  tooltip    href="/admin/rolepermission/setting/#(data.id)" data-dialogbtn data-scroll="yes"  data-title="为角色【#(data.name??)】设置权限" data-area="980,80%" class="jbolt_table_btn"><i class="fa fa-cogs c-info"></i></a>
+<a  tooltip  href="/admin/role/users/#(data.id)" data-dialogbtn data-btn="close" data-scroll="yes"  data-title="角色【#(data.name??)】-用户列表" data-area="980,80%" class="jbolt_table_btn"><i class="fa fa-users c-danger"></i></a>
+</td>
+<td></td>
+</tr>
+#if(data.items&&data.items.size()>0)
+#@showItems(data.items??,2)
+#end
+#end
+</tbody>
+</table>	
+</div>
+</div>
+</div>
+#end
+#define js()
+<script>
+$(function(){
+});
+</script>
+#end
+

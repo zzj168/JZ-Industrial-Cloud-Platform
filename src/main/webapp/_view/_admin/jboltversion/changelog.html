@@ -1,0 +1,66 @@
+#@adminDialogLayout()
+#define main()
+<div class="jbolt_page">
+<div class="jbolt_page_content">
+<form  onsubmit="return ajaxSubmitForm(this)" id="changelogForm" action="/admin/jboltversion/changelog/submit" method="post">
+	#if(changelog.id??)
+		<input type="hidden" name="changelog.id" value="#(changelog.id)" />
+	#end
+		<input type="hidden" name="changelog.jboltVersionId" value="#(jboltVersionId??)" />
+	<div style="display:none">
+		<textarea id="changelogContent_hidden" class="form-control" data-rule="required" placeholder="请输入changelog内容" data-tips="请输入changelog内容" maxlength="10000"  name="changelog.content" >#(changelog.content??)</textarea>
+	</div>
+ 
+	 
+</form>
+
+<div class="form-group" style="width:800px;min-height:500px;margin:30px auto;" id="goodsHtmlContent_editorBox">
+		<div 
+		data-editor="summernote" 
+		data-height="500" 
+		data-imghost="#(imghost??)"
+		data-imguploadurl="/admin/jboltversion/uploadImage" 
+		data-hiddeninput="changelogContent_hidden" 
+		data-fileinputname="img"
+		data-maxsize="500"
+		id="changelogContent" 
+		class="form-control">#(changelog.content??)</div>
+		<!-- 
+		富文本组件 JBOlt上传地址有默认值 如果需要特殊处理
+		可以自己定义这个属性
+		data-imguploadurl="/admin/jboltversion/uploadImage" 
+		-->
+	</div>
+
+</div>
+</div>
+#end
+
+#define js()
+<script>
+needPjax=false;
+function submitThisForm(successCallback){
+	var formId="changelogForm";
+	var form=$("#"+formId);
+	if(FormChecker.check(form)){
+		var url=form.action;
+		form.ajaxSubmit({
+			type:"post",
+			url:url,
+			success:function(ret){
+				if(ret.state=="ok"){
+					LayerMsgBox.success(ret.msg,500,function(){
+						if(successCallback){
+							successCallback();
+						}
+					});
+				}else{
+					LayerMsgBox.error(ret.msg);
+				}
+			}
+		});
+	}
+}
+
+</script>
+#end

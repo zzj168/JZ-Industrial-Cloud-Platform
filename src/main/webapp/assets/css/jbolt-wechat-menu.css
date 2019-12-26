@@ -1,0 +1,145 @@
+@CHARSET "UTF-8";
+/*
+ * JBolt框架 Weixin公众号管理-菜单管理界面css
+ **/
+ol, ul {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#menu {
+	display: block;
+	width: 320px;
+	height: 500px;
+	background: #FFF;
+	position: relative;
+	border: 1px solid #DDD;
+	margin: 0px 20px;
+}
+
+.menus {
+	position: absolute;
+	bottom: 1px;
+	height:50px;
+	width: 100%;
+	background-image:url("img/mb_foot.png");
+	padding-left: 45px;
+	border-top: 1px solid #DDD;
+}
+
+ul, li {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	cursor: pointer;
+}
+
+ul>li:hover {
+	color: black;
+	background: #FFF;
+}
+
+.level1 {
+	background-color:transparent;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	display: flex;
+	display: -webkit-flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	margin-bottom: 0px;
+}
+
+ul.level1>li {
+	display: inline-block;
+	flex-grow: 1;
+	text-align: center;
+	position: relative;
+	color: #333;
+	max-width: 33.3%;
+	border-right: 1px solid #DDD;
+}
+
+ul.level1>li:LAST-CHILD{
+	border-right: none;
+}
+
+ul.level1>li ul.level2 {
+	background-color: #fafafa;
+	position: absolute;
+	width: 95%;
+	left: 3px;
+	text-align: center;
+	bottom: 60px;
+border-top: 1px solid #DDD;	
+border-bottom: 1px solid #DDD;	
+border-radius:4px;
+}
+/* ul.level2>li i.fa-caret-down{
+	width:20px;
+	height:20px;
+	font-size:20px;
+	position:absolute;
+	bottom:-13px;
+	left:50%;
+	margin-left:-10px;
+	color:#EEE;
+} */
+ul.level2>li {
+	position:relative;
+	height: 42px;
+	line-height: 40px;
+	border: 1px solid #DDD;
+	border-top:none;
+	color: #333;
+	padding:2px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	font-size:12px;
+	    white-space: nowrap;
+}
+ul.level2>li:LAST-CHILD {
+	border-bottom:none;
+}
+
+ul.level1>li.active, ul.level2>li.active {
+	background-color: #e7e7eb;
+	color: red;
+}
+ul.level1>li:hover>i.fa-remove, ul.level2>li:hover>i.fa-remove ,
+ul.level1>li.active>i.fa-remove, ul.level2>li.active>i.fa-remove {
+	display: inline-block;
+}
+
+
+
+
+
+i.fa-remove {
+	position: absolute;
+	top:0px;
+	right: 0px;
+	height: 15px;
+	line-height: 15px;
+	padding: 0px 3px;
+	display: none;
+}
+
+.wxtitle {
+	background-image:url("img/mb_head.png");
+	color: #FFF;
+	height: 64px;
+	overflow:hidden;
+	line-height: 80px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.wxtitle i.fa {
+	font-size: 14px;
+	margin-right: 10px;
+}

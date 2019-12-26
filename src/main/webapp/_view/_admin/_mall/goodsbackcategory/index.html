@@ -1,0 +1,179 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-9">
+	<h1>商品分类管理</h1>
+	</div>
+	<div class="col-3">
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content">
+	<div class="row">
+		<div class="col-sm-3">
+		<div class="card">
+			<div class="card-header  ">商品分类树</div>
+			<div class="card-body">
+				<div id="goodsBackCategoryTree"></div>
+			</div>
+		</div>
+		</div>
+		<div class="col-sm-9">
+		 #ajaxPortal("/admin/mall/goodsbackcategory/edit","goodsBackCategoryPortal",true)
+		</div>
+	</div>
+
+</div>
+</div>
+#end
+#define css()
+<link href="/assets/plugins/jstree/themes/default/style.min.css" rel="stylesheet">
+#end
+
+#define js()
+<script src="/assets/plugins/jstree/jstree.min.js"></script> 
+<script type="text/javascript">
+var goodsBackCategoryTree=$("#goodsBackCategoryTree");
+var goodsBackCategoryPortal=$("#goodsBackCategoryPortal");
+
+
+function readGoodsBackCategoryTree(){
+	Ajax.get("/admin/mall/goodsbackcategory/mgrTree",function(data){
+		 var treeDatas=data.data;
+		  goodsBackCategoryTree.jstree({
+				'core' : {
+					'data' :treeDatas,
+					'check_callback' : true
+				},
+				'plugins' : ["themes",'dnd','contextmenu',"wholerow"],
+				"contextmenu":{
+					"items":
+						{
+							"create":{
+								"label":"创建子类目",
+								"action":function(data){
+									 var inst = $.jstree.reference(data.reference),
+			                            obj = inst.get_node(data.reference);//获得当前节点,可以拿到当前节点所有属性
+			                            //var dd=(new Date().getTime()).toString();
+			                          	//var name="新分类_"+dd.substring(10)+parseInt(Math.random()*10);
+			                            var pid=obj.id;
+			                            var url="/admin/mall/goodsbackcategory/add/"+pid;
+			                            goodsBackCategoryPortal.ajaxPortal(true,url,true);
+										/* createNewGoodsBackCategory({"category.pid":pid,"category.name":name},function(categoryId){
+											inst.create_node(obj, {"id":categoryId,"parent":pid,"text":name}, 12, function (new_node) {
+					                        	setTimeout(function () { 
+					                            	inst.deselect_node(obj); 
+					                            	inst.select_node(new_node); 
+					                            },100); 
+					                        	
+					                        });
+			                        	}); */
+			                            
+								}
+							},
+							"delete":{
+								"label":"删除此分类",
+								"action":function(data){
+									 var inst = $.jstree.reference(data.reference),
+                                        obj = inst.get_node(data.reference);
+	                                   delGoodsBackCategory(obj.id,function(){
+	                                	   if(inst.is_selected(obj)) {
+		                                        inst.delete_node(inst.get_selected());
+		                                    }
+		                                    else {
+		                                        inst.delete_node(obj);
+		                                    } 
+	                                   });
+									
+								}
+							}
+							
+						}
+						
+					
+					
+				}
+			})
+			.on('move_node.jstree', function (e, data) {
+				Ajax.post("/admin/mall/goodsbackcategory/move",{
+					 'id' : data.node.id, 'pid' : data.parent, 'rank' : data.position 
+				},function(data){
+					LayerMsgBox.success("操作成功",1000);
+				});
+			})
+			.on('changed.jstree', function (e, data) {
+				if(data&&data.node){
+				changeGoodsBackCategoryFormPortal(data.node.id);
+					}
+			});
+	});
+		  
+}
+var delNodeId=0;
+//切换表单
+function changeGoodsBackCategoryFormPortal(id){
+	if(id==delNodeId){
+		id=0;
+	}
+	var url="/admin/mall/goodsbackcategory/edit/"+(id?id:0);
+	goodsBackCategoryPortal.ajaxPortal(true,url,true);
+}
+
+ 
+//删除
+function delGoodsBackCategory(id,callback){
+	if(id==0){
+		LayerMsgBox.alert("不能删除根节点",2);
+		return;
+	}
+	LayerMsgBox.loading("执行中...");
+	Ajax.get("/admin/mall/goodsbackcategory/delete/"+id,function(data){
+		LayerMsgBox.success("删除成功",1000);
+		delNodeId=id;
+		if(callback){
+			callback();
+		}
+	});
+	
+}
+//提交表单
+function submitGoodsBackCategoryForm(){
+	var form=$("#goodsBackCategoryForm");
+	if(FormChecker.check(form)){
+		LayerMsgBox.loading("执行中...");
+		var formData=form.serialize();
+		var action=form.attr("action");
+		Ajax.post(action,formData,function(data){
+			LayerMsgBox.success("操作成功",500,function(){
+				refreshTreeAll(data.data);
+			});
+		});
+	}
+	
+}
+//刷新整棵树
+function refreshTreeAll(selectId){
+	Ajax.get("/admin/mall/goodsbackcategory/mgrTree/"+selectId,function(data){
+		 var treeDatas=data.data;
+		 goodsBackCategoryTree.jstree(true).deselect_all();
+		 goodsBackCategoryTree.jstree(true).settings.core.data=treeDatas;
+		   goodsBackCategoryTree.jstree(true).refresh();
+			
+			setTimeout(function(){
+				goodsBackCategoryTree.jstree(true).select_node({id:selectId,selected:true});
+				},100);
+	});
+}
+//刷新节点
+function refreshTreeData(node){
+	goodsBackCategoryTree.jstree(true).set_text({id:node.id},node.name);
+}
+ 
+$(function(){
+	readGoodsBackCategoryTree();
+});
+</script>
+#end
+

@@ -1,0 +1,120 @@
+#@adminLayout()
+#define main()
+
+<div class="jbolt_page2" data-key="#(pmkey)">
+	<div class="row pm0">
+<div class="top_nav">
+    <ul>
+        <li class="l1"><a href="/admin/bom"  data-key="bom" class="active">物料管理</a></li>
+        <li class="l2"><a href="/admin/supplier" data-key="supplier">供应商管理</a></li>
+        <li class="l3"><a href="/admin/customer" data-key="customer">客户管理</a></li>
+        <li class="l4"><a href="/admin/warehouse" data-key="warehouse">仓库管理</a></li>
+    </ul>
+</div>
+</div>
+<div class="jbolt_page_title">
+	<div class="search">
+		<button data-area="100%,100%" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增物料信息" data-url="/admin/bom/add" class="xinzeng jbolt_table_addbtn"></button>
+		<input name="" type="text" class="search1" placeholder="请输入关键词" />
+		<input type="button" class="search2">
+	</div>
+	<div class="row disno">
+	<div class="col-9">
+		<h1>物料管理</h1>
+		<span> #(pageData.totalRow?? 0)条记录</span>
+	</div>
+	<div class="col-3">
+		<form class="form-inline" id="bomForm" action="/admin/bom" data-pjaxsubmit  method="get"></form>
+		<button class="pull-right btn btn-primary"><i class="fa fa-cloud-download"></i> 下载</button>
+		<button class="pull-right btn btn-danger mr-2"><i class="fa fa-paper-plane-o"></i> 上传</button>
+		<button data-area="600,500" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增物料信息" data-url="/admin/bom/add" class="pull-right jbolt_table_addbtn btn btn-success mr-2" ><i class="fa fa-plus"></i> 新增</button>
+	</div>
+	</div>
+</div>
+
+<div class="jbolt_page_content">
+<table class="table table-bordered table-hover table-striped table-center">
+<thead>
+	<tr><th style="width: 60px">编号</th><th>物料名称</th><th style="width: 150px">种类</th><th style="width: 100px;">型号</th><th>产品规格</th><th style="width: 100px">操作</th></tr>
+</thead>
+	<tbody>
+	#for(data:pageData.list)
+	<tr>
+	<td>#(data.id??)</td>
+	<td>#(data.materialName??)</td>	
+	<td>#(CACHE.getDictionaryName(data.materialType??))</td>
+	<td>#(CACHE.getDictionaryName(data.materialModel??))</td>
+	<td>#(CACHE.getDictionaryName(data.productionProcesses??))</td>
+	<td>                               
+		<a  tooltip  title="编辑"  href="/admin/bom/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="600,500" class="jbolt_table_editbtn"><i class="fa fa-pencil c-primary"></i></a>
+		<a  tooltip  title="删除"  href="/admin/bom/delete/#(data.id)" data-handler="removeTr" class="jbolt_table_delbtn"><i class="fa fa-remove c-danger"></i></a>
+	</td>
+	</tr>
+	#end
+	</tbody>
+</table>
+#include("../common/_page.html",pageEleId="bomPage")	
+</div>
+
+<div class="jichu1_div">
+	<ul class="jichu1_li">
+		<li>编号</li>
+		<li>物料名称</li>
+		<li>种类</li>
+		<li>型号</li>
+		<li>产品规格</li>
+	</ul>
+</div>
+
+<div class="accordion">
+#for(data:pageData.list)
+	<ul>
+		<li>
+			<div class="item">
+				<ul class="jichu1_li">
+					<li>#(for.index+1)</li>
+					<li>#(data.materialName??)</li>
+					<li>#(CACHE.getDictionaryName(data.materialType??))</li>
+					<li>#(CACHE.getDictionaryName(data.materialModel??))</li>
+					<li>#(CACHE.getDictionaryName(data.productionProcesses??))</li>
+				</ul>
+		   </div>
+			<div class="dis">编号：#(for.index+1)<br />
+			物料名称：#(data.materialName??)<br />
+			种类：#(CACHE.getDictionaryName(data.materialType??))<br />
+			型号：#(CACHE.getDictionaryName(data.materialModel??))<br />
+			生产工序：#(CACHE.getDictionaryName(data.productionProcesses??))
+				<div class="an_line">
+					<a  tooltip  title="编辑"  href="/admin/bom/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="100%,100%" class="blue jbolt_table_editbtn">编辑</a>
+		<a  tooltip  title="删除"  href="/admin/bom/delete/#(data.id)" data-handler="removeTr" class="red jbolt_table_delbtn">删除</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+#end
+</div>
+
+
+<script src="/assets/js/vue.min.js"></script>
+<script src="/assets/js/main.js"></script>
+</div>
+<div class="foot_nav">
+    <ul>
+        <li class="l1"><a href="/admin/bom" data-key="bom" class="active">基础</a></li>
+        <li class="l2"><a href="/admin/supplymanage" data-key="supplymanage">业务</a></li>
+        <li class="l3"><a href="/admin/dashboard" data-key="dashboard">报表</a></li>
+        <li class="l4"><a href="/admin/user/pwd" data-key="userpwd">我的</a></li>
+    </ul>
+</div>
+
+#end
+#define js()
+<script>
+$(function(){
+	initPage("bomPage",#(pageData.totalPage??),#(pageData.pageNumber??),"bomForm");
+});
+</script>
+#end
+
+
+

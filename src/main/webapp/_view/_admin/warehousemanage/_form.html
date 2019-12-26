@@ -1,0 +1,41 @@
+<form onsubmit="return false;" id="warehousemanageForm" action="#(action)" method="post">
+	#if(warehousemanage.id??)
+		<input type="hidden" name="warehousemanage.id" value="#(warehousemanage.id)" />
+	#end
+	<div class="form-group">
+		<label>物料名称</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入名称" data-tips="请输入名称" maxlength="50" name="warehousemanage.materialName" value="#(warehousemanage.materialName??)">
+	</div>
+	<div class="form-group">
+		<label>种类</label>                                                 
+		<select class="form-control" data-rule="required"  data-tips="请选择种类" data-url="/admin/warehousemanage/dictionary?key=materialType"  name="warehousemanage.materialType" data-autoload data-text="=请选择种类=" data-value="" data-select="#(warehousemanage.materialType??)"></select>
+	</div>	
+	<div class="form-group">
+		<label>型号</label>                                                 
+		<select class="form-control" data-rule="required"  data-tips="请选择型号" data-url="/admin/warehousemanage/dictionary?key=materialModel"  name="warehousemanage.materialModel" data-autoload data-text="=请选择型号=" data-value="" data-select="#(warehousemanage.materialModel??)"></select>
+	</div>
+	<div class="form-group">
+		<label>生产工序</label>                                                 
+		<select class="form-control" data-rule="required"  data-tips="请选择生产工序" data-url="/admin/warehousemanage/dictionary?key=productionProcesses"  name="warehousemanage.productionProcesses" data-autoload data-text="=请选择生产工序=" data-value="" data-select="#(warehousemanage.productionProcesses??)"></select>
+	</div>
+	<div class="form-group">
+		<label>数量</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入数量" data-tips="请输入数量" maxlength="50" name="warehousemanage.num" value="#(warehousemanage.num??)">
+	</div>	
+	<div class="form-group">
+		<label>入库日期</label>	
+		<input type="text" class="form-control" data-rule="required" data-date name="warehousemanage.inDate" value="#date(warehousemanage.inDate??,"yyyy-MM-dd")">
+	</div>	
+	<div class="form-group">
+		<label>出库日期</label>	
+		<input type="text" class="form-control" data-rule="required" data-date name="warehousemanage.outDate" value="#date(warehousemanage.outDate??,"yyyy-MM-dd")">
+	</div>	
+	<div class="form-group">
+		<label>仓库余位</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入仓库余位" data-tips="请输入仓库余位" maxlength="50" name="warehousemanage.locationNum" value="#(warehousemanage.locationNum??)">
+	</div>	
+		
+</form>
+#define js()
+#include("/_view/_admin/common/_formjs.html",formId="warehousemanageForm")
+#end

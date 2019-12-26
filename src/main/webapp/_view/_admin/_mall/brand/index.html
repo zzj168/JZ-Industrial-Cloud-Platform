@@ -1,0 +1,61 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-4">
+	<h1>品牌库管理</h1>
+	<span> #(pageData.totalRow?? 0) 条记录</span>
+	</div>
+	<div class="col-5">
+	<form class="form-inline" id="mallgoodsForm" action="/admin/mall/brand"  data-pjaxsubmit  method="get">
+			<input type="text" autocomplete="off"  class="form-control"  placeholder="输入关键字搜索" name="keywords" value="#(keywords??)" />
+			<button  type="submit" class="btn btn-light" ><i class="fa fa-search"></i> 查询</button>
+		</form>
+	</div>
+	<div class="col-3">
+		<button data-area="800,500" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增品牌" data-url="/admin/mall/brand/add" class="pull-right jbolt_table_addbtn btn btn-success" ><i class="fa fa-plus"></i> 新增</button>
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content">
+<div class="table-responsive">
+<table class="table table-bordered table-hover table-striped table-center">
+<thead>
+<tr>
+<th style="width: 60px">序号</th><th style="width:100px">LOGO</th><th style="width: 150px">中文名</th><th style="width: 150px">英文名</th><th>网址</th><th style="max-width:300px;">备注</th><th style="width:120px;">启用/禁用</th><th  style="width: 120px">操作</th>
+</tr>
+</thead>
+<tbody>
+#if(pageData)
+#for(data:pageData.list)
+<tr>
+<td>#(for.index+1)</td>
+<td><img class="j_goodslist_mainimg" data-photobtn tooltip data-title="点击查看大图"  src="#realImage(data.logo??,'/assets/img/uploadimg.png')"/></td>
+<td>#(data.name??)</td>
+<td>#(data.englishName??)</td>
+<td>#(data.url??)</td>
+<td>#(data.remark??)</td>
+<td><img src="#(data.enable?'/assets/img/switch/default/on.png':'/assets/img/switch/default/off.png')" data-switchbtn  data-url="/admin/mall/brand/toggleEnable/#(data.id)"/></td>
+<td>
+<a  tooltip  title="编辑"  href="/admin/mall/brand/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="800,500" class="jbolt_table_editbtn"><i class="fa fa-pencil c-primary"></i></a>
+<a  tooltip  title="删除"  href="/admin/mall/brand/delete/#(data.id)" data-handler="removeTr" class="jbolt_table_delbtn"><i class="fa fa-remove c-danger"></i></a>
+</td>
+</tr>
+#end
+#end
+</tbody>
+</table>
+</div>	
+#include("../../common/_page.html",pageEleId="mallbrandPage")
+</div>
+</div>
+#end
+#define js()
+<script>
+$(function(){
+	initPage("mallbrandPage",#(pageData.totalPage??),#(pageData.pageNumber??),"mallgoodsForm");
+});
+</script>
+#end
+

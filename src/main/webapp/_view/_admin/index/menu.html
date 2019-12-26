@@ -1,0 +1,31 @@
+<!--left top userInfo  start-->
+<div class="jbolt_admin_left_top">
+	<img class="jbolt_admin_avatar rounded-circle" src="#(CACHE.getUserRealAvatar(session[cn.jbolt.common.config.SessionKey::ADMIN_USER_ID]))" />
+	<h3 class="jbolt_admin_username">#(CACHE.getUserName(session[SessionKey.ADMIN_USER_ID]))</h3>
+</div>
+<!--left top userInfo  end-->
+<!--left nav menu start-->
+<div class="jbolt_admin_left_navs" data-pjax>
+#for(l1:leftMenus)
+<nav class="jbolt_admin_nav #((l1.permissionKey=="dashboard")?"expansion":"")" data-key="#(l1.permissionKey??)">
+#if(l1.permissionKey=="dashboard")
+<a href="#(l1.url??)"   data-key="dashboard"><h1 class="dashboard"><i class="fa fa-dashboard"></i><span>#(l1.title??)</span><i class="pull-right fa fa-angle-right title_arrow"></i></h1></a>
+#else
+<h1><i class="#(l1.icons??)"></i><span>#(l1.title??)</span><i class="pull-right fa fa-angle-left title_arrow"></i></h1>
+#end
+#if(l1.items??&&l1.items.size()>0)
+<ul class="jbolt_admin_menus">
+#for(l2:l1.items)
+<li><a href="#(l2.url??)"  data-key="#(l2.permissionKey??)">#(l2.title??)
+#if(l2.permissionKey=="intelligence")
+<span id="noticeCount"></span></a>
+#end
+</a></li>
+#end
+</ul>
+#end
+</nav>
+#end
+	
+</div>
+<!--left nav menu end-->

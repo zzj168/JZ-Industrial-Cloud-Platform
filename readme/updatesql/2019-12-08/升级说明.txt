@@ -1,0 +1,1 @@
+jb_wechat_reply_content表里字段mediaId改成了media_id

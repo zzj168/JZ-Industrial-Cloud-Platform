@@ -1,0 +1,168 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+<h1>拍照WebCam组件-Demo</h1>
+</div>
+<div class="jbolt_page_content">
+<div class="text-center my-5">
+<div class="btn-group" role="group" aria-label="btn-group">
+<button class="btn btn-primary" id="captureBtn">点我拍照</button>  
+<button class="btn btn-info" id="uploadCaptureBtn">点我上传</button>  
+</div>
+</div>
+<div class="row">
+    <div class="col">
+    <div class="alert alert-success">摄像头:<div id="webcamInfo"></div></div>
+   	<div id="webcam"></div>  
+    </div>
+    <div class="col text-center">
+   	<div id="imgPreview" style="font-size:20px;" class="text-center font-weight-bolder text-danger">暂无预览</div>
+    </div>
+    <div class="col text-center">
+   	<div id="serverImgPreview"></div>
+    </div>
+</div>
+</div>
+</div>
+
+#end
+#define js()       
+<script type="text/javascript">
+//定义
+var pos = 0, ctx = null ,w = 842,h= 595, image = [];
+var canvas = document.createElement("canvas");//创建画布指定宽度和高度
+canvas.setAttribute('width', w);
+canvas.setAttribute('height', h);
+ctx = canvas.getContext("2d");//设置画布为2d，未来可能支持3d
+image = ctx.getImageData(0, 0, w, h);//截图w*h，即整个画布作为有效区(cutx?)
+
+//拍照save回调处理
+function captureSaveCallback(data) {
+  var col = data.split(";");//把data切割为数组
+  processImgData(col,image,ctx,pos,canvas,w,h);
+};
+
+var imgPreview=$("#imgPreview");
+var serverImgPreview=$("#serverImgPreview");
+var captureBtn=$("#captureBtn");
+var uploadCaptureBtn=$("#uploadCaptureBtn");
+
+//执行拍照
+function capture(){
+	offCapBtnEvent();
+	imgPreview.html("正在处理,请稍等...");
+	setTimeout(function(){
+		webcam.capture();
+	},300);
+}
+//执行上传
+function uploadCapture(){
+	uploadCaptureBtn.text("上传中...");
+	offCapBtnEvent();
+	var newImg=imgPreview.find("img");
+	if(newImg&&newImg.length==1){
+		var formData=new FormData();
+		var base64Data=canvas.toDataURL("image/jpg");
+		var name=randomId();
+		var fileName=name+".jpg";
+		LayerMsgBox.loading("上传中...",60000);
+		//上传base64数据
+		Ajax.uploadBase64File("/demo/webcam/upload", base64Data,fileName,function(res){
+  	  		LayerMsgBox.success("上传成功",500,function(){
+  				initCapBtnEvent();
+  	  			uploadCaptureBtn.text("点我上传");
+  				serverImgPreview.html('<img src="'+res.data+'"/>');
+  	  	  },function(){
+  	  		initCapBtnEvent();
+  	  		uploadCaptureBtn.text("点我上传");
+  	  	  	  });
+  		});
+	}else{
+		initCapBtnEvent();
+		uploadCaptureBtn.text("点我上传");
+		LayerMsgBox.alert("先拍照，再上传",2);
+	}
+}
+
+//处理save每次callback回来的数据
+function processImgData(col){
+		var img = image;
+		//绘制图像(这里不是很理解算法)
+		//参数data  只是每行的数据  ，例如w*h 大小的照片，一张完整的照片下来需要h个data，每个data有w个rgb
+        for(var i = 0; i < w; i++) {
+            //转换为十进制
+            var tmp = parseInt(col[i]);
+            img.data[pos + 0] = (tmp >> 16) & 0xff;
+            img.data[pos + 1] = (tmp >> 8) & 0xff;
+            img.data[pos + 2] = tmp & 0xff;
+            img.data[pos + 3] = 0xff;
+            pos+= 4;
+        }
+		//当绘制320*240像素的图片时发给后端php
+        if (pos == 4 * w * h) {
+			//把图像放到画布上,输出为png格式
+            ctx.putImageData(img, 0, 0);
+            var baseData=canvas.toDataURL("image/jpg");
+            imgPreview.html('<img src="'+baseData+'"/>');//显示拍摄的照片
+			//重新切换事件
+            initCapBtnEvent();
+            pos = 0;
+        }
+}
+//初始化webcam
+function initWebcam(){
+	//组件渲染出来的宽高定义
+	var renderWidth =400;
+	var renderHeight =300;
+	//用哪个flash swf
+	var swffile="/assets/plugins/webcam/jscam_842×595.swf";
+	$("#webcam").webcam({
+	    width: renderWidth,
+	    height: renderHeight,
+	    mode: "callback", //stream,save，回调模式,流模式和保存模式
+	    swffile: swffile,
+	    onSave: captureSaveCallback,
+	    onCapture: function () {
+	    	webcam.save();  
+	    }, debug: function(type, string) {
+	    	LayerMsgBox.closeAll();
+            LayerMsgBox.loading(string,1000); 
+        },
+	    onLoad: function() {                   //flash 加载完毕执行
+	    	LayerMsgBox.loading("摄像头加载...",300,function(){
+	    		var cams = webcam.getCameraList();
+	 	        for(var i in cams) {
+	 	        	$("#webcamInfo").append("<p>" + cams[i] + "</p>");
+	 	        }
+	 	        LayerMsgBox.success("摄像头加载完成",1000); 
+		    	}); 
+	       
+	    }
+		});  
+}
+//卸载事件
+function offCapBtnEvent(){
+	captureBtn.off("click");
+	uploadCaptureBtn.off("click");
+}
+//绑定事件
+function initCapBtnEvent(){
+		captureBtn.on("click",capture);
+		uploadCaptureBtn.on("click",uploadCapture);
+	}
+	
+//页面初始化完成
+$(function(){
+	//动态加载js放置组件第一次加载失败
+	$.getScript("/assets/plugins/webcam/jquery.webcam.min.js").
+	done(function(){
+		//初始化webcam组件
+		initWebcam();
+		//初始化相关按钮点击事件绑定
+		initCapBtnEvent();
+	});
+	
+});
+</script>
+#end

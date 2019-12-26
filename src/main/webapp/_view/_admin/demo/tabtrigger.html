@@ -1,0 +1,56 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<h1>Demo-TabTrigger演示</h1>
+</div>
+<div class="jbolt_page_content">
+#setLocal(JboltWithTabs=CACHE.getUserJBoltAdminWithTabs(session[SessionKey.ADMIN_USER_ID]))
+#if(!JboltWithTabs) 
+<div class="alert alert-danger mb-5">
+	<strong>注意：</strong>需开启多选项卡模式才能使用TabTrigger
+	<br>
+	请在系统右上角找到用户配置，启用多选项卡模式
+</div>
+#end
+<div class="row">
+<div class="col-6">
+	<div class="card">
+	<div class="card-header">tabtrigger</div>
+	<div class="card-body">
+	<a data-tabtrigger data-key="demo_temp_tabtrigger1" href="/demo/tabtrigger/content">超链接</a>
+	<br/>
+	<br/>
+	<a data-tabtrigger data-key="demo_temp_tabtrigger1_1" href="/demo/tabtrigger/content" class="btn btn-primary">超链接-button样式</a>
+	<br/>
+	<br/>
+	<button type="button" class="btn btn-info" data-tabtrigger data-key="demo_temp_tabtrigger2" data-url="/demo/tabtrigger/content">Button</button>
+	<br/>
+	<br/>
+	<a tooltip data-tabtrigger data-title="指定自定义标题" data-key="demo_temp_tabtrigger3" href="/demo/tabtrigger/content">标题自定义</a>
+	<div class="alert alert-info mt-4">
+	data-tabtrigger 声明是一个可以触发弹出新的选项卡的触发器组件
+	<br />
+	data-key="自定义key" 每个选项卡都有唯一标识KEY 这个随便起名 不重复就可以，如果重复就会打开已经存在的
+	<br />
+	href或者data-url 指定选项卡加载内容的action地址
+	<br />
+	data-title="自定义标题" 新打开的选项卡的标题自定义内容 默认使用这个元素的text()属性值
+	</div>
+	</div>
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+#end
+
+#define js()
+<script>
+
+$(function(){
+})
+</script>
+#end

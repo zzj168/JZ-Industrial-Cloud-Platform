@@ -1,0 +1,65 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<h1>Demo-ImageViewer组件演示</h1>
+</div>
+<div class="jbolt_page_content">
+
+<div class="row">
+<div class="col-4">
+<div class="card">
+	<div class="card-header">点击查看单图大图- data-imgviewer</div>
+	<div class="card-body">
+	<img data-imgviewer src="/assets/img/defaultposter.jpg"  class="m-1"  style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img data-imgviewer src="/assets/css/img/login_bg2.jpg"  class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img data-imgviewer src="/assets/img/avatar.jpg" class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<div class="alert alert-info mt-4">
+	在Img上加data-imgviewer 属性 声明点击就能看大图的组件
+	</div>
+	</div>
+	</div>
+</div>
+<div class="col-4">
+<div class="card">
+	<div class="card-header">点击查看单图大图- data-imgviewer data-orignurl</div>
+	<div class="card-body">
+	<img data-imgviewer data-orignurl="https://www.jfinal.com/upload/img/share/0/10114_20190906224042.jpg" src="http://www.jfinal.com/upload/img/share/0/10114_20190504113606.png"  class="m-1"  style="height: 100px;" tooltip data-title="点击查看大图" />
+	<div class="alert alert-info mt-4">
+	在Img上加data-orignurl 属性 声明点击出来的图用这个地址 而不用src上的
+	src上的地址，仅作为页面缩略图
+	<br/>
+	还能做到，缩略图和点开图完全不一样
+	</div>
+	</div>
+	</div>
+</div>
+<div class="col-4">
+<div class="card">
+	<div class="card-header">点击查看多图大图-data-imgviewer</div>
+	<div class="card-body" data-imgviewer>
+	<img src="/assets/img/defaultposter.jpg" class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img src="/assets/css/img/login_bg2.jpg"  class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img src="/assets/img/avatar.jpg"   class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<div class="alert alert-info mt-4">
+	data-imgviewer 属性 声明点击就能看大图的组件<br/>
+	这里只要声明在包含很多img标签的父容器上就可以做相册
+	<br/>
+	如果想让缩略图和弹出的图不一致，相册模式下只要给父容器增加一个data-useorign声明 然后img上增加data-orignurl即可
+	</div>
+	</div>
+	</div>
+</div>
+</div>
+
+</div>
+</div>
+#end
+
+#define js()
+<script>
+
+$(function(){
+})
+</script>
+#end

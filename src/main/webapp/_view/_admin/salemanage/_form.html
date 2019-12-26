@@ -1,0 +1,120 @@
+<form onsubmit="return false;" id="salemanageForm" action="#(action)" method="post">
+	#if(salemanage.id??)
+		<input type="hidden" name="salemanage.id" value="#(salemanage.id)" />
+	#end
+	<div class="form-group">
+		<label>供应商名称</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入名称" data-tips="请输入名称" maxlength="50" name="salemanage.supplierName" value="#(salemanage.supplierName??)">
+	</div>
+	<div class="form-group">
+		<label>发货日期</label>                                                                
+			<input type="text" class="form-control" data-date name="salemanage.shipDate" value="#date(((salemanage.shipDate)?? DateUtil.getNow()),"yyyy-MM-dd")">
+	</div>
+	<div class="form-group">
+		<label>型号</label>
+		<input type="text" autocomplete="off"  class="form-control"  placeholder="请输入型号" data-tips="请输入型号" maxlength="50" name="salemanage.model" value="#(salemanage.model??)">
+	</div>	
+	<div class="form-group">
+		<label>箱数</label>
+		#if (salemanage.num??) 
+			<input type="number"  min="0"  autocomplete="off"  class="form-control"  placeholder="请输入箱数" data-tips="请输入箱数" maxlength="10" name="salemanage.num" value="#(salemanage.num??)">
+		#else
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入箱数" data-tips="请输入箱数" maxlength="10" name="salemanage.num" value="1">		
+		#end		
+	</div>	
+	<div class="form-group">
+		<label>每箱数量</label>
+		#if (salemanage.numPerBox??) 
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入每箱数量" data-tips="请输入每箱数量" maxlength="10" name="salemanage.numPerBox" value="#(salemanage.numPerBox??)">
+		#else
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入每箱数量" data-tips="请输入每箱数量" maxlength="10" name="salemanage.numPerBox" value="1">		
+		#end
+	</div>	
+	<div class="form-group">
+		<label>单价</label>
+		#if (salemanage.price??)
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入单价" data-tips="请输入单价" maxlength="10" name="salemanage.price" value="#(salemanage.price??)">
+		#else
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入单价" data-tips="请输入单价" maxlength="10" name="salemanage.price" value="1">		
+		#end		
+	</div>
+	<div class="form-group">
+		<label>总金额</label>
+		#if (salemanage.totalMoney??)
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入总金额"  data-tips="请输入总金额" maxlength="10" name="salemanage.totalMoney" value="#(salemanage.totalMoney??)">
+		#else
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入总金额"  data-tips="请输入总金额" maxlength="10" name="salemanage.totalMoney" value="0">		
+		#end		
+	</div>	
+	<div class="form-group">
+		<label>收款金额</label>
+		#if (salemanage.receiptMoney??)
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入收款金额" data-tips="请输入收款金额" maxlength="10" name="salemanage.receiptMoney" value="#(salemanage.receiptMoney??)">
+		#else
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入收款金额" data-tips="请输入收款金额" maxlength="10" name="salemanage.receiptMoney" value="0">		
+		#end		
+	</div>	
+	<div class="form-group">
+		<label>收款日期</label>	                                                              
+		<input type="text" class="form-control" data-date name="salemanage.receiptDate" value="#date(((salemanage.receiptDate)?? DateUtil.getNow()),"yyyy-MM-dd")">
+	</div>
+	<div class="form-group">
+		<label>收款金额二</label>
+		#if (salemanage.receiptMoney2??)
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入收款金额" data-tips="请输入收款金额" maxlength="10" name="salemanage.receiptMoney2" value="#(salemanage.receiptMoney2??)">
+		#else
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入收款金额" data-tips="请输入收款金额" maxlength="10" name="salemanage.receiptMoney2" value="0">		
+		#end		
+	</div>	
+	<div class="form-group">
+		<label>收款日期二</label>	                                                              
+		<input type="text" class="form-control" data-date name="salemanage.receiptDate2" value="#date(((salemanage.receiptDate2)?? DateUtil.getNow()),"yyyy-MM-dd")">
+	</div>	
+	<div class="form-group">
+		<label>收款金额三</label>
+		#if (salemanage.receiptMoney3??)
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入收款金额" data-tips="请输入收款金额" maxlength="10" name="salemanage.receiptMoney3" value="#(salemanage.receiptMoney3??)">
+		#else
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入收款金额" data-tips="请输入收款金额" maxlength="10" name="salemanage.receiptMoney3" value="0">		
+		#end		
+	</div>	
+	<div class="form-group">
+		<label>收款日期三</label>	                                                              
+		<input type="text" class="form-control" data-date name="salemanage.receiptDate3" value="#date(((salemanage.receiptDate3)?? DateUtil.getNow()),"yyyy-MM-dd")">
+	</div>		
+	<div class="form-group">
+		<label>收款金额四</label>
+		#if (salemanage.receiptMoney4??)
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入收款金额" data-tips="请输入收款金额" maxlength="10" name="salemanage.receiptMoney4" value="#(salemanage.receiptMoney4??)">
+		#else
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入收款金额" data-tips="请输入收款金额" maxlength="10" name="salemanage.receiptMoney4" value="0">		
+		#end		
+	</div>	
+	<div class="form-group">
+		<label>收款日期四</label>	                                                              
+		<input type="text" class="form-control" data-date name="salemanage.receiptDate4" value="#date(((salemanage.receiptDate4)?? DateUtil.getNow()),"yyyy-MM-dd")">
+	</div>		
+	<div class="form-group">
+		<label>收款金额五</label>
+		#if (salemanage.receiptMoney5??)
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入收款金额" data-tips="请输入收款金额" maxlength="10" name="salemanage.receiptMoney5" value="#(salemanage.receiptMoney5??)">
+		#else
+			<input type="number"  min="0" autocomplete="off"  class="form-control"  placeholder="请输入收款金额" data-tips="请输入收款金额" maxlength="10" name="salemanage.receiptMoney5" value="0">		
+		#end		
+	</div>	
+	<div class="form-group">
+		<label>收款日期五</label>	                                                              
+		<input type="text" class="form-control" data-date name="salemanage.receiptDate5" value="#date(((salemanage.receiptDate5)?? DateUtil.getNow()),"yyyy-MM-dd")">
+	</div>	
+	<div class="form-group">
+		<label>待收款</label>
+		#if (salemanage.waitPay??)
+			<input type="text" autocomplete="off"  class="form-control"  placeholder="请输入待付款金额" data-tips="请输入待付款金额" maxlength="50" name="salemanage.waitPay" value="#(salemanage.waitPay??)">
+		#else
+			<input type="text" autocomplete="off"  class="form-control"  placeholder="请输入待付款金额" data-tips="请输入待付款金额" maxlength="50" name="salemanage.waitPay" value="1">		
+		#end
+	</div>
+</form>
+#define js()
+#include("/_view/_admin/common/_formjs.html",formId="salemanageForm")
+#end

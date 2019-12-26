@@ -1,0 +1,16 @@
+<table class="table table-hover table-bordered j_table dictionaryTypes">
+<thead><tr><th>名称</th><th>模式层级</th><th>标识KEY</th><th>操作</th></tr></thead>
+<tbody>
+#for(data:dictionaryTypes)
+<tr class="hand" onclick="readDictionarys(this,#(data.id),'#(data.name)')">
+<td>#(data.name??)</td>
+<td>#(data.modeLevel==1?"一级":"多级")</td>
+<td>#(data.typeKey??)</td>
+<td>
+ <a tooltip data-title="编辑" class=" d-inline-block jbolt_table_editbtn"  data-area="500,400" data-handler="refreshAllPortal"   href="/admin/dictionarytype/edit/#(data.id)"><i class="fa fa-edit text-warning"></i></a>
+ <a tooltip data-title="删除" class="ml-2 d-inline-block jbolt_table_delbtn" data-confirm="确认删除此分类？" data-handler="refreshPortal" data-portal="dictionaryTypePortal" href="/admin/dictionarytype/delete/#(data.id)"><i class="fa fa-remove text-danger"></i></a>
+</td>
+</tr>
+#end
+</tbody>
+</table>

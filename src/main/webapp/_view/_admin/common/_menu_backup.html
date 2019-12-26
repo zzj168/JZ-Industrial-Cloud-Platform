@@ -1,0 +1,31 @@
+<!--left top userInfo  start-->
+<div class="jbolt_admin_left_top2">
+	<img class="jbolt_admin_logo" src="http://www.jfinalxueyuan.com/img/logo.png" />
+</div>
+<!--left top userInfo  end-->
+<!--left nav menu start-->
+<div class="jbolt_admin_left_navs" data-pjax>
+#set(leftMenus=CACHE.getUserMenus(session[SessionKey.ADMIN_USER_ID]))
+#for(l1:leftMenus)
+<nav title="#(l1.title??)" class="jbolt_admin_nav #((l1.permissionKey=="dashboard")?"expansion":"")" data-key="#(l1.permissionKey??)">
+#if(l1.permissionKey=="dashboard")
+<a href="#(l1.url??)"  data-pjax data-key="dashboard"><div class="jbolt_menu_group dashboard"><i class="#(l1.icons??)"></i><span>#(l1.title??)</span><i class="pull-right fa fa-angle-right title_arrow"></i></div></a>
+#else
+<div class="jbolt_menu_group"><i class="#(l1.icons??)"></i><span>#(l1.title??)</span><i class="pull-right fa fa-angle-left title_arrow"></i></div>
+#end
+#if(l1.items??&&l1.items.size()>0)
+<ul class="jbolt_admin_menus">
+#for(l2:l1.items)
+<li><a href="#(l2.url??)"  data-key="#(l2.permissionKey??)">#(l2.title??)
+#if(l2.permissionKey=="intelligence")
+<span id="noticeCount"></span></a>
+#end
+</a></li>
+#end
+</ul>
+#end
+</nav>
+#end
+	
+</div>
+<!--left nav menu end-->

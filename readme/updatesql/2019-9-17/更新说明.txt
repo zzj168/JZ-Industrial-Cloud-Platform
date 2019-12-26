@@ -1,0 +1,9 @@
+application.sql
+创建application表
+
+在权限管理中增加菜单 分配权限
+
+API应用开发中心			KEY:app_dev_center	一级菜单	    	
+   ∟API应用管理	URL:/admin/app	打开方式:当前窗口加载	KEY:application  二级菜单
+   
+   注意需要自己再重新生成一次 只选择application表

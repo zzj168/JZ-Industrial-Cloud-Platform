@@ -1,0 +1,36 @@
+<script>
+needPjax=false;
+var _submit_ing=false;
+function submitThisForm(successCallback){
+	if(_submit_ing){
+		return false;
+	}
+	_submit_ing=true;
+	var formId="#(formId)";
+	var form=$("#"+formId);
+	if(FormChecker.check(form)){
+		var url=form.action;
+		LayerMsgBox.loading("正在提交...",10000);
+		form.ajaxSubmit({
+			type:"post",
+			url:url,
+			success:function(ret){
+				if(ret.state=="ok"){
+					LayerMsgBox.success(ret.msg,500,function(){
+						if(successCallback){
+							successCallback();
+						}
+						_submit_ing=false;
+					});
+				}else{
+					LayerMsgBox.error(ret.msg,1500,function(){
+						_submit_ing=false;
+						});
+				}
+			}
+		});
+	}else{
+		_submit_ing=false;
+		}
+}
+</script>

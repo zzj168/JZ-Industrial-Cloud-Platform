@@ -1,0 +1,125 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<h1>Demo-JboltLayer演示</h1>
+</div>
+<div class="jbolt_page_content">
+
+<div class="row">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">JBoltLayer-弹出位置</div>
+	<div class="card-body">
+	<a tooltip data-title="右侧滑出" data-jboltlayertrigger  href="/demo/jboltlayer/content">打开JboltLayer-右侧滑出</a>
+	<br/>
+	<br/>
+	<a tooltip data-title="左侧滑出"  data-jboltlayertrigger  href="/demo/jboltlayer/content" data-dir="left">打开JboltLayer-左侧滑出</a>
+	<div class="alert alert-info mt-4">
+	data-jboltlayertrigger 声明组件是一个可以触发jboltlayer组件弹出的触发器
+	<br>
+	data-dir="right|left" 取值有两个 right left，默认right
+	<br>
+	href或者data-url 是指定layer异步加载的页面内容action地址
+	</div>
+	</div>
+</div>
+</div>
+<div class="col-6">
+<div class="card">
+	<div class="card-header">JBoltLayer-宽度和高度</div>
+	<div class="card-body">
+	<a tooltip data-title="左侧滑出-指定宽度-600px" data-width="600"  data-jboltlayertrigger  href="/demo/jboltlayer/content" data-dir="left">打开JboltLayer-左侧滑出-宽度600</a>
+	<br/>
+	<br/>
+	<a tooltip data-title="右侧滑出-指定宽度-700px" data-width="700"  data-jboltlayertrigger  href="/demo/jboltlayer/content">打开JboltLayer-右侧滑出-宽度700</a>
+	<br/>
+	<br/>
+	<a tooltip data-title="左侧滑出-指定高度-600px" data-width="400" data-height="600"  data-jboltlayertrigger  href="/demo/jboltlayer/content">打开JboltLayer-右侧滑出-高度600</a>
+	<div class="alert alert-info mt-4">
+	data-width="600"  滑出层的宽度
+	<br/>
+	data-height="600"  滑出层的高度
+	</div>
+	</div>
+</div>
+</div>
+</div>
+
+<div class="row mt-5">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">JBoltLayer-关闭带confirm</div>
+	<div class="card-body">
+	<a tooltip data-title="右侧滑出-关闭需要确认" data-jboltlayertrigger data-confirm href="/demo/jboltlayer/content">打开JboltLayer-right-confirm</a>
+	<br/>
+	<br/>
+	<a tooltip data-title="右侧滑出-关闭需要确认" data-jboltlayertrigger data-confirm="表单尚未填完，确认关闭？" href="/demo/jboltlayer/content">打开JboltLayer-right-confirm-自定义</a>
+	<div class="alert alert-info mt-4">
+	data-confirm="表单尚未填完，确认关闭？"  关闭时confirm对话框选择
+	只写data-confirm 不指定提示内容的话 默认提示“确认关闭？”
+	</div>
+	</div>
+</div>
+</div>
+<div class="col-6">
+<div class="card">
+	<div class="card-header">JBoltLayer-高级用法</div>
+	<div class="card-body">
+	<a tooltip data-title="右侧滑出-宽度-TOP自定义" data-jboltlayertrigger  href="/demo/jboltlayer/content" data-width="400" data-top="60">右侧滑出-宽度-TOP自定义</a>
+	<br/>
+	<br/>
+	<a tooltip data-title="更多样式配置"  data-jboltlayertrigger data-width="400" data-noclose data-top="60" href="/demo/jboltlayer/content" >去掉关闭按钮</a>
+	<br/>
+	<br/>
+	<a tooltip data-title="去掉遮罩层-left" data-jboltlayertrigger  href="/demo/jboltlayer/content" data-width="400" data-dir="left" data-nomask>左侧滑出-去掉遮罩</a>
+	<br/>
+	<br/>
+	<a tooltip data-title="去掉遮罩层-right" data-jboltlayertrigger  href="/demo/jboltlayer/content" data-width="400"  data-nomask>右侧滑出-去掉遮罩</a>
+	<br/>
+	<br/>
+	<a tooltip data-title="无关闭按钮-去掉遮罩层-right" data-jboltlayertrigger  href="/demo/jboltlayer/content" data-width="400"  data-nomask data-noclose>无关闭按钮-右侧滑出-去掉遮罩</a>
+	<br/>
+	<br/>
+	<a tooltip data-title="无关闭按钮-去掉遮罩层-right-top" data-jboltlayertrigger  href="/demo/jboltlayer/content" data-width="400"  data-top="60" data-nomask data-noclose>无关闭按钮-右侧滑出-去掉遮罩-指定top</a>
+	<br/>
+	<br/>
+	<a tooltip data-title="无关闭按钮-去掉遮罩层-right-height" data-jboltlayertrigger  href="/demo/jboltlayer/content" data-width="400"  data-height="600" data-nomask data-noclose>无关闭按钮-右侧滑出-去掉遮罩-指定height</a>
+	<div class="alert alert-info mt-4">
+	data-top="60" 指定top的属性举例顶部距离
+	<br>
+	data-noclose 去掉关闭按钮
+	<br>
+	data-nomask 去掉遮罩层
+	</div>
+	</div>
+</div>
+</div>
+</div>
+
+
+
+<div class="row mt-5">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">JBoltLayer-加载其他组件</div>
+	<div class="card-body">
+	<a tooltip data-title="右侧滑出-加载组件列表" data-jboltlayertrigger  href="/demo/jboltlayer/demo">打开</a>
+	</div>
+</div>
+</div>
+<div class="col-6">
+</div>
+</div>
+
+</div>
+</div>
+#end
+
+#define js()
+<script>
+
+$(function(){
+})
+</script>
+#end

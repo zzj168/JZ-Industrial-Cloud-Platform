@@ -1,0 +1,756 @@
+[2019-12-26 09:09:22] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 09:09:22] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://jzacme.tpddns.cn/jzkj9000?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1807648168","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 09:09:22","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":7,"executeMillisTotal":7,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 09:09:22] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 09:09:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 09:09:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 09:09:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 09:09:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 09:09:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 09:09:23] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 09:09:23] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 09:29:42] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 09:29:42] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://jzacme.tpddns.cn/jzkj9000?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-776700275","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 09:29:42","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":8,"executeMillisTotal":8,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 09:30:13] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-1} closing ...
+
+[2019-12-26 09:30:13] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-1} closed
+
+[2019-12-26 09:51:07] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 09:51:07] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://jzacme.tpddns.cn/jzkj9000?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-776700275","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 09:51:07","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":7,"executeMillisTotal":7,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 09:57:31] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 09:57:31] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://jzacme.tpddns.cn/jzkj9000?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-776700275","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 09:57:31","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":8,"executeMillisTotal":8,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 10:00:51] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 10:00:51] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-776700275","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 10:00:51","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 10:01:14] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 10:01:14] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-776700275","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 10:01:14","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":11,"executeMillisTotal":11,"executeHistogram":[0,0,1],"executeAndResultHoldHistogram":[0,0,1],"concurrentMax":1}]}
+
+[2019-12-26 10:09:30] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 10:09:30] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-776700275","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 10:09:30","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":8,"executeMillisTotal":8,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 10:10:21] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 10:10:21] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1807648168","activeCount":1,"activePeak":1,"activePeakTime":"2019-12-26 10:10:21","poolingCount":0,"poolingPeak":1,"poolingPeakTime":"2019-12-26 10:10:21","connectCount":1,"closeCount":0,"physicalConnectCount":1,"connectionHoldTimeHistogram":[],"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 10:10:22] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 10:10:22] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 10:10:22] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 10:10:22] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 10:10:22] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 10:10:22] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 10:10:22] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 10:10:22] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 10:11:00] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-1} closing ...
+
+[2019-12-26 10:11:00] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-1} closed
+
+[2019-12-26 10:11:00] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-2} inited
+
+[2019-12-26 10:11:00] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-2099995728","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 10:11:00","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":1,"executeMillisTotal":1,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 10:11:01] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 10:11:01] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 10:11:01] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 10:11:01] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 10:11:01] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 10:11:01] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 10:11:01] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 10:11:01] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 10:16:24] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-2} closing ...
+
+[2019-12-26 10:16:24] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-2} closed
+
+[2019-12-26 10:27:22] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 10:27:22] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1807648168","activeCount":1,"activePeak":1,"activePeakTime":"2019-12-26 10:27:22","poolingCount":0,"poolingPeak":1,"poolingPeakTime":"2019-12-26 10:27:22","connectCount":1,"closeCount":0,"physicalConnectCount":1,"connectionHoldTimeHistogram":[],"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":5,"executeMillisTotal":5,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 10:27:22] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 10:27:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 10:27:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 10:27:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 10:27:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 10:27:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 10:27:23] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 10:27:23] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 10:29:32] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-1} closing ...
+
+[2019-12-26 10:29:32] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-1} closed
+
+[2019-12-26 10:29:32] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-2} inited
+
+[2019-12-26 10:29:32] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1275121951","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 10:29:32","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":1,"executeMillisTotal":1,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 10:29:33] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 10:29:33] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 10:29:33] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 10:29:33] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 10:29:33] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 10:29:33] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 10:29:33] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 10:29:33] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 10:33:33] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-2} closing ...
+
+[2019-12-26 10:33:33] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-2} closed
+
+[2019-12-26 10:33:34] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-3} inited
+
+[2019-12-26 10:33:34] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1732690317","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 10:33:34","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 10:33:34] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 10:33:34] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 10:33:34] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 10:33:34] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 10:33:34] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 10:33:34] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 10:33:34] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 10:33:34] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 10:33:43] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-3} closing ...
+
+[2019-12-26 10:33:43] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-3} closed
+
+[2019-12-26 10:33:43] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-4} inited
+
+[2019-12-26 10:33:43] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1587529865","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 10:33:43","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 10:33:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 10:33:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 10:33:44] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 10:33:44] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 10:33:44] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 10:33:44] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 10:33:44] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 10:33:44] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 10:56:45] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 10:56:45] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-776700275","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 10:56:45","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":7,"executeMillisTotal":7,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 11:04:16] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 11:04:16] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1807648168","activeCount":1,"activePeak":1,"activePeakTime":"2019-12-26 11:04:16","poolingCount":0,"poolingPeak":1,"poolingPeakTime":"2019-12-26 11:04:16","connectCount":1,"closeCount":0,"physicalConnectCount":1,"connectionHoldTimeHistogram":[],"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 11:04:17] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 11:04:17] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 11:04:17] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 11:04:17] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 11:04:17] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 11:04:17] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 11:04:17] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 11:04:17] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 11:05:53] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 11:05:53] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1807648168","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 11:05:53","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 11:05:53] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 11:05:53] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 11:05:53] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 11:05:53] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 11:05:53] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 11:05:53] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 11:05:53] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 11:05:54] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 11:07:54] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 11:07:54] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1807648168","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 11:07:54","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 11:07:55] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 11:07:55] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 11:07:55] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 11:07:55] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 11:07:55] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 11:07:55] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 11:07:55] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 11:07:55] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 11:10:09] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 11:10:09] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1807648168","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 11:10:09","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 11:10:10] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 11:10:10] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 11:10:10] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 11:10:10] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 11:10:10] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 11:10:10] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 11:10:10] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 11:10:10] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 11:20:45] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 11:20:45] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-776700275","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 11:20:45","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 11:27:56] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 11:27:56] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1807648168","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 11:27:56","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 11:27:56] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 11:27:56] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 11:27:56] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 11:27:56] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 11:27:56] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 11:27:56] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 11:27:56] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 11:27:56] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 11:44:30] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-1} closing ...
+
+[2019-12-26 11:44:30] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-1} closed
+
+[2019-12-26 11:44:31] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-2} inited
+
+[2019-12-26 11:44:31] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1477244534","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 11:44:31","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 11:44:31] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 11:44:31] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 11:44:31] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 11:44:31] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 11:44:31] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 11:44:31] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 11:44:31] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 11:44:31] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:09:49] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-2} closing ...
+
+[2019-12-26 14:09:49] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-2} closed
+
+[2019-12-26 14:09:50] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-3} inited
+
+[2019-12-26 14:09:50] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1248470151","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:09:50","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 14:09:50] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:09:50] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:09:50] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:09:50] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:09:50] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:09:50] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:09:50] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:09:50] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:11:41] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-3} closing ...
+
+[2019-12-26 14:11:41] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-3} closed
+
+[2019-12-26 14:11:41] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-4} inited
+
+[2019-12-26 14:11:41] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-537216001","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:11:41","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":3,"executeMillisTotal":3,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 14:11:41] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:11:41] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:11:41] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:11:41] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:11:41] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:11:41] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:11:41] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:11:41] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:12:19] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-4} closing ...
+
+[2019-12-26 14:12:19] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-4} closed
+
+[2019-12-26 14:12:19] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-5} inited
+
+[2019-12-26 14:12:19] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-77574009","activeCount":1,"activePeak":1,"activePeakTime":"2019-12-26 14:12:19","poolingCount":0,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:12:19","connectCount":1,"closeCount":0,"physicalConnectCount":1,"connectionHoldTimeHistogram":[],"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 14:12:19] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:12:19] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:12:19] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:12:19] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:12:19] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:12:19] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:12:19] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:12:19] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:13:36] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-5} closing ...
+
+[2019-12-26 14:13:36] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-5} closed
+
+[2019-12-26 14:13:36] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-6} inited
+
+[2019-12-26 14:13:36] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-66469591","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:13:36","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 14:13:36] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:13:36] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:13:36] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:13:36] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:13:36] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:13:36] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:13:36] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:13:36] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:20:12] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-6} closing ...
+
+[2019-12-26 14:20:12] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-6} closed
+
+[2019-12-26 14:20:12] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-7} inited
+
+[2019-12-26 14:20:12] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-447263362","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:20:12","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 14:20:12] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:20:12] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:20:12] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:20:12] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:20:12] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:20:12] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:20:12] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:20:12] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:20:39] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-7} closing ...
+
+[2019-12-26 14:20:39] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-7} closed
+
+[2019-12-26 14:20:40] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-8} inited
+
+[2019-12-26 14:20:40] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-2030685747","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:20:40","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 14:20:40] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:20:40] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:20:40] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:20:40] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:20:40] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:20:40] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:20:40] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:20:40] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:22:40] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-8} closing ...
+
+[2019-12-26 14:22:40] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-8} closed
+
+[2019-12-26 14:22:40] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-9} inited
+
+[2019-12-26 14:22:40] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1339208690","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:22:40","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 14:22:41] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:22:41] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:22:41] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:22:41] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:22:41] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:22:41] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:22:41] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:22:41] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:23:08] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-9} closing ...
+
+[2019-12-26 14:23:08] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-9} closed
+
+[2019-12-26 14:23:08] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-10} inited
+
+[2019-12-26 14:23:08] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-105398084","activeCount":1,"activePeak":1,"activePeakTime":"2019-12-26 14:23:08","poolingCount":0,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:23:08","connectCount":1,"closeCount":0,"physicalConnectCount":1,"executeCount":1,"connectionHoldTimeHistogram":[],"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":2,"executeMillisTotal":2,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1},{"sql":"select * from `bom` where 1 = 2","runningCount":1,"concurrentMax":1}]}
+
+[2019-12-26 14:23:09] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:23:09] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:23:09] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:23:09] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:23:09] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:23:09] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:23:09] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:23:09] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:26:25] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 14:26:25] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-776700275","activeCount":1,"activePeak":1,"activePeakTime":"2019-12-26 14:26:25","poolingCount":0,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:26:25","connectCount":1,"closeCount":0,"physicalConnectCount":1,"connectionHoldTimeHistogram":[],"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 14:27:16] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 14:27:16] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1807648168","activeCount":1,"activePeak":1,"activePeakTime":"2019-12-26 14:27:16","poolingCount":0,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:27:16","connectCount":1,"closeCount":0,"physicalConnectCount":1,"connectionHoldTimeHistogram":[],"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 14:27:17] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:27:17] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:27:17] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:27:17] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:27:17] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:27:17] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:27:17] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:27:17] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:29:12] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-1} closing ...
+
+[2019-12-26 14:29:12] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-1} closed
+
+[2019-12-26 14:29:12] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-2} inited
+
+[2019-12-26 14:29:12] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1250189524","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:29:12","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":1,"executeMillisTotal":1,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 14:29:12] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:29:12] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:29:12] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:29:12] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:29:12] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:29:12] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:29:12] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:29:12] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:29:23] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-2} closing ...
+
+[2019-12-26 14:29:23] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-2} closed
+
+[2019-12-26 14:29:23] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-3} inited
+
+[2019-12-26 14:29:23] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1881676841","activeCount":1,"activePeak":1,"activePeakTime":"2019-12-26 14:29:23","poolingCount":0,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:29:23","connectCount":1,"closeCount":0,"physicalConnectCount":1,"connectionHoldTimeHistogram":[],"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 14:29:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:29:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:29:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:29:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:29:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:29:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:29:23] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:29:23] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:30:00] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-3} closing ...
+
+[2019-12-26 14:30:00] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-3} closed
+
+[2019-12-26 14:30:00] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-4} inited
+
+[2019-12-26 14:30:00] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1594191427","activeCount":1,"activePeak":1,"activePeakTime":"2019-12-26 14:30:00","poolingCount":0,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:30:00","connectCount":1,"closeCount":0,"physicalConnectCount":1,"connectionHoldTimeHistogram":[],"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 14:30:01] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:30:01] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:30:01] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:30:01] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:30:01] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:30:01] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:30:01] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:30:01] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:31:40] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-4} closing ...
+
+[2019-12-26 14:31:40] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-4} closed
+
+[2019-12-26 14:31:40] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-5} inited
+
+[2019-12-26 14:31:40] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1724221752","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:31:40","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 14:31:40] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:31:40] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:31:40] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:31:40] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:31:40] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:31:40] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:31:40] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:31:40] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:32:40] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 14:32:40] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-776700275","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:32:40","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":7,"executeMillisTotal":7,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 14:33:22] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 14:33:22] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1807648168","activeCount":1,"activePeak":1,"activePeakTime":"2019-12-26 14:33:22","poolingCount":0,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:33:22","connectCount":1,"closeCount":0,"physicalConnectCount":1,"connectionHoldTimeHistogram":[],"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":7,"executeMillisTotal":7,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 14:33:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:33:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:33:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:33:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:33:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:33:23] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:33:23] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:33:23] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:37:32] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-1} closing ...
+
+[2019-12-26 14:37:32] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-1} closed
+
+[2019-12-26 14:37:32] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-2} inited
+
+[2019-12-26 14:37:32] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1636240420","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:37:32","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":1,"executeMillisTotal":1,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 14:37:32] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:37:32] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:37:32] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:37:32] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:37:32] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:37:32] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:37:32] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:37:32] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:39:25] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-2} closing ...
+
+[2019-12-26 14:39:25] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-2} closed
+
+[2019-12-26 14:39:26] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-3} inited
+
+[2019-12-26 14:39:26] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-726576972","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:39:26","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":0,"executeMillisTotal":0,"executeHistogram":[1],"executeAndResultHoldHistogram":[1],"concurrentMax":1}]}
+
+[2019-12-26 14:39:26] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:39:26] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:39:26] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:39:26] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:39:26] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:39:26] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:39:26] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:39:26] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:40:25] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 14:40:25] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-776700275","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:40:25","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 14:40:43] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1948) close - {dataSource-3} closing ...
+
+[2019-12-26 14:40:43] INFO  (com.alibaba.druid.pool.DruidDataSource.java:2020) close - {dataSource-3} closed
+
+[2019-12-26 14:40:43] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-4} inited
+
+[2019-12-26 14:40:43] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-2133893169","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:40:43","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":2,"executeMillisTotal":2,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 14:40:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:40:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:40:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:40:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:40:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:40:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:40:43] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:40:43] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+
+[2019-12-26 14:46:27] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 14:46:27] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-776700275","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:46:27","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 14:46:42] INFO  (com.alibaba.druid.pool.DruidDataSource.java:1003) init - {dataSource-1} inited
+
+[2019-12-26 14:46:42] INFO  (com.alibaba.druid.pool.DruidDataSourceStatLoggerImpl.java:77) log - {"url":"jdbc:mysql://127.0.0.1/jbolt?characterEncoding=utf8&useSSL=false&autoReconnect=true&zeroDateTimeBehavior=convertToNull&serverTimezone=Asia/Shanghai","dbType":"mysql","name":"DataSource-1807648168","activeCount":0,"poolingCount":1,"poolingPeak":1,"poolingPeakTime":"2019-12-26 14:46:42","connectCount":0,"closeCount":0,"physicalConnectCount":1,"sqlList":[{"sql":"set names utf8mb4","executeCount":1,"executeMillisMax":6,"executeMillisTotal":6,"executeHistogram":[0,1],"executeAndResultHoldHistogram":[0,1],"concurrentMax":1}]}
+
+[2019-12-26 14:46:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:34) exe - JBolt自动升级：开始执行
+
+[2019-12-26 14:46:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:49) up20191207_globalconfig - JBolt自动升级：正在执行-up20191207_globalconfig
+
+[2019-12-26 14:46:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:69) up20191207_globalconfig - JBolt自动升级：执行完毕-up20191207_globalconfig
+
+[2019-12-26 14:46:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:77) up20191207_userconfig - JBolt自动升级：正在执行-up20191207_userconfig
+
+[2019-12-26 14:46:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:87) up20191207_userconfig - JBolt自动升级：执行完毕-up20191207_userconfig
+
+[2019-12-26 14:46:43] INFO  (cn.jbolt.common.config.JBoltAutoUpgrade.java:37) exe - JBolt自动升级：执行完成
+
+[2019-12-26 14:46:43] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:193) configAllEnable - 开始启动公众平台配置... start
+
+[2019-12-26 14:46:43] INFO  (cn.jbolt.admin.wechat.config.WechatConfigService.java:202) configAllEnable - 所有公众平台启动完成... finish
+

@@ -1,0 +1,75 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="/demo/radio">
+<div class="jbolt_page_title">
+	<h1>Demo-radio演示</h1>
+</div>
+<div class="jbolt_page_content">
+
+<div class="row">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">Radio组件_普通</div>
+	<div class="card-body">
+	<form action="/demo/radio/submit" method="post" onsubmit="return FormChecker.check(this)">
+	 <div class="form-group row" 
+		data-radio 
+		data-rule="radio"  
+		data-value="#(must??)" 
+		data-name="must" 
+		data-default="false">
+		<label class="col-auto col-form-label" >强制更新：</label>
+			<div class="col"  style="padding-top: 1px;">
+				<div class="radio radio-primary  radio-inline">
+					<input  id="r3" type="radio" name="must"   value="true"/>
+					<label for="r3">是</label>
+				</div>
+				
+				<div class="radio radio-primary  radio-inline">
+					<input  id="r4" type="radio" name="must"   value="false"/>
+					<label for="r4">否</label>
+				</div>
+			</div>
+		</div>
+	<div class="alert alert-info">通过在一组radio的父元素标签上配置属性，可实现自动加载、自动校验、自动选中，无需写JS,此案例是简单案例，未自动加载数据源</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+
+<div class="col-6">
+<div class="card">
+	<div class="card-header">Radio组件_自动加载数据</div>
+	<div class="card-body">
+	<form action="/demo/radio/submit" method="post" onsubmit="return FormChecker.check(this)">
+	 <div class="form-group row" 
+		data-radio 
+		data-rule="radio"  
+		data-value="#(fileType??)" 
+		data-name="fileType" 
+		data-default=""
+		
+		data-url="/demo/dictionary?key=filetype"
+		data-label="类型："
+		data-width="col-3,col-9"
+		data-inline="true">
+		</div>
+	<div class="alert alert-info">通过在一组radio的父元素标签上配置属性，可实现自动加载、自动校验、自动选中，无需写JS,此案例是配置数据源版</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+#end
+
+#define js()
+<script>
+
+$(function(){
+})
+</script>
+#end

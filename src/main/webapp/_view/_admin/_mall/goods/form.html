@@ -1,0 +1,354 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)" data-dontchangeleftnav="true" data-text="编辑商品[#(goods.id??)]">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-9">
+	#setLocal(JboltWithTabs=CACHE.getUserJBoltAdminWithTabs(session[SessionKey.ADMIN_USER_ID]))
+	<h1>#if(JboltWithTabs)
+	<a  class="mr-1" ><i class="fa fa-file-text-o"></i></a>
+	#else<a class="btn btn-outline-secondary mr-1" tooltip data-title="返回商品列表" data-pjax href="/admin/mall/goods"><i class="fa fa-chevron-left"></i></a>#end 商品管理-#(goods==null?"添加新":"编辑")商品<span class="text-danger">【#(goods.name??)】</span></h1>
+	</div>
+	<div class="col-3">
+	#if(JboltWithTabs)
+	<button class="btn btn-danger pull-right" onclick="closeCurrentAndReloadTiggerTab()"><i class="fa fa-check mr-1"></i>完成编辑</button>
+	#else
+	<a class="btn btn-danger pull-right" data-pjax href="/admin/mall/goods"><i class="fa fa-check mr-1"></i>完成编辑</a>
+	#end
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content">
+#setLocal(jboltTabId=(goods.id?? RandomUtil.random(6)))
+<nav>
+  <div class="nav nav-tabs" id="nav-tab_#(jboltTabId)" role="tablist">
+    <a class="nav-item nav-link active" id="nav-base-tab_#(jboltTabId)" data-toggle="tab" href="#nav-base_#(jboltTabId)" role="tab" aria-controls="nav-base_#(jboltTabId)" aria-selected="true">1、基 本</a>
+    <a class="nav-item nav-link" id="nav-image-tab_#(jboltTabId)" data-toggle="tab" href="#nav-image_#(jboltTabId)" role="tab" aria-controls="nav-image_#(jboltTabId)" aria-selected="false">2、图 片</a>
+    <a class="nav-item nav-link" id="nav-attr-tab_#(jboltTabId)" data-toggle="tab" href="#nav-attr_#(jboltTabId)" role="tab" aria-controls="nav-attr_#(jboltTabId)" aria-selected="false">3、属 性</a>
+    <a class="nav-item nav-link" id="nav-spec-tab_#(jboltTabId)" data-toggle="tab" href="#nav-spec_#(jboltTabId)" role="tab" aria-controls="nav-spec_#(jboltTabId)" aria-selected="false">4、规 格</a>
+    <a class="nav-item nav-link" id="nav-marketing-tab_#(jboltTabId)" data-toggle="tab" href="#nav-marketing_#(jboltTabId)" role="tab" aria-controls="nav-marketing_#(jboltTabId)" aria-selected="false">5、营 销</a>
+    <a class="nav-item nav-link" id="nav-shipping-tab_#(jboltTabId)" data-toggle="tab" href="#nav-shipping_#(jboltTabId)" role="tab" aria-controls="nav-shipping_#(jboltTabId)" aria-selected="false">6、物 流</a>
+    <a class="nav-item nav-link" id="nav-aftersales-tab_#(jboltTabId)" data-toggle="tab" href="#nav-aftersales_#(jboltTabId)" role="tab" aria-controls="nav-aftersales_#(jboltTabId)" aria-selected="false">7、售 后</a>
+    <a class="nav-item nav-link" id="nav-content-tab_#(jboltTabId)" data-toggle="tab" href="#nav-content_#(jboltTabId)" role="tab" aria-controls="nav-content_#(jboltTabId)" aria-selected="false">8、图文详情</a>
+  </div>
+</nav>
+<div class="tab-content mallGoodsForm">
+  <!-- 基础信息 start -->
+  <div class="tab-pane fade show active" id="nav-base_#(jboltTabId)" role="tabpanel" aria-labelledby="nav-base-tab_#(jboltTabId)">
+  <form class="form"   action="/admin/mall/goods/updateBaseInfo" method="post" onsubmit="return ajaxSubmitForm(this)">
+	#if(goods.id??)
+	<input type="hidden" name="goods.id" value="#(goods.id??)" />
+	#end
+	<!-- <input type="hidden" id="goodsGroupsInput" name="goods.groups" value="#(goods.groups??)"/> -->
+  <div class="form-group row">
+		<label class="col-form-label col-2 col-sm-3 text-right">商品类目(后端)：</label>
+		<div class="col-7 col-sm-6">
+		<div class="input-group">
+			<input type="text" autocomplete="off" class="form-control bg-white"   value="#(CACHE.getGoodsBackCategoryFullName(goods.bcategoryId??))" readonly="readonly" />
+			#if(canEditCategory??)
+			<div class="input-group-append" >
+			<a  class="input-group-text" href="/admin/mall/goods/editBackCategory/#(goods.id)" #if(JboltWithTabs) data-tabtrigger target="_self"  data-key="edit_goods_catgory_#(goods.id)"  #else data-pjax #end><i class="fa fa-pencil"></i></a>
+			</div>
+			#end
+		 </div>
+			#if(failTips??)
+			<small class="form-text text-danger">提示：#(failTips??)</small>
+			#end
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="col-form-label col-2 col-sm-3 text-right">商品名称：</label>
+		<div class="col-7 col-sm-6">
+			<input type="text" autocomplete="off" class="form-control" data-rule="required;len<=40" placeholder="请输入商品名称" data-tips="请输入商品名称" maxlength="40" name="goods.name" value="#(goods.name??)">
+		</div>
+	</div>
+<!-- 	
+	<div class="form-group row" data-checkbox  data-rule="checkbox" data-value="#(goods.groups??)" data-handler="processHiddenInput" data-hiddeninput="goodsGroupsInput" data-name="goodsGroups" data-default="">
+		<label class="col-form-label col-2 col-sm-3 text-right">商品分组：</label>
+		<div class="col-8 col-sm-7">
+			#for(data:groups)
+				<div class="checkbox checkbox-primary  checkbox-inline">
+				<input  id="goodsGroups_#(data.id?? 0)" type="checkbox" name="goodsGroups"   value="#(data.id??)"/>
+				<label for="goodsGroups_#(data.id?? 0)">#(data.name??)</label>
+				</div>
+			#end
+		</div>
+	</div> -->
+	
+	<div class="form-group row">
+		<label class="col-form-label col-2 col-sm-3 text-right">售价：</label>
+		<div class="col-6 col-sm-5">
+			<input type="text"  autocomplete="off" min="0"   class="form-control" data-rule="pznumber" placeholder="请输入商品售价 单位(元)" data-tips="请输入商品售价" maxlength="10" name="goods.price" value="#(goods.price??)">
+			<small  class="form-text text-muted">填写数字需>=0，如果是免费展示品，请输入0</small>
+		</div>
+	</div>
+	
+	<div class="form-group row">
+		<label class="col-form-label col-2 col-sm-3 text-right">原价(选填)：</label>
+		<div class="col-6 col-sm-5">
+			<input type="number"  autocomplete="off" min="0" class="form-control" data-rule="pznumber;len<=10" data-notnull="false" placeholder="请输入商品原价 单位(元)" data-tips="请输入商品原价" maxlength="10" name="goods.originalPrice" value="#(goods.originalPrice??)">
+		</div>
+	</div>
+	
+	
+	
+	<div class="form-group row">
+		<label class="col-form-label col-2 col-sm-3 text-right">商品单位：</label>
+		<div class="col-5 col-sm-4">
+			<select class="form-control" data-rule="required"  data-tips="请选择商品单位" data-url="/admin/dictionary/options?key=goodsunit"  name="goods.goodsUnit" data-autoload data-text="=请选择=" data-value="" data-select="#(goods.goodsUnit??)"></select>
+			<small  class="form-text text-muted">统一商品销售单位和库存单位</small>
+		</div>
+	</div>
+	
+	<div class="form-group row">
+		<label class="col-form-label col-2 col-sm-3 text-right">库存量：</label>
+		<div class="col-5 col-sm-4">
+			<input type="number"  autocomplete="off" min="0" class="form-control" data-rule="pznumber;len<=10"  placeholder="请输入商品库存量" data-tips="请输入商品库存量" maxlength="10" name="goods.stockCount" value="#(goods.stockCount??)">
+		</div>
+	</div>
+	
+	<div class="form-group text-center">
+	<button type="submit" class="btn btn-success" style="width:150px"><i class="fa fa-check mr-2"></i>更新基本信息</button>
+	</div>
+	</form>
+	
+  </div>
+   <!-- 基础信息 end -->
+   
+   <!-- 图片 start -->
+  <div class="tab-pane fade" id="nav-image_#(jboltTabId)" role="tabpanel" aria-labelledby="nav-image-tab_#(jboltTabId)">
+  <form class="form" id="mallGoodsImgForm"  action="/admin/mall/goods/updateImages" method="post" onsubmit="return ajaxSubmitForm(this)">
+	#if(goods.id??)
+	<input type="hidden" name="goods.id" value="#(goods.id??)" />
+	#end
+	<input type="hidden" id="mainImageInput" data-rule="required" data-tips="请上传商品主图" name="goods.mainImage" value="#(goods.mainImage??)" />
+	<input type="hidden" id="extraImagesInput"   name="goods.extraImages" value="#(goods.extraImages??)" />
+	</form>
+  <div class="form-group row">
+		<label class="col-form-label col-2 col-sm-3 text-right">商品主图：</label>
+		<div class="col-10 col-sm-9">
+			<div class="j_img_uploder" data-url="/admin/mall/goods/uploadImage/#(goods.id??)"  data-value="#realImage(goods.mainImage??)"  data-handler="uploadFile"  data-hiddeninput="mainImageInput"  data-area="200,200" data-maxsize="2000" style="width: 100px; height: 100px;"></div>
+			<small  class="form-text text-muted text-ceter">建议尺寸640像素*640像素,大小不超200kb</small>
+		</div>
+	</div>
+	
+	
+	<div class="form-group row">
+		<label class="col-form-label col-2 col-sm-3 text-right">其它图片(选传)：</label>
+		<div class="col-10 col-sm-9">
+			<ul id="goodsExtraImagebox" class="j_img_upload_mutilbox">
+			#if(goods.extraImages??)
+			#set(extraImgs=goods.extraImages.split(","))
+			#for(img:extraImgs)
+			<li data-imgbox="goodsExtraImagebox" data-hiddeninput="extraImagesInput"><img src="#(img)"><div class="optbox"><i title="删除" onclick="removeUploadImgBoxLi(this)" class="fa fa-trash"></i><i onclick="imgGotoLeft(this)" class="fa fa-arrow-left" title="左移"></i><i title="右移" onclick="imgGotoRight(this)" class="fa fa-arrow-right"></i></div></li>
+			#end
+			#end
+			</ul>
+			<div class="j_img_uploder" 
+			data-url="/admin/mall/goods/uploadImage/#(goods.id??)" 
+			data-limit="10"  
+			data-handler="uploadMultipleFile" 
+			data-imgbox="goodsExtraImagebox" 
+			data-hiddeninput="extraImagesInput"  
+			data-area="100,100" data-maxsize="2000" 
+			style="width: 100px; height: 100px;"></div>
+			<small  class="form-text text-muted text-ceter">单张大小不超200kb，最多10张</small>
+		</div>
+	</div>
+	
+	<div class="form-group text-center">
+	<button type="button" onclick="$('#mallGoodsImgForm').submit()" class="btn btn-success" style="width:150px"><i class="fa fa-check mr-2"></i>更新图片信息</button>
+	</div>
+	
+  </div>
+   <!-- 图片end -->
+   
+   <!-- 营销信息 start -->
+  <div class="tab-pane fade" id="nav-marketing_#(jboltTabId)" role="tabpanel" aria-labelledby="nav-marketing-tab_#(jboltTabId)">
+   <form class="form"   action="/admin/mall/goods/updateMarketingInfo" method="post" onsubmit="return ajaxSubmitForm(this)">
+	#if(goods.id??)
+	<input type="hidden" name="goods.id" value="#(goods.id??)" />
+	#end
+  <div class="form-group row">
+		<label class="col-form-label col-2 col-sm-3 text-right">营销语：</label>
+		<div class="col-10 col-sm-9">
+			<input type="text" autocomplete="off" class="form-control" data-rule="len<=40" data-notnull="false" placeholder="请输入商品营销语" data-tips="请输入商品营销语" maxlength="40" name="goods.subTitle" value="#(goods.subTitle??)">
+			<small  class="form-text text-muted">用于显示营销信息，与商品名称区分显示</small>
+		</div>
+	</div>
+	
+	<div class="form-group row">
+		<label class="col-form-label col-2 col-sm-3 text-right">显示销量：</label>
+		<div class="col-7 col-sm-6">
+			<input type="number"  autocomplete="off" min="0" class="form-control" data-rule="pznumber" data-notnull="false" placeholder="请输入商品前端显示销量" data-tips="请输入商品前端显示销量" maxlength="10" name="goods.showSaleCount" value="#(goods.showSaleCount??)">
+			<small  class="form-text text-muted">不是真实销量，用来促销显示销量的，烘托销售热度</small>
+		</div>
+	</div>
+	
+	
+	
+	<div class="form-group row">
+		<label class="col-form-label col-2 col-sm-3 text-right">限购(选填)：</label>
+		<div class="col-5 col-sm-4">
+			<input type="number"  autocomplete="off" min="0" class="form-control" data-rule="pzint" data-notnull="false" placeholder="请输入商品限购数量" maxlength="5" name="goods.limitCount" value="#(goods.limitCount?? 0)">
+		</div>
+	</div>
+	
+	<div class="form-group text-center">
+	<button type="submit"  class="btn btn-success" style="width:150px"><i class="fa fa-check mr-2"></i>更新营销信息</button>
+	</div>
+	</form>
+  
+  </div>
+   <!-- 营销信息 end -->
+   
+      <!-- 属性信息 start -->
+  <div class="tab-pane fade" id="nav-attr_#(jboltTabId)" role="tabpanel" aria-labelledby="nav-attr-tab_#(jboltTabId)">
+  
+  </div>
+   <!-- 属性信息 end -->
+   
+   
+      <!-- 规格信息 start -->
+  <div class="tab-pane fade" id="nav-spec_#(jboltTabId)" role="tabpanel" aria-labelledby="nav-spec-tab_#(jboltTabId)">
+  
+  </div>
+   <!-- 规格信息 end -->
+   
+   <!-- 物流信息 start -->
+  <div class="tab-pane fade" id="nav-shipping_#(jboltTabId)" role="tabpanel" aria-labelledby="nav-shipping-tab_#(jboltTabId)">
+   <form class="form"   action="/admin/mall/goods/updateShippingInfo" method="post" onsubmit="return ajaxSubmitForm(this)">
+	#if(goods.id??)
+	<input type="hidden" name="goods.id" value="#(goods.id??)" />
+	#end
+	
+	<div class="form-group text-center">
+	<button type="submit"  class="btn btn-success" style="width:150px"><i class="fa fa-check mr-2"></i>更新物流信息</button>
+	</div>
+	</form>
+  </div>
+   <!-- 物流信息 end -->
+   
+  <!-- 售后信息 start -->
+  <div class="tab-pane fade" id="nav-aftersales_#(jboltTabId)" role="tabpanel" aria-labelledby="nav-aftersales-tab_#(jboltTabId)">
+  <form class="form"   action="/admin/mall/goods/updateAfterSalesInfo" method="post" onsubmit="return ajaxSubmitForm(this)">
+	#if(goods.id??)
+	<input type="hidden" name="goods.id" value="#(goods.id??)" />
+	#end
+  <div class="form-group row" data-radio  data-rule="radio" data-value="#(goods.isProvideInvoices?? false)"   data-name="goods.isProvideInvoices" data-default="false">
+		<label class="col-form-label col-2 col-sm-3 text-right">发票：</label>
+		<div class="col-8 col-sm-7">
+				<div class="radio radio-primary  radio-inline">
+				<input  id="isProvideInvoices_false" type="radio" name="goods.isProvideInvoices"   value="false"/>
+				<label for="isProvideInvoices_false">无</label>
+				</div>
+				
+				<div class="radio radio-primary  radio-inline">
+				<input  id="isProvideInvoices_true" type="radio" name="goods.isProvideInvoices"   value="true"/>
+				<label for="isProvideInvoices_true">有</label>
+				</div>
+		</div>
+	</div>
+	
+	
+	  <div class="form-group row" data-radio  data-rule="radio" data-value="#(goods.isGuarantee?? false)"   data-name="goods.isGuarantee" data-default="false">
+		<label class="col-form-label col-2 col-sm-3 text-right">保修：</label>
+		<div class="col-8 col-sm-7">
+				<div class="radio radio-primary  radio-inline">
+				<input  id="isGuarantee_false" type="radio" name="goods.isGuarantee"   value="false"/>
+				<label for="isGuarantee_false">无</label>
+				</div>
+				
+				<div class="radio radio-primary  radio-inline">
+				<input  id="isGuarantee_true" type="radio" name="goods.isGuarantee"   value="true"/>
+				<label for="isGuarantee_true">有</label>
+				</div>
+		</div>
+	</div>
+	
+	<div class="form-group text-center">
+	<button type="submit"  class="btn btn-success" style="width:150px"><i class="fa fa-check mr-2"></i>更新售后信息</button>
+	</div>
+	</form>
+  
+  </div>
+  <!-- 售后信息 end -->
+  
+  
+  
+       <!-- 图文详情 start -->
+  <div class="tab-pane fade" id="nav-content_#(jboltTabId)" role="tabpanel" aria-labelledby="nav-content-tab_#(jboltTabId)">
+  	 <form class="form" id="goodsHtmlContentForm"  action="/admin/mall/goods/updateHtmlContent" method="post" onsubmit="return ajaxSubmitForm(this)">
+	#if(goods.id??)
+	<input type="hidden" name="goodsHtmlContent.id" value="#(goods.htmlContent.id??)" />
+	<input type="hidden" name="goodsHtmlContent.goodsId" value="#(goods.id??)" />
+	#end
+	
+	<div style="display:none;" >
+		<textarea id="goodsHtmlContent_hidden"  class="form-control" data-rule="required" placeholder="请输入商品详情" data-tips="请输入商品详情"   name="goodsHtmlContent.content" >#(goods.htmlContent.content??)</textarea>
+	 </div>
+	</form>
+	
+	 
+	<div class="form-group" style="width:800px;min-height:500px;margin:30px auto;" id="goodsHtmlContent_editorBox">
+		<div 
+		data-editor="summernote" 
+		data-height="500" 
+		data-imghost="#(imghost??)"
+		data-imguploadurl="/admin/mall/goods/uploadImage/#(goods.id??)" 
+		data-hiddeninput="goodsHtmlContent_hidden" 
+		id="goodsHtmlContent" 
+		class="form-control">#(goods.htmlContent.content??)</div>
+	</div>
+	
+	<div class="form-group text-center">
+	<button type="button"  onclick="$('#goodsHtmlContentForm').submit()" class="btn btn-success" style="width:150px"><i class="fa fa-check mr-2"></i>更新商品详情</button>
+	</div>
+  </div>
+   <!-- 图文详情 end -->
+  
+  
+</div>
+	
+<!--  <div class="form-group row" data-radio  data-rule="radio" data-value="#(goods.onSale??)"   data-name="onSale" data-default="false">
+		<label class="col-form-label col-2 col-sm-3 text-right">上架设置：</label>
+		<div class="col-8 col-sm-7">
+				<div class="radio radio-primary  radio-inline">
+				<input  id="onSale_false" type="radio" name="onSale"   value="false"/>
+				<label for="onSale_false">暂不上架</label>
+				</div>
+				
+				<div class="radio radio-primary  radio-inline">
+				<input  id="onSale_true" type="radio" name="onSale"   value="true"/>
+				<label for="onSale_true">立即上架</label>
+				</div>
+				
+				<button type="submit" class="btn btn-success" style="width:150px"><i class="fa fa-check mr-2"></i>确 定</button>
+		</div>
+	</div> -->	
+	
+	
+	
+	
+	
+	
+	
+	
+	 
+	
+</div>
+</div>
+</div>
+#end
+#define js()
+<script>
+
+$(function(){
+	openLeftNav("/admin/mall/goods");
+	var withTabs=isWithtabs();
+	if(withTabs){
+		JBoltTabUtil.changeUrl("/admin/mall/goods/edit/#(goods.id)");
+	}
+})
+</script>
+#end

@@ -1,0 +1,58 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-4">
+	<h1>JBolt资源更新管理</h1>
+	<span> #(pageData.totalRow?? 0) 条记录</span>
+	</div>
+	<div class="col-4">
+		<form class="form-inline" id="updatelibsForm" action="/admin/updatelibs" data-pjaxsubmit  method="get">
+		<input type="text" autocomplete="off"  class="form-control" placeholder="输入关键字搜索" name="keywords" value="#(keywords??)" />
+			<button  type="submit" class="btn btn-light catdata_table_searchbtn ml-2" ><i class="fa fa-search"></i> 查询</button>
+		</form>
+	</div>
+	<div class="col-4">
+	<a href="/libs" target="_blank" class="pull-right btn btn-danger" ><i class="fa fa-cog"></i> 测试资源更新接口</a>
+	<button data-area="600,400" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增更新资源" data-url="/admin/updatelibs/add" class="pull-right jbolt_table_addbtn btn btn-success" ><i class="fa fa-plus"></i> 新增</button>
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content">
+<div class="table-responsive">
+<table class="table table-bordered table-hover table-striped table-center">
+<thead>
+<tr><th style="width: 60px">序号</th><th>下载地址</th><th>target</th><th>强制每次更新</th><th>清空文件所在文件夹</th> <th  style="width: 120px">操作</th></tr>
+</thead>
+<tbody>
+#if(pageData)
+#for(data:pageData.list)
+<tr>
+<td>#(for.index+1)</td>
+<td class="text-left"><a target="_blank" href="#(data.url??)">#(data.url??)</a></td>
+<td  class="text-left">#(data.target??)</td>
+<td><img src="#(data.isMust?'/assets/img/switch/default/on.png':'/assets/img/switch/default/off.png')" data-switchbtn data-handler="refreshPjaxContainer"  data-url="/admin/updatelibs/toggleMust/#(data.id)"/></td>
+<td><img src="#(data.deleteAll?'/assets/img/switch/default/on.png':'/assets/img/switch/default/off.png')" data-switchbtn data-handler="refreshPjaxContainer"  data-url="/admin/updatelibs/toggleDeleteAll/#(data.id)"/></td>
+<td>
+<a  tooltip  title="编辑"  href="/admin/updatelibs/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="600,400" class="jbolt_table_editbtn"><i class="fa fa-pencil c-primary"></i></a>
+<a  tooltip  title="删除"  href="/admin/updatelibs/delete/#(data.id)" data-handler="removeTr" class="jbolt_table_delbtn"><i class="fa fa-remove c-danger"></i></a>
+</td>
+</tr>
+#end
+#end
+</tbody>
+</table>	
+</div>
+#include("../common/_page.html",pageEleId="updatelibsPage")
+</div>
+</div>
+#end
+#define js()
+<script>
+$(function(){
+	initPage("updatelibsPage",#(pageData.totalPage??),#(pageData.pageNumber??),"updatelibsForm");
+});
+</script>
+#end
+

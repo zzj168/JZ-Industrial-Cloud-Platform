@@ -1,0 +1,46 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-4">
+	<h1>更新下载日志记录</h1>
+	<span> #(pageData.totalRow?? 0) 条记录</span>
+	</div>
+	<div class="col-3">
+		<form class="form-inline" id="downloadlogForm" action="/admin/downloadlog" data-pjaxsubmit  method="get"></form>
+	</div>
+	<div class="col-5">
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content">
+<table class="table table-bordered table-hover table-striped table-center">
+<thead>
+<tr><th style="width: 60px">序号</th><th>IP地址</th><th>下载类型</th><th>时间</th></tr>
+</thead>
+<tbody>
+#if(pageData)
+#for(data:pageData.list)
+<tr>
+<td>#(for.index+1)</td>
+<td>#(data.ipaddress??)</td>
+<td>#(data.downloadType==1?"主程序更新":"Libs更新")</td>
+<td>#date(data.downloadTime,"yyyy-MM-dd HH:mm:ss sss")</td>
+</tr>
+#end
+#end
+</tbody>
+</table>	
+#include("../common/_page.html",pageEleId="downloadlogPage")
+</div>
+</div>
+#end
+#define js()
+<script>
+$(function(){
+	initPage("downloadlogPage",#(pageData.totalPage??),#(pageData.pageNumber??),"downloadlogForm");
+});
+</script>
+#end
+

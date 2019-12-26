@@ -1,0 +1,52 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<h1>Demo-DialogBtn组件演示</h1>
+</div>
+<div class="jbolt_page_content">
+
+<div class="row">
+<div class="col-12">
+<div class="card">
+	<div class="card-header">可以弹出Dialog的Button</div>
+	<div class="card-body">
+	<a  class="btn btn-primary" data-dialogbtn data-area="600,400" data-title="新增" href="/demo/dialogbtn/temp"><i class="fa fa-plus mr-1"></i> 超链接</a>
+	<button  class="btn btn-success" data-dialogbtn data-area="600,400" data-title="新增"  data-url="/demo/dialogbtn/temp"><i class="fa fa-plus mr-1"></i> Button按钮</button>
+	<a  class="btn btn-info" data-dialogbtn data-area="600,400" data-title="编辑"  href="/demo/dialogbtn/temp"><i class="fa fa-edit"></i></a>
+	<button  class="btn btn-dark" data-dialogbtn data-area="600,400"  data-title="编辑"  data-url="/demo/dialogbtn/temp"><i class="fa fa-edit"></i></button>
+	<a tooltip data-title="编辑"  data-dialogbtn data-area="600,400" href="/demo/dialogbtn/temp"><i class="fa fa-edit"></i></a>
+	
+	<button  class="btn btn-success" data-dialogbtn data-area="600,400" data-title="弹出没有按钮操作的dialog 一般用于查看详情" data-btn="no"  data-url="/demo/dialogbtn/temp"><i class="fa fa-info mr-1"></i> 查看详情A</button>
+	<button  class="btn btn-info" data-dialogbtn data-area="600,400" data-title="弹出只有关闭按钮操作的dialog 一般用于查看详情" data-btn="close"  data-url="/demo/dialogbtn/temp"><i class="fa fa-info mr-1"></i> 查看详情B</button>
+	<button  class="btn btn-info" data-dialogbtn data-area="600,400" data-title="带滚动条" data-btn="close" data-scroll="yes" data-url="http://www.jfinalxueyuan.com"><i class="fa fa-info mr-1"></i> 带滚动条</button>
+	<button  class="btn btn-danger" data-dialogbtn data-area="600,400" data-title="带滚动条" data-btn="close" data-scroll="yes" data-fs="true" data-url="http://www.jfinalxueyuan.com"><i class="fa fa-info mr-1"></i> 最大化</button>
+	<button  class="btn btn-warning" data-dialogbtn data-area="800,80%" data-scroll="yes" data-title="自定义按钮"   data-url="/demo/dialogbtn/btn"><i class="fa fa-info mr-1"></i> 自定义dialog按钮</button>
+	<div class="alert alert-info mt-4">
+	data-dialogbtn 属性 声明这是一个可以弹出Dialog的触发按钮
+	<br/>data-url="xxx" 指定dialog加载URL 如果是超链接 可以使用href属性
+	<br/>data-area="600,400" 指定一个dialog的尺寸大小，可以使用百分比的 data-are="600,50%" 
+	<br/>data-title="新增用户" 指定dialog的标题
+	<br/>data-btn="no" 让dialog没有操作按钮
+	<br/>data-btn="close" 让dialog只留下关闭按钮
+	<br/>data-scroll="yes" 让dialog内容页过长的出滚动条 默认没有滚动条
+	<br/>data-fs="true" 让dialog最大化显示
+	<br/>还有几个特殊属性 一般用不上 就不说了
+	</div>
+	</div>
+	</div>
+</div>
+
+ 
+</div>
+</div>
+</div>
+#end
+
+#define js()
+<script>
+
+$(function(){
+})
+</script>
+#end

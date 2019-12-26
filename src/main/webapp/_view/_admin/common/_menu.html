@@ -1,0 +1,36 @@
+<!--left top userInfo  start-->
+<div class="jbolt_admin_left_top">
+	<img class="jbolt_admin_logo" src="#globalConfig(GlobalConfigKey.SYSTEM_ADMIN_LOGO,'/assets/img/logo.png')" />
+</div>
+<!--left top userInfo  end-->
+<!--left nav menu start-->
+<div class="jbolt_admin_left_navs" data-pjax>
+#set(leftMenus=CACHE.getUserMenus(session[SessionKey.ADMIN_USER_ID]))
+#for(l1:leftMenus)
+<nav title="#(l1.title??)" class="jbolt_admin_nav #(for.first&&l1.url?"expansion":"")" data-key="#(l1.permissionKey??)">
+#if(l1.url??)
+<a #if(l1.url??) data-hasurl #end href="#(l1.url??)" #if(l1.url && l1.isTargetBlank) target="_blank" #end data-pjax data-key="#(l1.permissionKey??)"><div class="jbolt_menu_group l1link"><i class="#(l1.icons??)"></i><span>#(l1.title??)</span><i class="pull-right fa fa-angle-right title_arrow"></i></div></a>
+#else
+<div class="jbolt_menu_group"><i class="#(l1.icons??)"></i><span>#(l1.title??)</span><i class="pull-right fa fa-angle-left title_arrow"></i></div>
+#end
+#if(l1.items&&l1.items.size()>0)
+<ul class="jbolt_admin_menus">
+#for(l2:l1.items)
+<li><a #if(l2.url??) data-hasurl #end href="#(l2.url?? 'javascript:void(0)')" #if(l2.url && l2.isTargetBlank) target="_blank" #end  data-key="#(l2.permissionKey??)">#(l2.title??)</a></li>
+
+#if(l2.items&&l2.items.size()>0)
+<ul class="jbolt_admin_menus">
+#for(l3:l2.items)
+<li><a #if(l3.url??) data-hasurl #end href="#(l3.url?? 'javascript:void(0)')" #if(l3.url && l3.isTargetBlank) target="_blank" #end  data-key="#(l3.permissionKey??)">├&nbsp;#(l3.title??)</a></li>
+#end
+</ul>
+#end
+
+#end
+</ul>
+#end
+</nav>
+#end
+	
+</div>
+<!--left nav menu end-->

@@ -1,0 +1,28 @@
+<div class="jbolt_ajaxportal_content">
+<div class="jbolt_slave_top">
+<button data-area="600,300" data-scroll="yes"  data-handler="refreshPortal" data-portalid="nav-mainfile" data-title="新增文件" data-url="/admin/jboltversion/addFile/#(jboltVersionId??)" class="jbolt_table_addbtn btn btn-success btn-sm" ><i class="fa fa-plus"></i> 新增</button>
+</div>
+<div class="jbolt_slave_body">
+<div class="table-responsive">
+<table class="table table-bordered table-hover table-striped table-center table-sm">
+<thead>
+<tr><th style="width: 60px">序号</th><th>URL</th><th  style="width: 120px">操作</th></tr>
+</thead>
+<tbody>
+#for(data:files)
+<tr>
+<td>#(for.index+1)</td>
+<td>#(data.url??)</td>
+<td>
+<a  title="编辑"  href="/admin/jboltversion/editFile/#(data.id)" data-scroll="yes"  data-handler="refreshPortal" data-portalid="nav-mainfile" data-title="编辑" data-area="600,300" class="jbolt_table_editbtn"><i class="fa fa-pencil c-primary"></i></a>
+<a  title="删除"  href="/admin/jboltversion/deleteFile/#(data.id)" data-handler="removeTr" class="jbolt_table_delbtn"><i class="fa fa-remove c-danger"></i></a>
+</td>
+</tr>
+#end
+</tbody>
+</table>	
+</div>
+</div>
+</div>
+
+

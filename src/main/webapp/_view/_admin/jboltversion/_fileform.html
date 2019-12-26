@@ -1,0 +1,15 @@
+<form onsubmit="return false;" id="jboltVersionFileForm" action="#(action)" method="post">
+	#if(jboltVersionFile.id??)
+		<input type="hidden" name="jboltVersionFile.id" value="#(jboltVersionFile.id)" />
+	#end
+		<input type="hidden" name="jboltVersionFile.jboltVersionId" value="#(jboltVersionId??)" />
+	<div class="form-group">
+		<label>下载地址</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" data-tips="请输文件地址" maxlength="255" name="jboltVersionFile.url" value="#(jboltVersionFile.url??)">
+	</div>
+	
+	 
+</form>
+#define js()
+#include("/_view/_admin/common/_formjs.html",formId="jboltVersionFileForm")
+#end

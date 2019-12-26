@@ -1,0 +1,22 @@
+<form onsubmit="return false;" id="goodsTypeForm" action="#(action)" method="post">
+	#if(goodsType.id??)
+		<input type="hidden" name="goodsType.id" value="#(goodsType.id)" />
+	<div class="form-group">
+		<label>请输入名称:</label>
+		<input type="text" autocomplete="off" autofocus="autofocus"  class="form-control" data-rule="required;len<=100" data-tips="请输入名称" maxlength="100" name="goodsType.name" value="#(goodsType.name??)">
+	</div>
+	<div class="form-group">
+		<label>请输入备注:</label>
+		<textarea style="height: 100px;" autocomplete="off"  class="form-control" data-rule="len<=200" data-tips="请输入备注信息"  data-notnull="false" maxlength="200" name="goodsType.remark">#(goodsType.remark??)</textarea>
+	</div>
+	#else
+	<div class="form-group">
+		<label>请输入名称:</label>
+		<textarea style="height: 160px;" autocomplete="off" autofocus="autofocus"  class="form-control" data-rule="required;len<=200" data-tips="请输入名称" placeholder="请输入名称 如果添加多个 请使用空格隔开" maxlength="200" name="goodsType.name">#(goodsType.name??)</textarea>
+	</div>
+	#end
+	
+</form>
+#define js()
+#include("/_view/_admin/common/_formjs.html",formId="goodsTypeForm")
+#end

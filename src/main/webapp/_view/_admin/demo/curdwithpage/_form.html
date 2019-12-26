@@ -1,0 +1,18 @@
+<form onsubmit="return false;" id="jboltVersionForm" action="#(action)" method="post">
+	#if(jboltVersion.id??)
+		<input type="hidden" name="jboltVersion.id" value="#(jboltVersion.id)" />
+	#end
+	<div class="form-group">
+		<label>版本号</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" data-tips="请输入版本号" maxlength="40" name="jboltVersion.version" value="#(jboltVersion.version??)">
+	</div>
+	
+	<div class="form-group">
+		<label>发布时间</label>
+		<input type="date"  class="form-control" data-rule="required" data-tips="请输入发布时间" maxlength="20" name="jboltVersion.publishTime" value="#date(((jboltVersion.publishTime)?? DateUtil.getNow()),'yyyy-MM-dd')">
+	</div>
+	 
+</form>
+#define js()
+#include("/_view/_admin/common/_formjs.html",formId="jboltVersionForm")
+#end

@@ -1,0 +1,46 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-9">
+	<h1>系统全局配置管理</h1>
+	<span> #(globalConfigs.size()) 条记录</span>
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content">
+<table class="table jbolt_table table-bordered table-hover table-striped table-center">
+<thead>
+<tr><th style="width: 60px">序号</th><th style="width: 300px">配置项</th><th style="width: 200px">配置项Value</th><th style="width: 150px">更新时间</th><th  style="width: 120px">编辑</th><th></th></tr>
+</thead>
+<tbody>
+#for(data:globalConfigs)
+<tr>
+<td>#(for.index+1)</td>
+<td>#(data.name??)</td>
+<td>#(data.configValue??)</td>
+<td>#date(data.updateTime??,"yyyy-MM-dd HH:mm")</td>
+<td>
+#if(data.configKey==GlobalConfigKey.JBOLT_ADMIN_WITH_TABS)
+<a  tooltip  title="编辑"  href="/admin/globalconfig/edit/#(data.id)" data-scroll="yes" data-handler="reloadCurrentPage" data-title="编辑" data-area="600,300" class="jbolt_table_editbtn"><i class="fa fa-pencil c-primary"></i></a>
+#else
+<a  tooltip  title="编辑"  href="/admin/globalconfig/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="600,300" class="jbolt_table_editbtn"><i class="fa fa-pencil c-primary"></i></a>
+#end
+
+</td>
+<td></td>
+</tr>
+#end
+</tbody>
+</table>	
+</div>
+</div>
+#end
+#define js()
+<script>
+$(function(){
+});
+</script>
+#end
+

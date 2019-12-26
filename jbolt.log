@@ -1,0 +1,160 @@
+
+2019-11-14 15:28:08
+[WARN]-[Thread: XNIO-1 task-3]-[com.jfinal.plugin.ehcache.CacheKit.getOrAddCache()]: Could not find cache config [/admin/mall/goods/isHotOptions], using default.
+
+2019-11-14 15:28:08
+[WARN]-[Thread: XNIO-1 task-1]-[com.jfinal.plugin.ehcache.CacheKit.getOrAddCache()]: Could not find cache config [/admin/mall/goods/isRecommendOptions], using default.
+
+2019-11-14 15:28:08
+[WARN]-[Thread: XNIO-1 task-4]-[com.jfinal.plugin.ehcache.CacheKit.getOrAddCache()]: Could not find cache config [/admin/mall/goods/onSaleOptions], using default.
+
+2019-11-14 15:29:14
+[WARN]-[Thread: XNIO-1 task-3]-[com.jfinal.plugin.ehcache.CacheKit.getOrAddCache()]: Could not find cache config [/admin/mall/goods/isHotOptions], using default.
+
+2019-11-14 15:29:14
+[WARN]-[Thread: XNIO-1 task-4]-[com.jfinal.plugin.ehcache.CacheKit.getOrAddCache()]: Could not find cache config [/admin/mall/goods/isRecommendOptions], using default.
+
+2019-11-14 15:29:14
+[WARN]-[Thread: XNIO-1 task-1]-[com.jfinal.plugin.ehcache.CacheKit.getOrAddCache()]: Could not find cache config [/admin/mall/goods/onSaleOptions], using default.
+
+2019-11-17 00:10:04
+[ERROR]-[Thread: XNIO-12 task-3]-[com.jfinal.core.ActionHandler.handle()]: cn.jbolt._admin.permission.PermissionAdminController.index() : /admin/permission
+com.jfinal.template.TemplateException: 你的主机中的软件中止了一个已建立的连接。
+Template: "/_view/_admin/permission/index.html". Line: 55
+	at com.jfinal.template.stat.ast.Text.exec(Text.java:51)
+	at com.jfinal.template.stat.ast.StatList.exec(StatList.java:68)
+	at com.jfinal.template.stat.ast.For.forIterator(For.java:74)
+	at com.jfinal.template.stat.ast.For.exec(For.java:53)
+	at com.jfinal.template.stat.ast.StatList.exec(StatList.java:68)
+	at com.jfinal.template.stat.ast.Define.call(Define.java:105)
+	at com.jfinal.template.stat.ast.Call.exec(Call.java:49)
+	at com.jfinal.template.stat.ast.StatList.exec(StatList.java:68)
+	at com.jfinal.template.stat.ast.Else.exec(Else.java:35)
+	at com.jfinal.template.stat.ast.If.exec(If.java:56)
+	at com.jfinal.template.stat.ast.StatList.exec(StatList.java:68)
+	at com.jfinal.template.stat.ast.Define.call(Define.java:105)
+	at com.jfinal.template.stat.ast.Call.exec(Call.java:49)
+	at com.jfinal.template.stat.ast.Else.exec(Else.java:35)
+	at com.jfinal.template.stat.ast.If.exec(If.java:56)
+	at com.jfinal.template.stat.ast.Define.call(Define.java:105)
+	at com.jfinal.template.stat.ast.Call.exec(Call.java:49)
+	at com.jfinal.template.stat.ast.StatList.exec(StatList.java:68)
+	at com.jfinal.template.Template.render(Template.java:58)
+	at com.jfinal.render.TemplateRender.render(TemplateRender.java:60)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:114)
+	at cn.jbolt.common.safe.XssHandler.handle(XssHandler.java:18)
+	at cn.jbolt.base.BaseHandler.handle(BaseHandler.java:55)
+	at com.jfinal.plugin.druid.DruidStatViewHandler.handle(DruidStatViewHandler.java:81)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:89)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:269)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:78)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:133)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:130)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:249)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:78)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:99)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:376)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.writev0(Native Method)
+	at sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:55)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:148)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:504)
+	at org.xnio.nio.NioSocketConduit.write(NioSocketConduit.java:184)
+	at io.undertow.server.protocol.http.HttpResponseConduit.write(HttpResponseConduit.java:647)
+	at io.undertow.conduits.ChunkedStreamSinkConduit.doWrite(ChunkedStreamSinkConduit.java:166)
+	at io.undertow.conduits.ChunkedStreamSinkConduit.write(ChunkedStreamSinkConduit.java:128)
+	at io.undertow.conduits.ChunkedStreamSinkConduit.write(ChunkedStreamSinkConduit.java:219)
+	at org.xnio.conduits.ConduitStreamSinkChannel.write(ConduitStreamSinkChannel.java:158)
+	at io.undertow.channels.DetachableStreamSinkChannel.write(DetachableStreamSinkChannel.java:179)
+	at io.undertow.server.HttpServerExchange$WriteDispatchChannel.write(HttpServerExchange.java:2070)
+	at org.xnio.channels.Channels.writeBlocking(Channels.java:152)
+	at io.undertow.servlet.spec.ServletOutputStreamImpl.writeTooLargeForBuffer(ServletOutputStreamImpl.java:198)
+	at io.undertow.servlet.spec.ServletOutputStreamImpl.write(ServletOutputStreamImpl.java:146)
+	at com.jfinal.template.io.ByteWriter.write(ByteWriter.java:90)
+	at com.jfinal.template.stat.ast.Text.exec(Text.java:49)
+	... 56 more
+
+2019-11-17 00:10:04
+[ERROR]-[Thread: XNIO-12 task-3]-[com.jfinal.core.JFinalFilter.doFilter()]: /admin/permission
+com.jfinal.template.TemplateException: UT010029: Stream is closed
+Template: "/_view/_admin/common/msg/500.html". Line: 1
+	at com.jfinal.template.stat.ast.Text.exec(Text.java:51)
+	at com.jfinal.template.stat.ast.StatList.exec(StatList.java:68)
+	at com.jfinal.template.Template.render(Template.java:58)
+	at com.jfinal.render.TemplateRender.render(TemplateRender.java:60)
+	at com.jfinal.render.ErrorRender.render(ErrorRender.java:51)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:132)
+	at cn.jbolt.common.safe.XssHandler.handle(XssHandler.java:18)
+	at cn.jbolt.base.BaseHandler.handle(BaseHandler.java:55)
+	at com.jfinal.plugin.druid.DruidStatViewHandler.handle(DruidStatViewHandler.java:81)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:89)
+	at io.undertow.servlet.core.ManagedFilter.doFilter(ManagedFilter.java:61)
+	at io.undertow.servlet.handlers.FilterHandler$FilterChainImpl.doFilter(FilterHandler.java:131)
+	at io.undertow.servlet.handlers.FilterHandler.handleRequest(FilterHandler.java:84)
+	at io.undertow.servlet.handlers.security.ServletSecurityRoleHandler.handleRequest(ServletSecurityRoleHandler.java:62)
+	at io.undertow.servlet.handlers.ServletChain$1.handleRequest(ServletChain.java:68)
+	at io.undertow.servlet.handlers.ServletDispatchingHandler.handleRequest(ServletDispatchingHandler.java:36)
+	at io.undertow.servlet.handlers.RedirectDirHandler.handleRequest(RedirectDirHandler.java:68)
+	at io.undertow.servlet.handlers.security.SSLInformationAssociationHandler.handleRequest(SSLInformationAssociationHandler.java:132)
+	at io.undertow.servlet.handlers.security.ServletAuthenticationCallHandler.handleRequest(ServletAuthenticationCallHandler.java:57)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.security.handlers.AbstractConfidentialityHandler.handleRequest(AbstractConfidentialityHandler.java:46)
+	at io.undertow.servlet.handlers.security.ServletConfidentialityConstraintHandler.handleRequest(ServletConfidentialityConstraintHandler.java:64)
+	at io.undertow.security.handlers.AuthenticationMechanismsHandler.handleRequest(AuthenticationMechanismsHandler.java:60)
+	at io.undertow.servlet.handlers.security.CachedAuthenticatedSessionHandler.handleRequest(CachedAuthenticatedSessionHandler.java:77)
+	at io.undertow.security.handlers.AbstractSecurityContextAssociationHandler.handleRequest(AbstractSecurityContextAssociationHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.server.handlers.PredicateHandler.handleRequest(PredicateHandler.java:43)
+	at io.undertow.servlet.handlers.SessionRestoringHandler.handleRequest(SessionRestoringHandler.java:119)
+	at io.undertow.servlet.handlers.ServletInitialHandler.handleFirstRequest(ServletInitialHandler.java:269)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$100(ServletInitialHandler.java:78)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:133)
+	at io.undertow.servlet.handlers.ServletInitialHandler$2.call(ServletInitialHandler.java:130)
+	at io.undertow.servlet.core.ServletRequestContextThreadSetupAction$1.call(ServletRequestContextThreadSetupAction.java:48)
+	at io.undertow.servlet.core.ContextClassLoaderSetupAction$1.call(ContextClassLoaderSetupAction.java:43)
+	at io.undertow.servlet.handlers.ServletInitialHandler.dispatchRequest(ServletInitialHandler.java:249)
+	at io.undertow.servlet.handlers.ServletInitialHandler.access$000(ServletInitialHandler.java:78)
+	at io.undertow.servlet.handlers.ServletInitialHandler$1.handleRequest(ServletInitialHandler.java:99)
+	at io.undertow.server.Connectors.executeRootHandler(Connectors.java:376)
+	at io.undertow.server.HttpServerExchange$1.run(HttpServerExchange.java:830)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: UT010029: Stream is closed
+	at io.undertow.servlet.spec.ServletOutputStreamImpl.write(ServletOutputStreamImpl.java:137)
+	at com.jfinal.template.io.ByteWriter.write(ByteWriter.java:90)
+	at com.jfinal.template.stat.ast.Text.exec(Text.java:49)
+	... 41 more
+
+2019-11-18 13:57:56
+[WARN]-[Thread: XNIO-1 task-3]-[com.jfinal.plugin.ehcache.CacheKit.getOrAddCache()]: Could not find cache config [/admin/mall/goods/onSaleOptions], using default.
+
+2019-11-18 13:57:56
+[WARN]-[Thread: XNIO-1 task-1]-[com.jfinal.plugin.ehcache.CacheKit.getOrAddCache()]: Could not find cache config [/admin/mall/goods/isRecommendOptions], using default.
+
+2019-11-18 13:57:56
+[WARN]-[Thread: XNIO-1 task-4]-[com.jfinal.plugin.ehcache.CacheKit.getOrAddCache()]: Could not find cache config [/admin/mall/goods/isHotOptions], using default.

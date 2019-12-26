@@ -1,0 +1,17 @@
+<div class="jbolt_ajaxportal_content">
+<div class="jbolt_slave_top">
+<div class="btn-group btn-group-sm" role="group" aria-label="工具栏" style="margin: 0px 3px;">
+<button type="button" data-area="900,85%" data-dialogbtn  data-scroll="yes"  data-handler="refreshPortal" data-portalid="nav-changelog" data-title="编辑日志" data-url="/admin/jboltversion/changelog/#(jboltVersionId??)" class="btn btn-success" ><i class="fa fa-pencil"></i> 编辑日志内容</button>
+<button type="button" data-area="900,85%" data-dialogbtn data-btn="close" data-contentid="ms_changelog_content" data-scroll="yes" data-title="查看日志"  class="btn btn-info" ><i class="fa fa-search-plus"></i> 弹出查看</button>
+</div>
+</div>
+<div class="jbolt_slave_body">
+<div class="card"  style="max-width:900px;margin:10px auto;">
+<div class="card-body" id="ms_changelog_content">
+#(changelog.content?? '<div style="width:200px;margin:20px auto;" class="text-center alert alert-danger">暂无内容</div>')
+</div>
+</div>
+</div>
+</div>
+
+

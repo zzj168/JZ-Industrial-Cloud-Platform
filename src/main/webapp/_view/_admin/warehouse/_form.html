@@ -1,0 +1,25 @@
+<form onsubmit="return false;" id="warehouseForm" action="#(action)" method="post">
+	#if(warehouse.id??)
+		<input type="hidden" name="warehouse.id" value="#(warehouse.id)" />
+	#end
+	<div class="form-group">
+		<label>仓库名称</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入名称" data-tips="请输入名称" maxlength="50" name="warehouse.warehouseName" value="#(warehouse.warehouseName??)">
+	</div>
+	<div class="form-group">
+		<label>位置</label>                                                 
+		<select class="form-control" data-rule="required"  data-tips="请选择位置" data-url="/admin/warehouse/dictionary?key=warehouseposition"  name="warehouse.warehousePosition" data-autoload data-text="=请选择位置=" data-value="" data-select="#(warehouse.warehousePosition??)"></select>
+	</div>	
+	<div class="form-group">
+		<label>类型</label>                                                 
+		<select class="form-control" data-rule="required"  data-tips="请选择类型" data-url="/admin/warehouse/dictionary?key=warehousetype"  name="warehouse.warehouseType" data-autoload data-text="=请选择类型=" data-value="" data-select="#(warehouse.warehouseType??)"></select>
+	</div>
+	<div class="form-group">
+		<label>仓位数量</label>
+		<input type=number" autocomplete="off" min="0"  class="form-control" data-rule="pznumber;len<=10" placeholder="请输入仓位数量" data-tips="请输入仓位数量" maxlength="50" name="warehouse.num" value="#(warehouse.num??)">
+		<small  class="form-text text-muted">填写数字需>=0</small>
+	</div>
+</form>
+#define js()
+#include("/_view/_admin/common/_formjs.html",formId="warehouseForm")
+#end

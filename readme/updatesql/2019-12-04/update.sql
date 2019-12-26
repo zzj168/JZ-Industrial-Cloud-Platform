@@ -1,0 +1,1 @@
+alter table jb_global_config add column `value_type` varchar(40) DEFAULT NULL COMMENT '配置项值类型'

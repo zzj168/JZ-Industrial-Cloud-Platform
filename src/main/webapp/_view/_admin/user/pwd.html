@@ -1,0 +1,65 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-9">
+	<h1>密码修改</h1>
+	</div>
+	<div class="col-3">
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content" style="padding-top: 80px;">
+	<form onsubmit="return false;"  id="userPwdForm" action="/admin/user/updatepwd" method="post" style="margin:auto;width:600px">
+	<div class="form-group row">
+		<label class="offset-1 col-2 col-form-label">原密码</label>
+		<div class="col-8">
+			<input type="password" autocomplete="off"  autocomplete="off" class="form-control" data-rule="required"  placeholder="请输入原登录密码"  maxlength="40" name="oldPwd" >
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="offset-1 col-2 col-form-label">新密码</label>
+		<div class="col-8">
+			<input type="password" autocomplete="off"   autocomplete="off" class="form-control" data-rule="required" placeholder="请输入新密码"  maxlength="40" id="newPwd" name="newPwd" >
+		</div>
+	</div>
+	<div class="form-group row">
+		<label class="offset-1 col-2 col-form-label">确认新密码</label>
+		<div class="col-8">
+			<input type="password" autocomplete="off"   autocomplete="off" class="form-control" data-rule="==#newPwd" data-tips="两次密码输入不一致"  placeholder="请输入确认新密码"  maxlength="40" name="reNewPwd" >
+		</div>
+	</div>
+	<div class="form-group text-center">
+		<button class="btn btn-primary" type="button" onclick="submitThisForm()">确认修改</button>
+	</div>
+	</form>
+
+</div>
+</div>
+#end
+#define js()
+<script type="text/javascript">
+function submitThisForm(){
+	var form=$("#userPwdForm");
+	if(FormChecker.check(form)){
+		var url=form.action;
+		form.ajaxSubmit({
+			type:"post",
+			url:url,
+			success:function(ret){
+				if(ret.state=="ok"){
+					LayerMsgBox.success(ret.msg,1500,function(){
+						refreshPjaxContainer();
+					});
+				}else{
+					LayerMsgBox.error(ret.msg);
+				}
+			}
+		});
+	}
+}
+</script>
+#end
+
+

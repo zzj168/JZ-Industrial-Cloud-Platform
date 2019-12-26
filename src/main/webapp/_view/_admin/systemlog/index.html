@@ -1,0 +1,82 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-4">
+	<h1>系统操作日志</h1>
+	<span> #(pageData.totalRow?? 0) 条记录</span>
+	</div>
+	<div class="col-7 text-center">
+		<form class="form-inline" id="systemlogForm" action="/admin/systemlog" method="get" data-pjaxsubmit>
+			<input type="text" autocomplete="off"  class="form-control"  placeholder="输入关键字搜索" name="keywords" value="#(keywords??)" />
+			<input type="input" data-date class="form-control ml-2"   placeholder="开始日期"   maxlength="20" name="startTime" value="#date((startTime?? DateUtil.getNow()),'yyyy-MM-dd')">
+			<span class="ml-1 mr-1">至</span>
+			<input type="input" data-date class="form-control"  placeholder="截止日期"   maxlength="20" name="endTime" value="#date((endTime?? DateUtil.getNow()),'yyyy-MM-dd')">
+			<button  type="submit" class="btn btn-light" ><i class="fa fa-search"></i> 查询</button>
+		</form>
+	</div>
+	<div class="col-1">
+	<button onclick="refreshPjaxContainer()"  class="pull-right  btn btn-success" ><i class="fa fa-refresh"></i> 刷新</button>
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content">
+<div class="table-responsive">
+<table class="table table-bordered table-hover table-striped table-center">
+<thead>
+<tr><th style="width: 60px">序号</th><th>日志</th><th>操作类型</th><th>数据类型</th><th >操作人</th><th>记录时间</th></tr>
+</thead>
+<tbody>
+#if(pageData)
+#for(data:pageData.list)
+<tr>
+<td>#(for.index+1)</td>
+<td class="text-left">
+#if((data.url) && data.type!=cn.jbolt.common.model.SystemLog::TYPE_DELETE)
+<a href="#(data.url)" data-pjax>#(data.title??)</a>
+#else
+#(data.title??)
+#end
+</td>
+<td>
+#if(data.type&&data.type==1)
+<span class="text-primary">#(data.typeName??)</span>	
+#else if(data.type&&data.type==2)
+<span class="text-success">#(data.typeName??)</span>
+#else if(data.type&&data.type==3)
+<span class="text-danger">#(data.typeName??)</span>
+#else if(data.type&&data.type==4)
+<span class="text-danger">#(data.typeName??)</span>
+#else if(data.type&&data.type==5)
+<span class="text-success">#(data.typeName??)</span>
+#else if(data.type&&data.type==6)
+<span class="text-primary">#(data.typeName??)</span>
+#else
+<span class="text-default">#(data.typeName??)</span>	
+#end
+</td>
+<td>
+<span class="text-info">#(data.targetTypeName??)</span>	
+</td>
+<td>#(data.userName??)</td>
+<td>#date(data.createTime??,"yyyy-MM-dd HH:mm:ss")</td>
+</tr>
+#end
+#end
+</tbody>
+</table>
+</div>	
+#include("../common/_page.html",pageEleId="systemlogPage")
+</div>
+</div>
+#end
+#define js()
+<script>
+$(function(){
+	//初始化page
+	initPage("systemlogPage",#(pageData.totalPage??),#(pageData.pageNumber??),"systemlogForm");
+});
+</script>
+#end
+

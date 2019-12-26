@@ -1,0 +1,20 @@
+<form onsubmit="return false;" id="customerForm" action="#(action)" method="post">
+	#if(customer.id??)
+		<input type="hidden" name="customer.id" value="#(customer.id)" />
+	#end
+	<div class="form-group">
+		<label>客户名称</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入名称" data-tips="请输入名称" maxlength="50" name="customer.customerName" value="#(customer.customerName??)">
+	</div>
+	<div class="form-group">
+		<label>地区/区域</label>                                                 
+		<select class="form-control" data-rule="required"  data-tips="请选择区域" data-url="/admin/customer/dictionary?key=area"  name="customer.customerArea" data-autoload data-text="=请选择区域=" data-value="" data-select="#(customer.customerArea??)"></select>
+	</div>	
+	<div class="form-group">
+		<label>等级</label>                                                 
+		<select class="form-control" data-rule="required"  data-tips="请选择等级" data-url="/admin/customer/dictionary?key=level"  name="customer.customerLevel" data-autoload data-text="=请选择等级=" data-value="" data-select="#(customer.customerLevel??)"></select>
+	</div>
+</form>
+#define js()
+#include("/_view/_admin/common/_formjs.html",formId="customerForm")
+#end

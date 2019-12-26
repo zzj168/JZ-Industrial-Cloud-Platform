@@ -1,0 +1,130 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page2" data-key="#(pmkey)">
+	<div class="row pm0">
+	<div class="top_nav2">
+    <ul>
+        <li class="l1"><a href="/admin/supplymanage" data-key="supplymanage">入库管理</a></li>
+        <li class="l2"><a href="/admin/salemanage" data-key="salemanage">销售管理</a></li>
+        <li class="l3"><a href="/admin/warehousemanage" data-key="warehousemanage" class="active">出库管理</a></li>
+    </ul>
+</div>
+	</div>
+<div class="jbolt_page_title">
+	<div class="search">
+			<button data-area="100%,100%" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增出库信息" data-url="/admin/warehousemanage/add" class="xinzeng jbolt_table_addbtn"></button>
+		<input name="" type="text" class="search1" placeholder="请输入关键词" />
+		<input type="button" class="search2">
+		</div>
+	<div class="row disno">
+	<div class="col-9">
+		<h1>出库管理</h1>
+		<span> #(pageData.totalRow?? 0)条记录</span>
+	</div>
+	<div class="col-3">
+		<button class="pull-right btn btn-primary"><i class="fa fa-cloud-download"></i> 下载</button>
+		<button class="pull-right btn btn-danger mr-2"><i class="fa fa-paper-plane-o"></i> 上传</button>
+		<button data-area="600,500" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增出库信息" data-url="/admin/warehousemanage/add" class="pull-right jbolt_table_addbtn btn btn-success mr-2" ><i class="fa fa-plus"></i> 新增</button>
+	</div>
+	</div>
+</div>
+
+<div class="jbolt_page_content">
+<table class="table table-bordered table-hover table-striped table-center">
+<thead>
+	<tr><th style="width: 60px">编号</th>
+	<th>物料名称</th>
+	<th style="width: 150px">种类</th>
+	<th style="width: 100px;">型号</th>
+	<th>生产工序</th>
+	<th>数量</th>
+	<th>入库日期</th>
+	<th>出库日期</th>
+	<th>库位余位</th>
+	<th>添加日期</th>	
+	<th style="width: 100px">操作</th></tr>
+</thead>
+	<tbody>
+	#for(data:pageData.list)
+	<tr>
+	<td>#(for.index+1)</td>
+	<td>#(data.materialName??)</td>	
+	<td>#(CACHE.getDictionaryName(data.materialType??))</td>
+	<td>#(CACHE.getDictionaryName(data.materialModel??))</td>
+	<td>#(CACHE.getDictionaryName(data.productionProcesses??))</td>
+	<td>#(data.num??)</td>	
+	<td>#date(data.inDate??,"yyyy-MM-dd")</td>	
+	<td>#date(data.outDate??,"yyyy-MM-dd")</td>	
+	<td>#(data.locationNum??)</td>
+	<td>#date(data.createTime??,"yyyy-MM-dd HH:mm")</td>
+	<td>
+		<a  tooltip  title="编辑"  href="/admin/warehousemanage/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="600,500" class="jbolt_table_editbtn"><i class="fa fa-pencil c-primary"></i></a>
+		<a  tooltip  title="删除"  href="/admin/warehousemanage/delete/#(data.id)" data-handler="removeTr" class="jbolt_table_delbtn"><i class="fa fa-remove c-danger"></i></a>
+	</td>
+	</tr>
+	#end
+	</tbody>
+</table>	
+</div>
+
+<div class="jichu1_div">
+	<ul class="jichu1_li">
+		<li>编号</li>
+		<li>物料名称</li>
+		<li>种类</li>
+		<li>型号</li>
+		<li>产品规格</li>
+	</ul>
+</div>
+<div class="accordion">
+#for(data:pageData.list)
+	<ul>
+		<li>
+			<div class="item">
+				<ul class="jichu1_li">
+					<li>#(for.index+1)</li>
+					<li>#(data.materialName??)</li>
+					<li>#(CACHE.getDictionaryName(data.materialType??))</li>
+					<li>#(CACHE.getDictionaryName(data.materialModel??))</li>
+					<li>#(CACHE.getDictionaryName(data.productionProcesses??))</li>
+				</ul>
+		   </div>
+			<div class="dis">编号：#(for.index+1)<br />
+			物料名称：#(data.materialName??)<br />
+			种类：#(CACHE.getDictionaryName(data.materialType??))<br />
+			型号：#(CACHE.getDictionaryName(data.materialModel??))<br />
+			产品规格：#(CACHE.getDictionaryName(data.productionProcesses??))<br />
+			数量：#(data.num??)<br />
+			入库日期：#date(data.inDate??,"yyyy-MM-dd")<br />
+			出库日期：#date(data.outDate??,"yyyy-MM-dd")<br />
+			库位余位：#(data.locationNum??)<br />
+			添加日期：#date(data.createTime??,"yyyy-MM-dd HH:mm")
+				<div class="an_line">
+					<a  tooltip  title="编辑"  href="/admin/warehousemanage/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="100%,100%" class="blue jbolt_table_editbtn">编辑</a>
+		<a  tooltip  title="删除"  href="/admin/warehousemanage/delete/#(data.id)" data-handler="removeTr" class="red jbolt_table_delbtn">删除</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+#end
+</div>
+
+<script src="/assets/js/vue.min.js"></script>
+<script src="/assets/js/main.js"></script>
+</div>
+<div class="foot_nav">
+    <ul>
+        <li class="l1"><a href="/admin/bom" data-key="bom">基础</a></li>
+        <li class="l2"><a href="/admin/supplymanage" data-key="supplymanage" class="active">业务</a></li>
+        <li class="l3"><a href="/admin/dashboard" data-key="dashboard">报表</a></li>
+        <li class="l4"><a href="/admin/user/pwd" data-key="userpwd">我的</a></li>
+    </ul>
+</div>
+#end
+#define js()
+<script>
+$(function(){
+});
+</script>
+#end
+

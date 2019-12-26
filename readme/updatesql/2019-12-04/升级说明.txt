@@ -1,0 +1,2 @@
+jb_global_config表新增一个value_type字段，请执行update.sql增加字段。
+然后启动系统，进入后台系统设置-全局配置页面即可完成升级初始化。

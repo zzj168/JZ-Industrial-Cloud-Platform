@@ -1,0 +1,56 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-4">
+	<h1>JBolt版本管理</h1>
+	<span> #(pageData.totalRow?? 0) 条记录</span>
+	</div>
+	<div class="col-3">
+		<form class="form-inline" id="demo_jboltversionForm1" action="/demo/curdwithpage" data-pjaxsubmit  method="get">
+		<input type="text" autocomplete="off"  class="form-control"  placeholder="输入关键字搜索" name="keywords" value="#(keywords??)" />
+		<button  type="submit" class="btn btn-light" ><i class="fa fa-search"></i> 查询</button>
+		</form>
+	</div>
+	<div class="col-5">
+	<button data-area="600,400" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增版本" data-url="/demo/curdwithpage/add" class="pull-right jbolt_table_addbtn btn btn-success" ><i class="fa fa-plus"></i> 新增</button>
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content">
+<div class="table-responsive">
+<table class="table table-bordered table-hover table-striped table-center">
+<thead>
+<tr><th style="width: 60px">序号</th><th style="width: 150px">版本号</th><th style="width: 150px">发布时间</th><th style="width: 150px">创建时间</th><th  style="width: 120px">操作</th></tr>
+</thead>
+<tbody>
+#if(pageData)
+#for(data:pageData.list)
+<tr>
+<td>#(for.index+1)</td>
+<td>#(data.version??)</td>
+<td>#date(data.publishTime??,"yyyy-MM-dd HH:mm")</td>
+<td>#date(data.createTime??,"yyyy-MM-dd HH:mm")</td>
+<td>
+<a  tooltip  title="编辑"  href="/demo/curdwithpage/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="600,400" class="jbolt_table_editbtn"><i class="fa fa-pencil c-primary"></i></a>
+<a  tooltip  title="删除"  href="/demo/curdwithpage/delete/#(data.id)" data-handler="removeTr" class="jbolt_table_delbtn"><i class="fa fa-remove c-danger"></i></a>
+</td>
+</tr>
+#end
+#end
+</tbody>
+</table>	
+</div>
+#include("../../common/_page.html",pageEleId="demo_jboltversionPage1")
+</div>
+</div>
+#end
+#define js()
+<script>
+$(function(){
+	initPage("demo_jboltversionPage1",#(pageData.totalPage??),#(pageData.pageNumber??),"demo_jboltversionForm1");
+});
+</script>
+#end
+

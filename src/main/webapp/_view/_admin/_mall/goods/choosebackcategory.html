@@ -1,0 +1,179 @@
+#@adminLayout()
+#define css()
+<style type="text/css">
+ 
+</style>
+#end
+
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)"  data-dontchangeleftnav="true">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-12">
+	<h1>
+	#setLocal(JboltWithTabs=CACHE.getUserJBoltAdminWithTabs(session[SessionKey.ADMIN_USER_ID]))
+	#if(JboltWithTabs) 
+	<i class="fa fa-list"></i>
+	#else
+	<a class="btn btn-outline-secondary mr-1" tooltip data-title="返回商品列表" data-pjax href="/admin/mall/goods"><i class="fa fa-chevron-left"></i></a>
+	#end 
+	#if(goodsId??)
+	商品管理-修改商品后端分类-[#(goodsName??)]
+	#else
+	商品管理-添加商品-选择商品分类
+	#end
+	</h1>
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content">
+<div class="j_category_title">当前选择的是：<span id="j_choose_categorys_#(goodsId?? 0)">#(goodsBackCategoryFullName?? "暂未选择")</span> （<span class="text-danger">涉及规格和属性，请谨慎选择</span>）</div>
+<div class="j_category_selectbox" id="category_select_box_#(goodsId?? 0)">
+
+</div>	
+<form action="/admin/mall/goods/#((goodsId??)?'updateBackCategory':'add')" data-submittabportal id="categoryChooseForm_#(goodsId?? 0)" method="get">
+#if(goodsId??)
+<input type="hidden" name="goodsId" value="#(goodsId??)"/>
+#end
+<input type="hidden" name="categoryId" value="#(categoryId??)" id="mall_goods_categoryId_#(goodsId?? 0)" data-rule="required;pint" data-tips="请选择商品分类"/>
+<div class="text-center" style="margin-top:20px;"><button id="goods_preadd_nextokBtn_#(goodsId?? 0)" disabled="disabled" type="button"  style="width:200px" class="btn btn-success">选定分类，进入下一步</button></div>
+</form>
+</div>
+</div>
+#end
+#define js()
+<script>
+
+
+ $(function(){
+function initEditGoodsCategory_#(goodsId?? 0)(){
+
+	 #if(goodsId??)
+			let key="#(bcategoryKey??)";
+			 let keyArr=key.split("_");
+			 let size=keyArr.length;
+			 let checkedIndex=0;
+		#end
+
+
+		//下一步按钮
+		let goods_preadd_nextokBtn=$("#goods_preadd_nextokBtn_#(goodsId?? 0)");
+		//选择分类的 父box
+		let category_select_box=$("#category_select_box_#(goodsId?? 0)");
+		//已经选了谁
+		let j_choose_categorys=$("#j_choose_categorys_#(goodsId?? 0)");
+		//最终选择分类的ID
+		let mall_goods_categoryId=$("#mall_goods_categoryId_#(goodsId?? 0)");
+
+		goods_preadd_nextokBtn.on("click",submitThisForm);
+		/**
+		 * 初始化一个类目列表 根据传入的PID找子类
+		 */
+		function initCategorySelectBox(pid,checkId){
+			if(!pid){pid=0;}
+			mall_goods_categoryId.val("");
+			goods_preadd_nextokBtn.attr("disabled","disabled");
+			var url="/admin/mall/goodsbackcategory/selectbox/"+pid;
+			Ajax.get(url,function(ret){
+				var categorys=ret.data;
+				if(categorys&&categorys.length>0){
+					insertNewSelect(pid,categorys);
+				}else{
+						//设置按钮可以点击
+					if(pid>0){
+						goods_preadd_nextokBtn.removeAttr("disabled");
+						mall_goods_categoryId.val(pid);
+						}
+				}
+					
+				if(checkId){
+					var lastSelect=category_select_box.find(".j_category_select").last();
+					if(lastSelect&&lastSelect.length>0){
+						lastSelect.find("ul>li[data-id='"+checkId+"']").addClass("selected");
+					}
+
+					if(checkedIndex<size){
+						checkedIndex++;
+						newCheckId=keyArr[checkedIndex];
+						initCategorySelectBox(checkId,newCheckId);
+						}
+		 
+				}
+			});
+		 }
+
+		/**
+		 * 将数据渲染出来
+		 */
+		function insertNewSelect(pid,categorys){
+			let select='<div class="j_category_select" id="j_category_select_#(goodsId?? 0)_'+pid+'"><ul></ul></div>';
+			let lastSelect=category_select_box.find(".j_category_select").last();
+			if(lastSelect&&lastSelect.length>0){
+				lastSelect.after(select);
+				}else{
+					category_select_box.append(select);
+					}
+
+			let newSelect=$("#j_category_select_#(goodsId?? 0)_"+pid +" >ul");
+			for(var i in categorys){
+				newSelect.append('<li data-id="'+categorys[i].id+'">'+categorys[i].name+'</li>');
+			}
+		}
+		/**
+		 * 绑定分类点击事件处理
+		 */
+		function initCategorySelectBoxEvent(){
+			$("body").off("click","#category_select_box_#(goodsId?? 0) .j_category_select>ul>li").on("click","#category_select_box_#(goodsId?? 0) .j_category_select>ul>li",function(){
+				let li=$(this);
+				let pid=li.data("id");
+					j_choose_categorys.text("暂未选择");
+					let select=li.closest(".j_category_select");
+					select.find("li.selected").removeClass("selected");
+					li.addClass("selected");
+					select.nextAll().remove();
+					initCategorySelectBox(pid);
+					let lis=$("#category_select_box_#(goodsId?? 0) .j_category_select li.selected");
+					if(lis&&lis.length>0){
+						let title="";
+						lis.each(function(){
+							let theLi=$(this);
+							if(title){
+							title=title+" > "+theLi.text();
+								}else{
+									title=theLi.text();
+									}
+
+							});
+						j_choose_categorys.text(title);
+					}
+				});
+		}
+
+		function submitThisForm(){
+			let form=$("#categoryChooseForm_#(goodsId?? 0)");
+			if(FormChecker.check(form)){
+				let j_choose_categorys=$("#j_choose_categorys_#(goodsId?? 0)").text();
+				LayerMsgBox.confirm("确定选择分类:["+j_choose_categorys+"]?",function(){
+					form.submit();
+					});
+			}
+		}
+		
+	let selects=category_select_box.find(".j_category_select");
+	 if(selects&&selects.length==0){
+	 	initCategorySelectBoxEvent();
+	 	#if(goodsId??)
+		initCategorySelectBox(0,keyArr[checkedIndex]);
+		#else
+		initCategorySelectBox(0);
+ 		#end
+		}
+		openLeftNav("/admin/mall/goods");
+}
+
+initEditGoodsCategory_#(goodsId?? 0)();
+	 });
+	 
+</script>
+#end
+

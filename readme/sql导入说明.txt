@@ -1,0 +1,12 @@
+jbolt_mysql.sql文件
+创建数据库 名字为 jbolt
+导入jbolt_mysql.sql
+
+如果使用其它数据库请导入对应的sql，并且修改config.properties和config-pro.properties中
+的db_type=postgresql
+或者db_type=sqlserver
+或者db_type=oracle
+
+如果安装了navicat可以直接导入*.nb3的备份文件
+
+用户名：admin 密码：333

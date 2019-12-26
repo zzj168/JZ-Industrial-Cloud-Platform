@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>#globalConfig(GlobalConfigKey.SYSTEM_NAME,"JBolt极速开发平台")</title>
+		 #if(need_always_https)
+	    	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+		 #end
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+		<meta name="renderer" content="webkit">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<link href="/assets/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="/assets/css/bootstrap.min.css" >
+		<!--<link rel="stylesheet" type="text/css" href="/assets/css/theme/default/layer.css" />-->
+		#@logincss?()
+	</head>
+	<body>
+	### 登录表单透明玻璃风格
+	#setLocal(glassStyle=CACHE.getJBoltLoginFormStyleGlass())
+	### 登录页面背景图模糊
+	#setLocal(bgimgBlur=CACHE.getJBoltLoginBgimgBlur())
+		<div class="bodybgmask #(bgimgBlur?'blur':'')" style="background-image: url('#(CACHE.getJboltLoginBgimg())');"></div>
+	<div class="d-block">
+	<div class="jbolt_loginform #(glassStyle?'jbolt_bg_glass':'')" >
+		<div class="jbolt_title">#globalConfig(GlobalConfigKey.SYSTEM_NAME,"JBolt极速开发平台")</div>
+		<div class="jbolt_formbox bb6">
+		<form id="loginForm" method="post" onsubmit="return submitForm(this);">
+		<div class="form-group">
+		<div class="input-group">
+		 <div class="input-group-prepend">
+		    <span class="input-group-text"><i class="fa fa-user"></i></span>
+		  </div>
+		<input type="text" autocomplete="off"  class="form-control" autocomplete="off" maxlength="20" autofocus="autofocus" data-rule="required" data-tips="请输入用户名"  name="username" placeholder="请输入用户名"/>
+		</div>
+		</div>
+		<div class="form-group">
+		<div class="input-group">
+		 <div class="input-group-prepend">
+		    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+		  </div>
+		<input type="password" class="form-control" autocomplete="off" maxlength="20" data-rule="required"  data-tips="请输入密码" name="password" placeholder="请输入密码"/>
+		</div>
+		</div>
+		#setLocal(needCapture=CACHE.isJBoltLoginUseCapture())
+		#if(needCapture)
+		<div class="form-group">
+		<div class="input-group">
+		 <div class="input-group-prepend">
+		    <span class="input-group-text"><i class="fa fa-check-square" style="width:10px;"></i></span>
+		  </div>
+		<input type="text" autocomplete="off"  class="form-control" maxlength="10" id="captcha" autocomplete="off" data-rule="required"  data-tips="请输入验证码" name="captcha" placeholder="请输入验证码"/>
+		<div class="input-group-append" style="padding: 0px 0px;">
+		    <img id="captchaimg" src="/admin/captcha" onclick="changeCaptcha()"/>
+		  </div>
+		</div>
+		</div>
+		#end
+		<div>
+		<button class="btn btn-primary" href="admin" type="submit"  style="margin: 30px auto 10px auto;">登  录  系  统</button>
+		</div>
+		</form>
+		</div>
+	</div>
+	</div>
+	<div class="copyright eidchide"><a target="_blank" href="#globalConfig(GlobalConfigKey.SYSTEM_COPYRIGHT_LINK,'http://jbolt.cn')">#globalConfig(GlobalConfigKey.SYSTEM_COPYRIGHT_COMPANY,"©JBolt(JBOLT.CN)")</a></div>
+	<script type="text/javascript">var needPjax=false;</script>
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/bootstrap.min.js"></script>
+	<script src="/assets/js/jquery.cookie.min.js"></script>
+	<script src="/assets/js/layer.js" type="text/javascript" charset="utf-8"></script>
+	#@mainjs?()
+	<script  color="255,255,255" opacity='0.5' zIndex="1" count="200" src="/assets/js/canvas-nest.js" type="text/javascript"></script>
+	<script type="text/javascript">
+	#if(needCapture)
+	function changeCaptcha(){
+		$("#captchaimg").attr("src","/admin/captcha?t="+new Date().getTime());
+	}
+	#end
+	
+	function submitForm(form){
+		var sf=$(form);
+		if(FormChecker.check(sf)){
+			LayerMsgBox.loading("登录中...");
+			Ajax.post("/admin/login",sf.serialize(),function(res){
+				LayerMsgBox.success("登录成功",1000,function(){
+					window.location.href="/admin";
+				});
+			},function(){
+				#if(needCapture)
+				$("#captcha").val("");
+				changeCaptcha();
+				#end
+			})
+		}
+		return false;
+	}
+
+	$(function(){
+		initLoginStyle();
+		});
+
+	</script>
+	</body>
+</html>

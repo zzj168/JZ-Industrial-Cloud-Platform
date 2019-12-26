@@ -1,0 +1,24 @@
+<!--分页-->
+<div class="pages pull-right">
+<div id="Pagination">
+   <div id="#(pageEleId??)"></div>
+</div>
+	   <div class="searchPage">
+	   <select id="jbolt_pagesize" data-autoload data-select="#(pageData.pageSize?? 10)" class="mx-2" style="width:80px;height: 32px;margin-top:-1px;border-color:#e6e6e6;">
+	   <option value="5">5条/页</option>
+	   <option value="10">10条/页</option>
+	   <option value="15">15条/页</option>
+	   <option value="20">20条/页</option>
+	   <option value="25">25条/页</option>
+	   <option value="30">30条/页</option>
+	   <option value="35">35条/页</option>
+	   <option value="40">40条/页</option>
+	   <option value="45">45条/页</option>
+	   <option value="50">50条/页</option>
+	   </select>
+	   <span class="page-sum">共<strong class="allPage">#(pageData.totalPage?? 0)</strong>页</span>
+	   <span class="page-go">跳转<input id="gonu" type="number" onblur="if(this.value&&this.value>=1){}else{this.value=1;}" min="1" max="#(pageData.totalPage?? 0)"  pattern="[0-9]*" class="current_page" value="#(pageData.pageNumber?? 0)">页</span>
+	   <a href="javascript:;" class="page-btn">GO</a>
+   </div>
+</div>
+<div class="clearfix"></div>

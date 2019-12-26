@@ -1,0 +1,157 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="/demo/autocomplete">
+<div class="jbolt_page_title">
+	<h1>Demo-Autocomplete组件演示</h1>
+</div>
+<div class="jbolt_page_content">
+
+<!-- autocomplete组件 -->
+<div class="row">
+<div class="col-4">
+	<div class="card">
+	<div class="card-header">Autocomplete组件</div>
+	<div class="card-body">
+	<form action="/demo/autocomplete/submit" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group ">
+	切换显示Autocomplete组件绑定的隐藏域
+	<img src="assets/img/off.png" data-switchbtn  data-handler="toggleInputHidden('userId')"/>
+	</div>
+	<div class="form-group row">
+		 <label class="col-2 col-form-label">用户</label>
+		<div class="col-8">
+			<input type="text" autocomplete="off" data-autocomplete data-url="/admin/user/autocomplete"  data-hiddeninput="userId" class="form-control" data-rule="required" placeholder="请选择用户"  data-tips="请选择用户"  maxlength="40" name="username" value="#(username??)">
+		    <input type="hidden"  autocomplete="off" id="userId" data-rule="required" data-tips="请选择用户"  name="userId" value="#(userId??)" />
+		</div>
+	</div>
+	<div class="alert alert-info">通过Input标签上 data-autocomplete 指定作为一个可以通过输入内容自动后台检索数据并提示 完成的组件
+	<br/>data-url="/admin/user/autocomplete" 指定数据源地址
+	<br/>data-hiddeninput="userId" 指定选中的数据的值赋值给哪个隐藏域 点上面切换按钮可以看到隐藏域
+	<br/>简单的数据源 只要数据里有id和name 或者实现option接口有text和value 就能自动出更高级的看右侧
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+<div class="col-4">
+	<div class="card">
+	<div class="card-header">Autocomplete组件-高级版</div>
+	<div class="card-body">
+	<form action="/demo/autocomplete/submit" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group ">
+	切换显示Autocomplete组件绑定的隐藏域
+	<img src="assets/img/off.png" data-switchbtn  data-handler="toggleInputHidden('userId2')"/>
+	</div>
+	<div class="form-group row">
+		 <label class="col-2 col-form-label">用户</label>
+		<div class="col-8">
+			<input type="text" autocomplete="off" class="form-control" 
+				data-autocomplete 
+				data-url="/admin/user/autocomplete"  
+				data-hiddeninput="userId2" 
+				data-text-attr="name" 
+				data-column-attr="name,pinyin,sex,phone" 
+				data-handler="LayerMsgBox.success('调用handler')"
+				data-rule="required" placeholder="请选择用户"  data-tips="请选择用户"  maxlength="40" name="username2" value="#(username2??)">
+		    <input type="hidden" id="userId2" data-rule="required" data-tips="请选择用户"  name="userId2" value="#(userId2??)"   autocomplete="off" />
+		</div>
+	</div>
+	<div class="alert alert-info">高级版可以自定义查询显示的text了
+	<br/>data-column-attr="name,pinyin,sex,phone" 指定显示内容
+	<br/>data-text-attr="name" 默认可以不填 自动处理 指定选中一个item后 输入框里显示的哪个属性的值
+	<br/>data-value-attr="sex"  默认可以不填 自动处理 指定选中一个item后 隐藏域用哪个属性赋值
+	<br/>data-handler="LayerMsgBox.success('调用handler')" 选择或者清空后 调用
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+<div class="col-4">
+	<div class="card">
+	<div class="card-header">Autocomplete组件-高级版-赋值多属性-多隐藏域</div>
+	<div class="card-body">
+	<form action="/demo/autocomplete/submit" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group ">
+	切换显示Autocomplete组件绑定的隐藏域
+	<img src="assets/img/off.png" data-switchbtn  data-handler="toggleInputHidden('userId3,pinyin,phone')"/>
+	</div>
+	<div class="form-group row">
+		 <label class="col-2 col-form-label">用户</label>
+		<div class="col-8">
+			<input type="text" autocomplete="off" class="form-control" 
+				data-autocomplete 
+				data-url="/admin/user/autocomplete"  
+				data-hiddeninput="userId3,pinyin,phone" 
+				data-text-attr="name" 
+				data-column-attr="name,pinyin,sex,phone" 
+				data-rule="required" placeholder="请选择用户"  data-tips="请选择用户"  maxlength="40" name="username3" value="#(username3??)">
+		    <input type="hidden" id="userId3" data-value-attr="value" data-rule="required" data-tips="请选择用户"  name="userId2" value="#(userId2??)"   autocomplete="off" />
+		    <input type="hidden" id="pinyin" data-value-attr="pinyin"  name="pinyin" value="#(pinyin??)"   autocomplete="off" />
+		    <input type="hidden" id="phone" data-value-attr="phone"   name="phone" value="#(phone??)"   autocomplete="off" />
+		</div>
+	</div>
+	<div class="alert alert-info">
+	data-hiddeninput="userId3,pinyin" 多个隐藏域用逗号隔开，选中之后 根据隐藏域自身需要的值填充
+	这里隐藏域也可以type=text 是可视状态 根据需要变通
+	<br/>
+	隐藏域上的 data-value-attr="value" 声明选中一个数据后，从数据中找哪个属性给自己用 value是默认选中值
+	<br>
+	data-value-attr="pinyin" 这就是指定当前input的取值使用选中数据的pinyin属性
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-4">
+    	<div class="card">
+	<div class="card-header">Autocomplete组件-高级版-多属性单隐藏域</div>
+	<div class="card-body">
+	<form action="/demo/autocomplete/submit" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group ">
+	切换显示Autocomplete组件绑定的隐藏域
+	<img src="assets/img/off.png" data-switchbtn  data-handler="toggleInputHidden('pinyin1')"/>
+	</div>
+	<div class="form-group row">
+		 <label class="col-2 col-form-label">用户</label>
+		<div class="col-8">
+			<input type="text" autocomplete="off" class="form-control" 
+				data-autocomplete 
+				data-url="/admin/user/autocomplete"  
+				data-hiddeninput="pinyin1" 
+				data-text-attr="name" 
+				data-column-attr="name,pinyin,sex,phone" 
+				data-rule="required" placeholder="请选择用户"  data-tips="请选择用户"  maxlength="40" name="username3" value="#(username3??)">
+		    <input type="hidden" id="pinyin1" data-value-attr="pinyin"  name="pinyin1" value="#(pinyin1??)"   autocomplete="off" />
+		</div>
+	</div>
+	<div class="alert alert-info">
+一个隐藏域，并且隐藏域设置data-value-attr
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+    </div>
+    <div class="col-4"></div>
+    <div class="col-4"></div>
+</div>
+
+
+
+</div>
+</div>
+#end
+
+#define js()
+<script>
+
+$(function(){
+})
+</script>
+#end

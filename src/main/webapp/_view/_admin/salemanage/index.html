@@ -1,0 +1,160 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page2" data-key="#(pmkey)">
+	<div class="row pm0">
+	<div class="top_nav2">
+    <ul>
+        <li class="l1"><a href="/admin/supplymanage" data-key="supplymanage">入库管理</a></li>
+        <li class="l2"><a href="/admin/salemanage" data-key="salemanage" class="active">销售管理</a></li>
+        <li class="l3"><a href="/admin/warehousemanage" data-key="warehousemanage">出库管理</a></li>
+    </ul>
+</div>
+	</div>
+<div class="jbolt_page_title">
+	<div class="search">
+			<button data-area="100%,100%" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增销售信息" data-url="/admin/salemanage/add" class="xinzeng jbolt_table_addbtn"></button>
+		<input name="" type="text" class="search1" placeholder="请输入关键词" />
+		<input type="button" class="search2">
+		</div>
+	<div class="row disno">
+	<div class="col-9">
+		<h1>销售管理</h1>
+		<span> #(pageData.totalRow?? 0)条记录</span>
+	</div>
+	<div class="col-3">
+		<button class="pull-right btn btn-primary"><i class="fa fa-cloud-download"></i> 下载</button>
+		<button class="pull-right btn btn-danger mr-2"><i class="fa fa-paper-plane-o"></i> 上传</button>
+		<button data-area="600,800" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增销售信息" data-url="/admin/salemanage/add" class="pull-right jbolt_table_addbtn btn btn-success mr-2" ><i class="fa fa-plus"></i> 新增</button>
+	</div>
+	</div>
+</div>
+
+<div class="jbolt_page_content">
+<table class="table table-bordered table-hover table-striped table-center">
+<thead>
+	<tr><th style="width: 60px">编号</th>
+	<th>供应商名称</th>
+	<th style="width: 100px">发货日期</th>
+	<th style="width: 100px">型号</th>
+	<th style="width: 80px">箱数</th>
+	<th style="width: 80px">每箱数量</th>
+	<th style="width: 60px">单价</th>
+	<th style="width: 80px">总金额</th>
+	<th style="width: 80px">收款金额</th>
+	<th style="width: 100px">收款日期</th>
+	<th style="width: 80px">收款金额2</th>
+	<th style="width: 100px">收款日期2</th>
+	<th style="width: 80px">收款金额3</th>
+	<th style="width: 100px">收款日期3</th>
+	<th style="width: 80px">收款金额4</th>
+	<th style="width: 100px">收款日期4</th>
+	<th style="width: 80px">收款金额5</th>
+	<th style="width: 100px">收款日期5</th>
+	<th style="width: 80px">待收款</th>
+	<th>添加时间</th>
+	<th style="width: 100px">操作</th></tr>
+</thead>
+	<tbody>
+	#for(data:pageData.list)
+	<tr>
+	<td>#(for.index+1)</td>
+	<td>#(data.supplierName??)</td>	
+	<td>#date(data.shipDate??,"yyyy-MM-dd")</td>
+	<td>#(data.model??)</td>
+	<td>#(data.num??)</td>
+	<td>#(data.numPerBox??)</td>
+	<td>#(data.price??)</td>
+	<td>#(data.num*data.numPerBox*data.price??)</td>	
+	<td>#(data.receiptMoney??)</td>	
+	<td>#date(data.receiptDate??,"yyyy-MM-dd")</td>	
+	<td>#(data.receiptMoney2??)</td>	
+	<td>#date(data.receiptDate2??,"yyyy-MM-dd")</td>	
+	<td>#(data.receiptMoney3??)</td>	
+	<td>#date(data.receiptDate3??,"yyyy-MM-dd")</td>	
+	<td>#(data.receiptMoney4??)</td>	
+	<td>#date(data.receiptDate4??,"yyyy-MM-dd")</td>	
+	<td>#(data.receiptMoney5??)</td>	
+	<td>#date(data.receiptDate5??,"yyyy-MM-dd")</td>	
+	<td>#(data.waitPay??)</td>
+	<td>#date(data.createTime??,"yyyy-MM-dd HH:mm")</td>
+	<td>
+		<a  tooltip  title="编辑"  href="/admin/salemanage/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="600,800" class="jbolt_table_editbtn"><i class="fa fa-pencil c-primary"></i></a>
+		<a  tooltip  title="删除"  href="/admin/salemanage/delete/#(data.id)" data-handler="removeTr" class="jbolt_table_delbtn"><i class="fa fa-remove c-danger"></i></a>
+	</td>
+	</tr>
+	#end
+	</tbody>
+</table>	
+</div>
+
+<div class="jichu1_div">
+	<ul class="jichu1_li">
+		<li>编号</li>
+		<li>供应商名称</li>
+		<li>发货日期</li>
+		<li>型号</li>
+		<li>箱数</li>
+	</ul>
+</div>
+<div class="accordion">
+#for(data:pageData.list)
+	<ul>
+		<li>
+			<div class="item">
+				<ul class="jichu1_li">
+					<li>#(for.index+1)</li>
+					<li>#(data.supplierName??)</li>
+					<li>#date(data.shipDate??,"yyyy-MM-dd")</li>
+					<li>#(data.model??)</li>
+					<li>#(data.num??)</li>
+				</ul>
+		   </div>
+			<div class="dis">编号：#(for.index+1)<br />
+			供应商名称：#(data.supplierName??)<br />
+			发货日期：#date(data.shipDate??,"yyyy-MM-dd")<br />
+			型号：#(data.model??)<br />
+			箱数：#(data.num??)<br />
+			每箱数量：#(data.numPerBox??)<br />
+			单价：#(data.price??)<br />
+			总金额：#(data.num*data.numPerBox*data.price??)<br />
+			收款金额：#(data.receiptMoney??)<br />
+			收款日期：#date(data.receiptDate??,"yyyy-MM-dd")<br />
+			收款金额2：#(data.receiptMoney2??)<br />
+			收款日期2：#date(data.receiptDate2??,"yyyy-MM-dd")<br />
+			收款金额3：#(data.receiptMoney3??)<br />
+			收款日期3：#date(data.receiptDate3??,"yyyy-MM-dd")<br />
+			收款金额4：#(data.receiptMoney4??)<br />
+			收款日期4：#date(data.receiptDate4??,"yyyy-MM-dd")<br />
+			收款金额5：#(data.receiptMoney5??)<br />
+			收款日期5：#date(data.receiptDate5??,"yyyy-MM-dd")<br />
+			待收款：#(data.waitPay??)<br />
+			添加时间：#date(data.createTime??,"yyyy-MM-dd HH:mm")
+				<div class="an_line">
+					<a  tooltip  title="编辑"  href="/admin/salemanage/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="100%,100%" class="blue jbolt_table_editbtn">编辑</a>
+		<a  tooltip  title="删除"  href="/admin/salemanage/delete/#(data.id)" data-handler="removeTr" class="red jbolt_table_delbtn">删除</a>
+				</div>
+			</div>
+		</li>
+	</ul>
+#end
+</div>
+
+<script src="/assets/js/vue.min.js"></script>
+<script src="/assets/js/main.js"></script>
+</div>
+<div class="foot_nav">
+    <ul>
+        <li class="l1"><a href="/admin/bom" data-key="bom">基础</a></li>
+        <li class="l2"><a href="/admin/supplymanage" data-key="supplymanage" class="active">业务</a></li>
+        <li class="l3"><a href="/admin/dashboard" data-key="dashboard">报表</a></li>
+        <li class="l4"><a href="/admin/user/pwd" data-key="userpwd">我的</a></li>
+    </ul>
+</div>
+#end
+#define js()
+<script>
+$(function(){
+});
+</script>
+#end
+

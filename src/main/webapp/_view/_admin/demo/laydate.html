@@ -1,0 +1,148 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="/demo/laydate">
+<div class="jbolt_page_title">
+	<h1>Demo-Laydate组件演示</h1>
+</div>
+<div class="jbolt_page_content">
+
+<div class="row">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">时间组件-laydate-简单</div>
+	<div class="card-body">
+	<form action="/demo/laydate/submit" method="post" onsubmit="return FormChecker.check(this)">
+	 	<div class="form-group" >
+		<label>选择日期:</label>
+		<input type="text" class="form-control"   data-date name="layDate" value="#date(DateUtil.toDate(layDate??),'yyyy-MM-dd')">
+		</div>
+		
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择日期:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"   data-date name="layDate2" value="#date(DateUtil.toDate(layDate2??),'yyyy-MM-dd')">
+		</div>
+		</div>
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择日期+时间:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"    data-date data-type="datetime" data-fmt="yyyy-MM-dd HH:mm" name="layDateTime" value="#date(DateUtil.toDate(layDateTime??),'yyyy-MM-dd HH:mm')">
+		</div>
+		</div>
+		 
+		<div class="alert alert-info">type="text" 加属性data-date 声明是个时间组件
+		<br/>
+		data-type="year" 指明格式是 year month date datetime time等类型 
+		<br/>
+		data-fmt="yyyy-MM-dd" 指明具体的格式化 比如yyyy-MM-dd等
+		</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+		</form>
+	</div>
+</div>
+</div>
+<div class="col-6">
+<div class="card">
+	<div class="card-header">时间组件-laydate-特殊</div>
+	<div class="card-body">
+	<form action="/demo/laydate/submit" method="post" onsubmit="return FormChecker.check(this)">
+	 	
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择时间:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"   data-date data-type="time" data-fmt="HH:mm:ss" name="layOnlyTime1" value="#(layOnlyTime1)">
+		</div>
+		</div>
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择时间不带秒:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"   data-date data-type="time" data-fmt="HH:mm" name="layOnlyTime2" value="#(layOnlyTime2)">
+		</div>
+		</div>
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择时间特殊1:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"    data-date data-type="time" data-fmt="HH:mm" data-minutes="00,15,30,45" name="layOnlyTime3" value="#(layOnlyTime3)">
+		</div>
+		</div>
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择时间特殊2:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"    data-date data-type="time" data-fmt="HH:mm:ss" data-minutes="00,15,30,45" name="layOnlyTime4" value="#(layOnlyTime4)">
+		</div>
+		</div>
+		 
+		<div class="alert alert-info">data-minutes="00,15,30,45" 指定分钟里固定可选值</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+		</form>
+	</div>
+</div>
+</div>
+
+
+</div>
+
+<div class="row mt-5">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">时间组件-laydate-特殊2</div>
+	<div class="card-body">
+	<form action="/demo/laydate/submit" method="post" onsubmit="return FormChecker.check(this)">
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择年:</label>
+		<div class="col-8">
+		<script>
+				function changeYear(ele,value){
+						console.log("切换中："+value);
+					alert("change："+value);
+				}
+				function changeDoneYear(ele,value){
+					console.log("切换确认后："+value);
+					alert("done："+value);
+					}
+		</script>
+		<input type="text" class="form-control" 
+		data-donehandler="changeDoneYear" 
+		data-changehandler="changeYear"   data-date data-type="year"   name="layYear" value="#(layYear??)">
+		</div>
+		</div>
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择年月:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"   data-date data-type="month" data-fmt="yyyy年MM月" name="layMonth" value="#(layMonth??)">
+		</div>
+		</div>
+		
+		<div class="form-group row" >
+		<label class="col-2 col-form-label">选时间段:</label>
+		<div class="col-3">
+		<input type="text" class="form-control"   data-date name="startDate" value="#date(DateUtil.toDate(startDate??),'yyyy-MM-dd')">
+		</div>
+		<label>~</label>
+		<div class="col-3">
+		<input type="text" class="form-control"  data-date name="endDate" value="#date(DateUtil.toDate(endDate??),'yyyy-MM-dd')">
+		</div>
+		</div>
+		<div class="alert alert-info">
+		data-donehandler="changeDoneYear" change时间完成后调用的处理函数 最终点击确定按钮时调用
+		<br/>
+		data-changehandler="changeYear" change的时候调用处理函数 切换选择日期的时候调用
+		</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+		</form>
+	</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+#end
+
+#define js()
+<script>
+
+$(function(){
+})
+</script>
+#end

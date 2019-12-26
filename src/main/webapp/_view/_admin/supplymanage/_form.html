@@ -1,0 +1,44 @@
+<form onsubmit="return false;" id="supplymanageForm" action="#(action)" method="post">
+	#if(supplymanage.id??)
+		<input type="hidden" name="supplymanage.id" value="#(supplymanage.id)" />
+	#end
+	<div class="form-group">
+		<label>供应商名称</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入名称" data-tips="请输入名称" maxlength="50" name="supplymanage.supplierName" value="#(supplymanage.supplierName??)">
+	</div>
+	<div class="form-group">
+		<label>收货日期</label>	
+		<input type="text" class="form-control" data-rule="required" data-date name="supplymanage.receiptDate" value="#date(supplymanage.receiptDate??,"yyyy-MM-dd")">
+	</div>
+	<div class="form-group">
+		<label>型号</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入型号" data-tips="请输入型号" maxlength="50" name="supplymanage.model" value="#(supplymanage.model??)">
+	</div>	
+	<div class="form-group">
+		<label>箱数</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入箱数" data-tips="请输入箱数" maxlength="50" name="supplymanage.num" value="#(supplymanage.num??)">
+	</div>	
+	<div class="form-group">
+		<label>每箱数量</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入每箱数量" data-tips="请输入每箱数量" maxlength="50" name="supplymanage.numPerBox" value="#(supplymanage.numPerBox??)">
+	</div>	
+	<div class="form-group">
+		<label>单价</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入单价" data-tips="请输入单价" maxlength="50" name="supplymanage.price" value="#(supplymanage.price??)">
+	</div>
+	<div class="form-group">
+		<label>付款金额</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入付款金额" data-tips="请输入付款金额" maxlength="50" name="supplymanage.payMoney" value="#(supplymanage.payMoney??)">
+	</div>
+	<div class="form-group">
+		<label>付款日期</label>	
+		<input type="text" class="form-control" data-rule="required" data-date name="supplymanage.payDate" value="#date(supplymanage.payDate??,"yyyy-MM-dd")">
+	</div>
+	<div class="form-group">
+		<label>待付款</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" placeholder="请输入待付款金额" data-tips="请输入待付款金额" maxlength="50" name="supplymanage.waitPay" value="#(supplymanage.waitPay??)">
+	</div>
+</form>
+#define js()
+#include("/_view/_admin/common/_formjs.html",formId="supplymanageForm")
+#end

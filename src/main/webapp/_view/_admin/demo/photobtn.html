@@ -1,0 +1,48 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<h1>Demo-Photobtn组件演示</h1>
+</div>
+<div class="jbolt_page_content">
+
+<div class="row">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">点击查看单图大图-photobtn</div>
+	<div class="card-body">
+	<img src="/assets/img/defaultposter.jpg" data-photobtn class="m-1"  style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img src="/assets/css/img/login_bg2.jpg" data-photobtn class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img src="/assets/img/avatar.jpg" data-photobtn  class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<div class="alert alert-info mt-4">
+	data-photobtn 属性 声明点击就能看大图的组件
+	</div>
+	</div>
+	</div>
+</div>
+<div class="col-6">
+<div class="card">
+	<div class="card-header">点击查看多图大图-photobtn</div>
+	<div class="card-body">
+	<img src="/assets/img/defaultposter.jpg" data-photobtn data-ablum="ablum1"  class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img src="/assets/css/img/login_bg2.jpg" data-photobtn data-ablum="ablum1"  class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img src="/assets/img/avatar.jpg" data-photobtn data-ablum="ablum1"  class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<div class="alert alert-info mt-4">
+	data-photobtn 属性 声明点击就能看大图的组件<br/>
+	data-ablum="xxx" 属性 声明多个图片属于一个相册
+	</div>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+#end
+
+#define js()
+<script>
+
+$(function(){
+})
+</script>
+#end

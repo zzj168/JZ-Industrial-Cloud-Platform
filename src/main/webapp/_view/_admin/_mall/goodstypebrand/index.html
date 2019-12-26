@@ -1,0 +1,165 @@
+#@adminDialogLayout()
+#define css()
+<style type="text/css">
+html, body {
+   height: 100%!important;
+   overflow: auto;
+}
+
+
+</style>
+#end
+
+#define main()
+<div class="jbolt_page h100" data-key="#(pmkey)">
+<div class="jbolt_page_content">
+<div class="row">
+<div class="col jbolt-select-filter">
+<h1>全部品牌(<span id="leftUlCount">#(brands.size()?? 0)</span>)</h1>
+<input class="form-control" oninput="filterBrands(this.value,'leftUl')" type="text" autocomplete="off"  placeholder="过滤器" />
+</div>
+<div class="col jbolt-select-filter">
+<h1>已选品牌(<span id="rightUlCount">#(chooseList.size()?? 0)</span>)</h1>
+<input class="form-control" oninput="filterBrands(this.value,'rightUl')" type="text" autocomplete="off"  placeholder="过滤器" />
+</div>
+</div>
+<div class="row jbolt-select-box" style="height: 90%">
+<div class="col jbolt-select-box_left">
+<ul class="jbolt-select-ul d-flex justify-content-start flex-wrap" id="leftUl">
+#for(data : brands)
+<li draggable="true" data-id="#(data.id)">
+<img src="#realImage(data.logo??,'/assets/img/uploadimg.png')" />
+<h3>#(data.name??)<br/>[#(data.englishName??)]</h3>
+</li>
+#end
+
+</ul>
+</div>
+<div class="jbolt-select-opt"></div>
+<div class="col jbolt-select-box_right">
+<ul class="jbolt-select-ul d-flex justify-content-start flex-wrap" id="rightUl">
+#for(data : choosedList)
+<li draggable="true" data-id="#(data.id)" >
+<img src="#realImage(data.logo??,'/assets/img/uploadimg.png')" />
+<h3>#(data.name??)<br/>[#(data.englishName??)]</h3>
+</li>
+#end
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+#end
+#define js()
+<script>
+var goodsTypeId="#(goodsTypeId?? 0)";
+var leftBox=$("#leftUl");
+var rightBox=$("#rightUl");
+needPjax=false;
+function submitThisForm(successCallback){
+	var lis=rightBox.find("li");
+	if(lis&&lis.length>0){
+		submitNewLinkBrans(lis);
+	}else{
+		clearGoodsTypeBrands();
+	}
+}
+//提交关联数据
+function submitNewLinkBrans(lis){
+	var ids=new Array();
+	lis.each(function(){
+		var li=$(this);
+		var id=li.data("id");
+		ids.push(id);
+	});
+	var brandIds=ids.join(",");
+	LayerMsgBox.confirm("确认更新关联品牌？",function(){
+		Ajax.post("/admin/mall/goodstypebrand/submit",{"goodsTypeId":goodsTypeId,"brandIds":brandIds},function(res){
+				LayerMsgBox.success("操作成功",500,function(){
+					parent.refreshPjaxContainer();
+				parent.layer.closeAll();
+				
+		});
+});
+		
+		});
+
+	
+}
+//清除
+function clearGoodsTypeBrands(){
+	LayerMsgBox.confirm("确认不选择任何关联品牌？",function(){
+		Ajax.get("/admin/mall/goodstypebrand/clearByType/"+goodsTypeId,function(res){
+				LayerMsgBox.success("操作成功",500,function(){
+					parent.refreshPjaxContainer();
+				parent.layer.closeAll();
+		});
+});
+		
+		});
+}
+function showAllLi(ul){
+	ul.find("li.hide").removeClass("hide");
+}
+function hideWithName(ul,name){
+	ul.find("li").each(function(){
+		var li=$(this);
+	var text=li.text();
+	if(text.toLowerCase().indexOf(name.toLowerCase())!=-1){
+		li.removeClass("hide");
+		}else{
+			li.addClass("hide");
+			}
+
+		});
+}
+function changeUlCount(ul,ulId){
+	var span=$("#"+ulId+"Count");
+	var lis=ul.find("li:not(.hide)");
+	if(lis&&lis.length>0){
+		span.text(lis.length);
+	}else{
+		span.text(0);
+		}
+}
+function filterBrands(name,ulId){
+	var ul=$("#"+ulId);
+	if(name&&$.trim(name)){
+		hideWithName(ul,name);
+	}else{
+		showAllLi(ul);
+	}
+	changeUlCount(ul,ulId);
+}
+
+function changeToRight(li){
+	var newLi=li.clone();
+	rightBox.append(newLi);
+	li.remove();
+	changeUlCount(rightBox,"rightUl");
+}
+function changeToLeft(li){
+	var newLi=li.clone();
+	leftBox.prepend(newLi);
+	li.remove();
+	changeUlCount(leftBox,"leftUl");
+	
+}
+$(function(){
+	$("body").on("click",".jbolt-select-box li",function(){
+			var li=$(this);
+			var parentId=li.parent().attr("id");
+			if(parentId=="leftUl"){
+				changeToRight(li);
+			}else{
+				changeToLeft(li);
+				}
+			
+		});
+
+	
+});
+</script>
+#end
+

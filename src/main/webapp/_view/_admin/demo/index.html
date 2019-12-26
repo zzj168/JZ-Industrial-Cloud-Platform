@@ -1,0 +1,622 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<h1>Demo演示</h1>
+</div>
+<div class="jbolt_page_content">
+
+<div class="row">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">点击查看单图大图-photobtn</div>
+	<div class="card-body">
+	<img src="/assets/img/defaultposter.jpg" data-photobtn class="m-1"  style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img src="/assets/css/img/login_bg2.jpg" data-photobtn class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img src="/assets/img/avatar.jpg" data-photobtn  class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<div class="alert alert-info mt-4">
+	data-photobtn 属性 声明点击就能看大图的组件
+	</div>
+	</div>
+	</div>
+</div>
+<div class="col-6">
+<div class="card">
+	<div class="card-header">点击查看多图大图-photobtn</div>
+	<div class="card-body">
+	<img src="/assets/img/defaultposter.jpg" data-photobtn data-ablum="ablum1"  class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img src="/assets/css/img/login_bg2.jpg" data-photobtn data-ablum="ablum1"  class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img src="/assets/img/avatar.jpg" data-photobtn data-ablum="ablum1"  class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<div class="alert alert-info mt-4">
+	data-photobtn 属性 声明点击就能看大图的组件<br/>
+	data-ablum="xxx" 属性 声明多个图片属于一个相册
+	</div>
+	</div>
+	</div>
+</div>
+</div>
+
+
+<div class="row mt-5">
+<div class="col-4">
+<div class="card">
+	<div class="card-header">点击查看单图大图- data-imgviewer</div>
+	<div class="card-body">
+	<img data-imgviewer src="/assets/img/defaultposter.jpg"  class="m-1"  style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img data-imgviewer src="/assets/css/img/login_bg2.jpg"  class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img data-imgviewer src="/assets/img/avatar.jpg" class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<div class="alert alert-info mt-4">
+	在Img上加data-imgviewer 属性 声明点击就能看大图的组件
+	</div>
+	</div>
+	</div>
+</div>
+<div class="col-4">
+<div class="card">
+	<div class="card-header">点击查看单图大图- data-imgviewer data-orignurl</div>
+	<div class="card-body">
+	<img data-imgviewer data-orignurl="https://www.jfinal.com/upload/img/share/0/10114_20190906224042.jpg" src="http://www.jfinal.com/upload/img/share/0/10114_20190504113606.png"  class="m-1"  style="height: 100px;" tooltip data-title="点击查看大图" />
+	<div class="alert alert-info mt-4">
+	在Img上加data-orignurl 属性 声明点击出来的图用这个地址 而不用src上的
+	src上的地址，仅作为页面缩略图
+	<br/>
+	还能做到，缩略图和点开图完全不一样
+	</div>
+	</div>
+	</div>
+</div>
+<div class="col-4">
+<div class="card">
+	<div class="card-header">点击查看多图大图-data-imgviewer</div>
+	<div class="card-body" data-imgviewer>
+	<img src="/assets/img/defaultposter.jpg" class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img src="/assets/css/img/login_bg2.jpg"  class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<img src="/assets/img/avatar.jpg"   class="m-1" style="height: 100px;" tooltip data-title="点击查看大图" />
+	<div class="alert alert-info mt-4">
+	data-imgviewer 属性 声明点击就能看大图的组件<br/>
+	这里只要声明在包含很多img标签的父容器上就可以做相册
+	<br/>
+	如果想让缩略图和弹出的图不一致，相册模式下只要给父容器增加一个data-useorign声明 然后img上增加data-orignurl即可
+	</div>
+	</div>
+	</div>
+</div>
+</div>
+
+
+<div class="row  mt-5">
+<div class="col-3">
+<div class="card">
+	<div class="card-header">switchBtn</div>
+	<div class="card-body">
+	<img src="/assets/img/switch/default/on.png" data-switchbtn data-confirm="确认切换？"  data-handler="onSaleChangeHandler"  data-url="/demo/temp"/>
+	</div>
+</div>
+
+</div>
+<div class="col-3">
+	<div class="card">
+	<div class="card-header">ajaxbtn</div>
+	<div class="card-body">
+	<a tooltip data-title="删除"  data-ajaxbtn data-confirm="确认删除此项目?" data-handler="LayerMsgBox.success('操作成功')" href="/demo/temp"><i class="fa fa-remove"></i></a>
+	</div>
+</div>
+</div>
+<div class="col-3">
+	<div class="card">
+	<div class="card-header">tabtrigger</div>
+	<div class="card-body">
+	<a tooltip data-title="打开一个新的tab页面"   data-tabtrigger data-key="demo_temp_tabtrigger1" href="/demo/tabtrigger">打开一个选项卡</a>
+	<div class="alert alert-info mt-4">
+	需要在全局配置中开启多选项卡模式才能用
+	</div>
+	</div>
+</div>
+
+</div>
+<div class="col-3">
+<div class="card">
+	<div class="card-header">jboltlayertrigger</div>
+	<div class="card-body">
+	<a tooltip data-title="右侧滑出" data-jboltlayertrigger  href="/demo/jboltlayertrigger">打开JboltLayer-right</a>
+	<br/>
+	<a tooltip data-title="左侧滑出"  data-jboltlayertrigger  href="/demo/jboltlayertrigger" data-dir="left">打开JboltLayer-left</a>
+	<br/>
+	<a tooltip data-title="左侧滑出-指定宽度-600px" data-width="600"  data-jboltlayertrigger  href="/demo/jboltlayertrigger" data-dir="left">打开JboltLayer-left-600</a>
+	<br/>
+	<a tooltip data-title="右侧滑出-指定宽度-700px" data-width="700"  data-jboltlayertrigger  href="/demo/jboltlayertrigger">打开JboltLayer-right-700</a>
+	<br/>
+	<a tooltip data-title="右侧滑出-关闭需要确认" data-jboltlayertrigger data-confirm href="/demo/jboltlayertrigger">打开JboltLayer-right-confirm</a>
+	<br/>
+	<a tooltip data-title="右侧滑出-关闭需要确认" data-jboltlayertrigger data-confirm="表单尚未填完，确认关闭？" href="/demo/jboltlayertrigger">打开JboltLayer-right-confirm-自定义</a>
+	</div>
+</div>
+</div>
+</div>
+<div class="row  mt-5">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">可以弹出Dialog的Button</div>
+	<div class="card-body">
+	<a  class="btn btn-primary" data-dialogbtn data-area="600,400" data-title="新增" href="/demo/temp"><i class="fa fa-plus mr-1"></i> 超链接</a>
+	<button  class="btn btn-success" data-dialogbtn data-area="600,400" data-title="新增"  data-url="/demo/temp"><i class="fa fa-plus mr-1"></i> Button按钮</button>
+	<a  class="btn btn-info" data-dialogbtn data-area="600,400" data-title="编辑"  href="/demo/temp"><i class="fa fa-edit"></i></a>
+	<button  class="btn btn-dark" data-dialogbtn data-area="600,400"  data-title="编辑"  data-url="/demo/temp"><i class="fa fa-edit"></i></button>
+	<a tooltip data-title="编辑"  data-dialogbtn data-area="600,400" href="/demo/temp"><i class="fa fa-edit"></i></a>
+	
+	<button  class="btn btn-success" data-dialogbtn data-area="600,400" data-title="弹出没有按钮操作的dialog 一般用于查看详情" data-btn="no"  data-url="/demo/temp"><i class="fa fa-info mr-1"></i> 查看详情A</button>
+	<button  class="btn btn-info" data-dialogbtn data-area="600,400" data-title="弹出只有关闭按钮操作的dialog 一般用于查看详情" data-btn="close"  data-url="/demo/temp"><i class="fa fa-info mr-1"></i> 查看详情B</button>
+	<button  class="btn btn-info" data-dialogbtn data-area="600,400" data-title="带滚动条" data-btn="close" data-scroll="yes" data-url="http://www.jfinalxueyuan.com"><i class="fa fa-info mr-1"></i> 带滚动条</button>
+	<button  class="btn btn-danger" data-dialogbtn data-area="600,400" data-title="带滚动条" data-btn="close" data-scroll="yes" data-fs="true" data-url="http://www.jfinalxueyuan.com"><i class="fa fa-info mr-1"></i> 最大化</button>
+	<button  class="btn btn-warning" data-dialogbtn data-area="800,80%" data-scroll="yes" data-title="自定义按钮"   data-url="/demo/btn"><i class="fa fa-info mr-1"></i> 自定义dialog按钮</button>
+	<div class="alert alert-info mt-4">
+	data-dialogbtn 属性 声明这是一个可以弹出Dialog的触发按钮
+	<br/>data-url="xxx" 指定dialog加载URL 如果是超链接 可以使用href属性
+	<br/>data-area="600,400" 指定一个dialog的尺寸大小，可以使用百分比的 data-are="600,50%" 
+	<br/>data-title="新增用户" 指定dialog的标题
+	<br/>data-btn="no" 让dialog没有操作按钮
+	<br/>data-btn="close" 让dialog只留下关闭按钮
+	<br/>data-scroll="yes" 让dialog内容页过长的出滚动条 默认没有滚动条
+	<br/>data-fs="true" 让dialog最大化显示
+	<br/>还有几个特殊属性 一般用不上 就不说了
+	</div>
+	</div>
+	</div>
+</div>
+
+<div class="col-6">
+<div class="card">
+<div class="card-header">富文本编辑器Demo</div>
+<div class="card-body">
+<div class="alert alert-danger" role="alert">
+请根据实际是否开启了多选项卡模式点击不同按钮案例
+</div>
+<a  class="btn btn-primary" data-pjax href="/demo/summernote">summernote编辑器</a>
+<a  class="ml-3 btn btn-success" data-title="Tab中的Summernote"   data-tabtrigger data-key="summernote_tabtrigger" href="/demo/summernote">选项卡里打开</a>
+<a class="btn btn-primary" data-dialogbtn data-area="80%,80%" data-title="Dialog中的富文本编辑器Demo" data-scroll="yes" href="/demo/summernoteInDialog">点击打开Dialog</a>
+<hr />
+<a  class="btn btn-primary" data-pjax href="/demo/neditor">neditor编辑器</a>
+<a  class="ml-3 btn btn-success" data-title="Tab中的neditor"   data-tabtrigger data-key="neditor_tabtrigger1" href="/demo/neditor">选项卡里打开</a>
+<a  class="ml-3 btn btn-success" data-title="Tab中的neditor"   data-tabtrigger data-key="neditor_tabtrigger2" href="/demo/neditor">选项卡里打开</a>
+<a class="btn btn-primary" data-dialogbtn data-area="80%,80%" data-title="Dialog中的富文本编辑器Demo" data-scroll="yes" href="/demo/neditorInDialog">点击打开Dialog</a>
+</div>
+</div>
+</div>
+ 
+</div>
+
+
+
+<!-- autocomplete组件 -->
+<div class="row  mt-5">
+<div class="col-4">
+	<div class="card">
+	<div class="card-header">Autocomplete组件</div>
+	<div class="card-body">
+	<form action="/demo/submit" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group ">
+	切换显示Autocomplete组件绑定的隐藏域
+	<img src="assets/img/off.png" data-switchbtn  data-handler="toggleInputHidden('userId')"/>
+	</div>
+	<div class="form-group row">
+		 <label class="col-2 col-form-label">用户</label>
+		<div class="col-8">
+			<input type="text" autocomplete="off" data-autocomplete data-url="/admin/user/autocomplete"  data-hiddeninput="userId" class="form-control" data-rule="required" placeholder="请选择用户"  data-tips="请选择用户"  maxlength="40" name="username" value="#(username??)">
+		    <input type="hidden"  autocomplete="off" id="userId" data-rule="required" data-tips="请选择用户"  name="userId" value="#(userId??)" />
+		</div>
+	</div>
+	<div class="alert alert-info">通过Input标签上 data-autocomplete 指定作为一个可以通过输入内容自动后台检索数据并提示 完成的组件
+	<br/>data-url="/admin/user/autocomplete" 指定数据源地址
+	<br/>data-hiddeninput="userId" 指定选中的数据的值赋值给哪个隐藏域 点上面切换按钮可以看到隐藏域
+	<br/>简单的数据源 只要数据里有id和name 或者实现option接口有text和value 就能自动出更高级的看右侧
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+<div class="col-4">
+	<div class="card">
+	<div class="card-header">Autocomplete组件-高级版</div>
+	<div class="card-body">
+	<form action="/demo/submit" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group ">
+	切换显示Autocomplete组件绑定的隐藏域
+	<img src="assets/img/off.png" data-switchbtn  data-handler="toggleInputHidden('userId2')"/>
+	</div>
+	<div class="form-group row">
+		 <label class="col-2 col-form-label">用户</label>
+		<div class="col-8">
+			<input type="text" autocomplete="off" class="form-control" 
+				data-autocomplete 
+				data-url="/admin/user/autocomplete"  
+				data-hiddeninput="userId2" 
+				data-text-attr="name" 
+				data-column-attr="name,pinyin,sex,phone" 
+				data-handler="LayerMsgBox.success('调用handler')"
+				data-rule="required" placeholder="请选择用户"  data-tips="请选择用户"  maxlength="40" name="username2" value="#(username2??)">
+		    <input type="hidden" id="userId2" data-rule="required" data-tips="请选择用户"  name="userId2" value="#(userId2??)"   autocomplete="off" />
+		</div>
+	</div>
+	<div class="alert alert-info">高级版可以自定义查询显示的text了
+	<br/>data-column-attr="name,pinyin,sex,phone" 指定显示内容
+	<br/>data-text-attr="name" 默认可以不填 自动处理 指定选中一个item后 输入框里显示的哪个属性的值
+	<br/>data-value-attr="sex"  默认可以不填 自动处理 指定选中一个item后 隐藏域用哪个属性赋值
+	<br/>data-handler="LayerMsgBox.success('调用handler')" 选择或者清空后 调用
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+</div>
+
+<!-- AutoSelect组件 -->
+<div class="row  mt-5">
+<div class="col-4">
+	<div class="card">
+	<div class="card-header">AutoSelect组件</div>
+	<div class="card-body">
+	<form action="/demo/submit" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group">
+		<select class="form-control"
+			name="dic" 
+			data-autoload  
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-url="/demo/dictionary?key=group"  
+			data-text="=请选择数据分类=" 
+			data-value="" 
+			data-select="#(dic??)">
+		</select>
+	</div>
+	<span class="text-danger">data-onlyleaf="true" 设置只能选择叶子节点</span>
+	<div class="form-group">
+		<select class="form-control"
+			name="dic1" 
+			data-autoload  
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-url="/demo/dictionary?key=group"  
+			data-text="=请选择数据分类=" 
+			data-onlyleaf="true"
+			data-value="" 
+			data-select="#(dic1??)">
+		</select>
+	</div>
+	<div class="alert alert-info">通过在Select标签上配置数据源地址，已选择项目值，可实现自动加载、自动校验、自动选中，无需写JS</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+
+<div class="col-4">
+	<div class="card">
+	<div class="card-header">AutoSelect组件-自定义Value和Text需要的字段属性</div>
+	<div class="card-body">
+	<form action="/demo/submit" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group">
+		<select class="form-control"
+			name="customattr" 
+			data-autoload  
+			data-rule="required"  
+			data-tips="请选择" 
+			data-url="/demo/customattr"  
+			data-text="=请选择=" 
+			data-value="" 
+			data-select="#(customattr??)"
+			data-text-attr="name,username,sex"
+			data-value-attr="id">
+		</select>
+	</div>
+	<div class="alert alert-info">通过在Select标签上配置 data-text-attr="name" data-value-attr="id" 可以设置option的text和value的取值字段<br/>
+	这样后端接口就不用特殊处理数据里必须有text和value这两个属性，Model也不用非得实现Option接口了<br/>
+	而且支持text显示多个字段的值data-text-attr="name,sex,age"
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+
+
+<div  class="col-4">
+<div class="card">
+	<div class="card-header">AutoSelect组件-多级联动</div>
+	<div class="card-body">
+	<form action="/demo/submit" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group">
+		<select class="form-control"
+			name="l1" 
+			data-autoload  
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-url="/admin/dictionary/poptions?key=group"  
+			data-text="=一级分类=" 
+			data-value="" 
+			data-linkage="true"
+			data-sonid="l2Select"
+			data-select="#(l1??)">
+		</select>
+	</div>
+	<div class="form-group">
+		<select class="form-control"
+			id="l2Select"
+			name="l2"
+			data-linkage="true" 
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-text="=二级分类=" 
+			data-value="" 
+			data-srcurl="/admin/dictionary/soptions?key=group&pid="
+			data-select="#(l2??)">
+		</select>
+	</div>
+	<div class="alert alert-info">上级的select 基本配置跟普通自动加载的select一样，如果需要多级联动，就需要配置data-linkage="true"
+	这个属性就是声明这个select属于这个多级联动的一部分，额外还需配置一个data-sonid="需要联动的下级Select组件的ID。
+	这样就知道了切换这个select选项的时候 触发哪一个select去重新加载数据，达到联动的效果。
+	注意：被联动的select 也需要增加data-linkage="true" 属性，但是最好去掉data-autoload属性。
+	最后，就是下级被联动的select需要一个数据源地址data-srcurl=""这里的srcurl需要写好URL最后是个自动拼接数据，当上级切换选择后，选择后的value值将会结合srcurl拼接下级Select完整的数据源URL地址。
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+</div>
+<div class="row  mt-5">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">Radio组件_普通</div>
+	<div class="card-body">
+	<form action="/demo/submit" method="post" onsubmit="return FormChecker.check(this)">
+	 <div class="form-group row" 
+		data-radio 
+		data-rule="radio"  
+		data-value="#(must??)" 
+		data-name="must" 
+		data-default="false">
+		<label class="col-auto col-form-label" >强制更新：</label>
+			<div class="col"  style="padding-top: 1px;">
+				<div class="radio radio-primary  radio-inline">
+					<input  id="r3" type="radio" name="must"   value="true"/>
+					<label for="r3">是</label>
+				</div>
+				
+				<div class="radio radio-primary  radio-inline">
+					<input  id="r4" type="radio" name="must"   value="false"/>
+					<label for="r4">否</label>
+				</div>
+			</div>
+		</div>
+	<div class="alert alert-info">通过在一组radio的父元素标签上配置属性，可实现自动加载、自动校验、自动选中，无需写JS,此案例是简单案例，未自动加载数据源</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+
+<div class="col-6">
+<div class="card">
+	<div class="card-header">Radio组件_自动加载数据</div>
+	<div class="card-body">
+	<form action="/demo/submit" method="post" onsubmit="return FormChecker.check(this)">
+	 <div class="form-group row" 
+		data-radio 
+		data-rule="radio"  
+		data-value="#(fileType??)" 
+		data-name="fileType" 
+		data-default=""
+		
+		data-url="/demo/dictionary?key=filetype"
+		data-label="类型："
+		data-width="col-3,col-9"
+		data-inline="true">
+		</div>
+	<div class="alert alert-info">通过在一组radio的父元素标签上配置属性，可实现自动加载、自动校验、自动选中，无需写JS,此案例是配置数据源版</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+
+</div>
+
+<div class="row mt-5">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">CheckBox组件_普通</div>
+	<div class="card-body">
+	<form action="/demo/submit" method="post" onsubmit="return FormChecker.check(this)">
+	 <div class="form-group row" 
+		data-checkbox 
+		data-rule="checkbox"  
+		data-value="#(aihao??)" 
+		data-name="aihao" 
+		data-default="1,3">
+		<label class="col-auto col-form-label" >兴趣爱好：</label>
+			<div class="col"  style="padding-top: 1px;">
+				<div class="checkbox checkbox-primary  checkbox-inline">
+					<input  id="c1" type="checkbox" name="aihao"   value="1"/>
+					<label for="c1">唱歌</label>
+				</div>
+				
+				<div class="checkbox checkbox-primary  checkbox-inline">
+					<input  id="c2" type="checkbox" name="aihao"   value="2"/>
+					<label for="c2">跳舞</label>
+				</div>
+				
+				<div class="checkbox checkbox-primary  checkbox-inline">
+					<input  id="c3" type="checkbox" name="aihao"   value="3"/>
+					<label for="c3">绘画</label>
+				</div>
+			</div>
+		</div>
+	<div class="alert alert-info">通过在一组checkbox的父元素标签上配置属性，可实现自动加载、自动校验、自动选中，无需写JS,此案例是简单案例，未自动加载数据源</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+
+</div>
+<div class="col-6">
+<div class="card">
+	<div class="card-header">CheckBox组件_自动加载数据</div>
+	<div class="card-body">
+	<form action="/demo/submit" method="post" onsubmit="return FormChecker.check(this)">
+	 <div class="form-group row" 
+		data-checkbox 
+		data-rule="checkbox"  
+		data-value="#(aihaoCheck??)" 
+		data-name="aihaoCheck" 
+		data-default=""
+		data-url="/demo/dictionary?key=filetype"
+		data-label="类型："
+		data-width="col-2,col-10"
+		data-inline="true">
+		</div>
+	<div class="alert alert-info">通过在一组checkbox的父元素标签上配置属性，可实现自动加载、自动校验、自动选中，无需写JS,此案例是简单案例，未自动加载数据源</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+
+</div>
+</div>
+
+<div class="row mt-5">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">时间组件-laydate</div>
+	<div class="card-body">
+	<form action="/demo/submitLayDate" method="post" onsubmit="return FormChecker.check(this)">
+	 <div class="form-group" >
+		<label>选择日期:</label>
+		<input type="text" class="form-control"   data-date name="layDate" value="#date(DateUtil.toDate(layDate??),'yyyy-MM-dd')">
+		</div>
+		
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择日期:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"   data-date name="layDate2" value="#date(DateUtil.toDate(layDate2??),'yyyy-MM-dd')">
+		</div>
+		</div>
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择日期+时间:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"    data-date data-type="datetime" data-fmt="yyyy-MM-dd HH:mm" name="layDateTime" value="#date(DateUtil.toDate(layDateTime??),'yyyy-MM-dd HH:mm')">
+		</div>
+		</div>
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择时间:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"   data-date data-type="time" data-fmt="HH:mm:ss" name="layOnlyTime1" value="#(layOnlyTime1)">
+		</div>
+		</div>
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择时间不带秒:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"   data-date data-type="time" data-fmt="HH:mm" name="layOnlyTime2" value="#(layOnlyTime2)">
+		</div>
+		</div>
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择时间特殊1:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"    data-date data-type="time" data-fmt="HH:mm" data-minutes="00,15,30,45" name="layOnlyTime3" value="#(layOnlyTime3)">
+		</div>
+		</div>
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择时间特殊2:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"    data-date data-type="time" data-fmt="HH:mm:ss" data-minutes="00,15,30,45" name="layOnlyTime4" value="#(layOnlyTime4)">
+		</div>
+		</div>
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择年:</label>
+		<div class="col-8">
+		<script>
+				function changeYear(ele,value){
+						console.log("切换中："+value);
+					alert("change："+value);
+				}
+				function changeDoneYear(ele,value){
+					console.log("切换确认后："+value);
+					alert("done："+value);
+					}
+		</script>
+		<input type="text" class="form-control" 
+		data-donehandler="changeDoneYear" 
+		data-changehandler="changeYear"   data-date data-type="year"   name="layYear" value="#(layYear??)">
+		</div>
+		</div>
+		 <div class="form-group row" >
+		<label class="col-2 col-form-label">选择年月:</label>
+		<div class="col-8">
+		<input type="text" class="form-control"   data-date data-type="month" data-fmt="yyyy年MM月" name="layMonth" value="#(layMonth??)">
+		</div>
+		</div>
+		
+		<div class="form-group row" >
+		<label class="col-2 col-form-label">选时间段:</label>
+		<div class="col-3">
+		<input type="text" class="form-control"   data-date name="startDate" value="#date(DateUtil.toDate(startDate??),'yyyy-MM-dd')">
+		</div>
+		<label>~</label>
+		<div class="col-3">
+		<input type="text" class="form-control"  data-date name="endDate" value="#date(DateUtil.toDate(endDate??),'yyyy-MM-dd')">
+		</div>
+		</div>
+		<div class="alert alert-info">type="text" 加属性data-date 声明是个时间组件，data-type指明格式是 year month date datetime time等类型 data-fmt指明具体的格式化 比如yyyy-MM-dd等</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+		</form>
+	</div>
+</div>
+</div>
+<div class="col-6">
+<div class="card">
+	<div class="card-header">时间组件-原生</div>
+	<div class="card-body">
+	<form action="/demo/submitDateAndTime" method="post" onsubmit="return FormChecker.check(this)">
+	 <div class="form-group" >
+		<label>选择日期:</label>
+		 <input type="date" name="date" value="#(date??)">
+		 <input type="date" name="dt.demoDate" value="#(dt.demoDate??)">
+		</div>
+		<div class="form-group" >
+		<label>选择时间:</label>
+		 <input type="time" name="time" value="#(time??)">
+		 <input type="time" name="dt.demoTime" value="#(dt.demoTime??)">
+		</div>
+		<div class="form-group" >
+		<label>选择日期+时间:#datetime(datetime??)</label>
+		
+		 <input type="datetime-local" name="datetime" value="#(datetime??)">
+		 <input type="datetime-local" name="dt.demoDateTime" value="#datetime(dt.demoDateTime??,true)">
+		</div>
+		<div class="form-group" >
+		<label>选择年月:</label>
+		 <input type="month" name="month" value="#(month??)">
+		</div>
+		<div class="form-group" >
+		<label>选择周:</label>
+		 <input type="week" name="week" value="#(week??)">
+		</div>
+	<div class="alert alert-info">通过设置不同的type 和不同的格式化 显示不同的样式和选择</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+#end
+
+#define js()
+<script>
+
+$(function(){
+})
+</script>
+#end

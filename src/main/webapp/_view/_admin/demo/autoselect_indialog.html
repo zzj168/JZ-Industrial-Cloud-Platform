@@ -1,0 +1,320 @@
+#@adminDialogLayout()
+#define main()
+<div class="jbolt_page">
+<div class="jbolt_page_content">
+<!-- AutoSelect组件 -->
+
+<div class="row">
+<div class="col-lg-4 col-md-6 col-sm-6 col-xl-4">
+	<div class="card">
+	<div class="card-header">AutoSelect组件</div>
+	<div class="card-body">
+	<form action="/demo/autoselect/submitInDialog" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group">
+		<select class="form-control"
+			name="dic" 
+			data-autoload  
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-url="/demo/dictionary?key=group"  
+			data-text="=请选择数据分类=" 
+			data-value="" 
+			data-select="#(dic??)">
+		</select>
+	</div>
+	
+	<div class="form-group">
+		<select class="form-control"
+			name="userId" 
+			data-autoload  
+			data-url="/admin/user/options"  
+			data-text="=选择用户=" 
+			data-value="" 
+			data-select="#(userId??)">
+		</select>
+	</div>
+	<span class="text-danger">data-onlyleaf="true" 设置只能选择叶子节点</span>
+	<div class="form-group">
+		<select class="form-control"
+			name="dic1" 
+			data-autoload  
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-url="/demo/dictionary?key=group"  
+			data-text="=请选择数据分类=" 
+			data-onlyleaf="true"
+			data-value="" 
+			data-select="#(dic1??)">
+		</select>
+	</div>
+	<div class="alert alert-info">通过在Select标签上配置数据源地址，已选择项目值，可实现自动加载、自动校验、自动选中，无需写JS</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-6 col-xl-4">
+	<div class="card">
+	<div class="card-header">AutoSelect组件-自定义Value和Text需要的字段属性</div>
+	<div class="card-body">
+	<form action="/demo/autoselect/submitInDialog" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group">
+		<select class="form-control"
+			name="customattr" 
+			data-autoload  
+			data-rule="required"  
+			data-tips="请选择" 
+			data-url="/demo/customattr"  
+			data-text="=请选择=" 
+			data-value="" 
+			data-select="#(customattr??)"
+			data-text-attr="name,username,sex"
+			data-value-attr="id">
+		</select>
+	</div>
+	<div class="alert alert-info">通过在Select标签上配置 data-text-attr="name" data-value-attr="id" 可以设置option的text和value的取值字段<br/>
+	这样后端接口就不用特殊处理数据里必须有text和value这两个属性，Model也不用非得实现Option接口了<br/>
+	而且支持text显示多个字段的值data-text-attr="name,sex,age"
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+
+
+<div  class="col-lg-4 col-md-6 col-sm-6 col-xl-4">
+<div class="card">
+	<div class="card-header">AutoSelect组件-Select2</div>
+	<div class="card-body">
+	<form action="/demo/autoselect/submitInDialog" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group">
+		<select class="form-control"
+			name="dic_select2" 
+			data-autoload
+			data-select-type="select2"  
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-url="/demo/dictionary?key=group"  
+			data-text="=请选择数据分类=" 
+			data-value="" 
+			data-select="#(dic_select2??)">
+		</select>
+	</div>
+	<div class="form-group">
+	<select class="form-control"
+			data-autoload
+			data-select-type="select2"  
+			data-rule="required" 
+			multiple="multiple" 
+			data-tips="请选择数据分类" 
+			data-url="/demo/dictionary?key=group"  
+			data-text="=请选择数据分类[多选]=" 
+			data-value="" 
+			data-handler="setValueToOther"
+			data-setvalueto="multipleInput"
+			data-select="#(dic_select2_multiple??)">
+		</select>
+		<input type="hidden" id="multipleInput" name="dic_select2_multiple" value="#(dic_select2_multiple??)" />
+	</div>
+	<div class="alert alert-info">
+	data-select-type="select2" 声明是个select2 默认不用声明就是普通select
+	<br/>
+	multiple="multiple" 声明是多选
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+</div>
+
+
+<div class="row  mt-5">
+<div class="col-lg-4 col-md-6 col-sm-6 col-xl-4">
+<div class="card">
+	<div class="card-header">AutoSelect组件-多级联动</div>
+	<div class="card-body">
+	<form action="/demo/autoselect/submitInDialog" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group">
+		<select class="form-control"
+			name="l1" 
+			data-autoload  
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-url="/admin/dictionary/poptions?key=group"  
+			data-text="=一级分类=" 
+			data-value="" 
+			data-linkage="true"
+			data-sonid="l2Select"
+			data-select="#(l1??)">
+		</select>
+	</div>
+	<div class="form-group">
+		<select class="form-control"
+			id="l2Select"
+			name="l2"
+			data-linkage="true" 
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-text="=二级分类=" 
+			data-value="" 
+			data-srcurl="/admin/dictionary/soptions?key=group&pid="
+			data-select="#(l2??)">
+		</select>
+	</div>
+	<div class="alert alert-info">
+	上级的select 基本配置跟普通自动加载的select一样，如果需要多级联动，就需要配置：
+	<br/>
+	data-linkage="true" 这个属性就是声明这个select属于这个多级联动的一部分
+	<br/>
+	额外还需配置一个:
+	<br/>
+	data-sonid="sonId" 需要联动的下级Select组件的ID。
+	<br/>
+	这样就知道了切换这个select选项的时候 触发哪一个select去重新加载数据，达到联动的效果。
+	<br/>
+	注意：被联动的select 也需要增加data-linkage="true" 属性，但是最好去掉data-autoload属性。
+	最后，就是下级被联动的select需要一个数据源地址:
+	<br/>
+	data-srcurl="" 这里的srcurl需要写好URL最后是个自动拼接数据，当上级切换选择后，选择后的value值将会结合srcurl拼接下级Select完整的数据源URL地址。
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+
+	</div>
+	
+	<div class="col-lg-4 col-md-6 col-sm-6 col-xl-4">
+<div class="card">
+	<div class="card-header">AutoSelect组件-handler处理</div>
+	<div class="card-body">
+	<form action="/demo/autoselect/submitInDialog" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group">
+		<select class="form-control"
+			name="l3" 
+			data-autoload  
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-url="/admin/dictionary/poptions?key=group"  
+			data-text="=一级分类=" 
+			data-value="" 
+			data-handler="processL3Handler"
+			data-linkage="true"
+			data-sonid="l4Select"
+			data-select="#(l3??)">
+		</select>
+	</div>
+	<div class="form-group">
+		<select class="form-control"
+			id="l4Select"
+			name="l4"
+			data-linkage="true" 
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-text="=二级分类=" 
+			data-value="" 
+			data-handler="processL4Handler"
+			data-srcurl="/admin/dictionary/soptions?key=group&pid="
+			data-select="#(l4??)">
+		</select>
+	</div>
+	<div class="alert alert-info">
+	data-handler="processL3Handler" 声明选择数据切换后执行handler处理
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+
+	</div>
+	<div class="col-lg-4 col-md-6 col-sm-6 col-xl-4">
+<div class="card">
+	<div class="card-header">AutoSelect组件-多级联动</div>
+	<div class="card-body">
+	<form action="/demo/autoselect/submitInDialog" method="post" onsubmit="return FormChecker.check(this)">
+	<div class="form-group">
+		<select class="form-control"
+			name="l5" 
+			data-autoload  
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-url="/admin/dictionary/poptions?key=group"  
+			data-text="=一级分类=" 
+			data-value="" 
+			data-linkage="true"
+			data-sonid="l6Select"
+			data-select="#(l5??)">
+		</select>
+	</div>
+	<div class="form-group">
+		<select class="form-control"
+			id="l6Select"
+			name="l6"
+			data-linkage="true" 
+			data-sonid="l7Select"
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-text="=二级分类=" 
+			data-value="" 
+			data-srcurl="/admin/dictionary/soptions?key=group&pid="
+			data-select="#(l6??)">
+		</select>
+	</div>
+	<div class="form-group">
+		<select class="form-control"
+			id="l7Select"
+			name="l7"
+			data-linkage="true" 
+			data-sonid="l8Select"
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-text="=三级分类=" 
+			data-value="" 
+			data-srcurl="/admin/dictionary/soptions?key=group&pid="
+			data-select="#(l7??)">
+		</select>
+	</div>
+	<div class="form-group">
+		<select class="form-control"
+			id="l8Select"
+			name="l8"
+			data-linkage="true" 
+			data-rule="required"  
+			data-tips="请选择数据分类" 
+			data-text="=四级分类=" 
+			data-value="" 
+			data-srcurl="/admin/dictionary/soptions?key=group&pid="
+			data-select="#(l8??)">
+		</select>
+	</div>
+	<div class="alert alert-info">
+	多级联动
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+
+	</div>
+	</div>
+	
+</div>
+</div>
+#end
+
+#define js()
+<script>
+function processL3Handler(select){
+	alert("processL3Handler："+select.val())
+}
+function processL4Handler(select){
+	alert("processL4Handler："+select.val())
+}
+
+$(function(){
+})
+</script>
+#end

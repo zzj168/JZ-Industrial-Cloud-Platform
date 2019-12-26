@@ -1,0 +1,106 @@
+<form onsubmit="return false;" id="permissionForm" action="#(action)" method="post">
+	#if(permission.id??)
+		<input type="hidden" name="permission.id" value="#(permission.id)" />
+	#end
+<input type="hidden" name="permission.permissionLevel" value="#(level?? 1)" />
+<div class="form-group row">
+   <label class="col-form-label col-2">上级资源</label>
+       <div class="col-8">
+           <select id="pid" class="form-control" name="permission.pid"  data-text="=无上级资源=" data-value="0" data-select="#(permission.pid?? (pid?? 0))" data-autoload data-url="/admin/permission/parentSelect/#(pid?? 0)"></select>
+       </div>
+   </div>
+    <div class="form-group row">
+    <label class="col-form-label col-2">资源名称</label>
+        <div class="col-8">
+            <input type="text" autocomplete="off"  data-rule="required" maxlength="20" placeholder="请输入资源名称" data-tips="请输入资源名称" name="permission.title" value="#(permission.title??)" class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-form-label col-2">ICONS</label>
+        <div class="col-8">
+            <input type="text" autocomplete="off"  maxlength="30" placeholder="请输入ICONS"   name="permission.icons" value="#(permission.icons??)" class="form-control">
+        </div>
+    </div>
+    <div class="form-group row">
+    <label class="col-form-label col-2">资源地址</label>
+        <div class="col-8">
+            <input type="text" autocomplete="off"    maxlength="255" placeholder="请输入资源地址"   name="permission.url" value="#(permission.url??)" class="form-control">
+        </div>
+    </div>
+    
+    <div class="form-group row">
+    <label class="col-form-label col-2">权限KEY</label>
+        <div class="col-8">
+            <input type="text" autocomplete="off"   data-rule="required" data-tips="请输入权限KEY" maxlength="40" placeholder="请输入权限KEY" tips="请输入权限KEY" name="permission.permissionKey" value="#(permission.permissionKey??)" class="form-control">
+        </div>
+    </div>
+ 
+    
+    <div class="form-group row" 
+		data-radio 
+		data-rule="radio"  
+		data-value="#(permission.isMenu??)" 
+		data-name="permission.isMenu" 
+		data-default="true">
+		<label class="col-form-label col-2" >是否是菜单</label>
+			<div class="col-8"  style="padding-top: 1px;">
+				<div class="radio radio-primary  radio-inline">
+					<input  id="rismenutrue" type="radio" name="permission.isMenu"   value="true"/>
+					<label for="rismenutrue">是</label>
+				</div>
+				<div class="radio radio-primary  radio-inline">
+					<input  id="rismenufalse" type="radio" name="permission.isMenu"   value="false"/>
+					<label for="rismenufalse">否</label>
+				</div>
+				
+			</div>
+		</div>
+    
+     <div class="form-group row" 
+		data-radio 
+		data-rule="radio"  
+		data-value="#(permission.isTargetBlank??)" 
+		data-name="permission.isTargetBlank" 
+		data-default="false">
+		<label class="col-form-label col-2" >打开方式</label>
+			<div class="col-8"  style="padding-top: 1px;">
+				<div class="radio radio-primary  radio-inline">
+					<input  id="rblankfalse" type="radio" name="permission.isTargetBlank"   value="false"/>
+					<label for="rblankfalse">当前窗口加载</label>
+				</div>
+				
+				<div class="radio radio-primary  radio-inline">
+					<input  id="rblanktrue" type="radio" name="permission.isTargetBlank"   value="true"/>
+					<label for="rblanktrue">新窗口打开</label>
+				</div>
+			<small class="form-text text-danger">提示：只有设置为菜单并且设置了资源地址，打开方式才生效</small>
+			</div>
+		</div>
+    
+	   <div class="form-group row" 
+		data-radio 
+		data-rule="radio"  
+		data-value="#(permission.isSystemAdminDefault??)" 
+		data-name="permission.isSystemAdminDefault" 
+		data-default="false">
+		<label class="col-form-label col-2" >是否超级管理员默认可用权限</label>
+			<div class="col-8"  style="padding-top: 1px;">
+				<div class="radio radio-primary  radio-inline">
+					<input  id="risSystemAdminDefaulttrue" type="radio" name="permission.isSystemAdminDefault"   value="true"/>
+					<label for="risSystemAdminDefaulttrue">是</label>
+				</div>
+				<div class="radio radio-primary  radio-inline">
+					<input  id="risSystemAdminDefaultfalse" type="radio" name="permission.isSystemAdminDefault"   value="false"/>
+					<label for="risSystemAdminDefaultfalse">否</label>
+				</div>
+				
+			<small class="form-text text-danger">提示：设置后超级管理员即使没有分配其它权限，也可以正常进入系统使用功能</small>
+			</div>
+		</div>
+	
+	
+	
+</form>
+#define js()
+#include("/_view/_admin/common/_formjs.html",formId="permissionForm")
+#end

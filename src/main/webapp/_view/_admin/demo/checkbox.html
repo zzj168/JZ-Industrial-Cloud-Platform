@@ -1,0 +1,95 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="/demo/checkbox">
+<div class="jbolt_page_title">
+	<h1>Demo-Checkbox演示</h1>
+</div>
+<div class="jbolt_page_content">
+
+<div class="row">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">CheckBox组件_普通</div>
+	<div class="card-body">
+	<form action="/demo/checkbox/submit" method="post" onsubmit="return FormChecker.check(this)">
+	 <div class="form-group row" 
+		data-checkbox 
+		data-rule="checkbox"  
+		data-value="#(aihao??)" 
+		data-name="aihao" 
+		data-default="1,3">
+		<label class="col-auto col-form-label" >兴趣爱好：</label>
+			<div class="col"  style="padding-top: 1px;">
+				<div class="checkbox checkbox-primary  checkbox-inline">
+					<input  id="c1" type="checkbox" name="aihao"   value="1"/>
+					<label for="c1">唱歌</label>
+				</div>
+				
+				<div class="checkbox checkbox-primary  checkbox-inline">
+					<input  id="c2" type="checkbox" name="aihao"   value="2"/>
+					<label for="c2">跳舞</label>
+				</div>
+				
+				<div class="checkbox checkbox-primary  checkbox-inline">
+					<input  id="c3" type="checkbox" name="aihao"   value="3"/>
+					<label for="c3">绘画</label>
+				</div>
+			</div>
+		</div>
+	<div class="alert alert-info">通过在一组checkbox的父元素标签上配置属性，可实现自动加载、自动校验、自动选中，无需写JS,此案例是简单案例，未自动加载数据源</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+
+</div>
+<div class="col-6">
+<div class="card">
+	<div class="card-header">CheckBox组件_自动加载数据</div>
+	<div class="card-body">
+	<form action="/demo/checkbox/submit" method="post" onsubmit="return FormChecker.check(this)">
+	 <div class="form-group row" 
+		data-checkbox 
+		data-rule="checkbox"  
+		data-value="#(filetypes??)" 
+		data-name="filetypes" 
+		data-default=""
+		data-url="/demo/dictionary?key=filetype"
+		data-label="类型："
+		data-width="col-2,col-10"
+		data-inline="true">
+		</div>
+		
+		 <div class="form-group row" 
+		data-checkbox 
+		data-rule="checkbox"  
+		data-value="#(filetypes2??)" 
+		data-name="filetypes2" 
+		data-default=""
+		data-url="/demo/dictionary?key=filetype"
+		data-label="类型："
+		data-width="col-2,col-10">
+		</div>
+	<div class="alert alert-info">通过在一组checkbox的父元素标签上配置属性，可实现自动加载、自动校验、自动选中，无需写JS,此案例是简单案例，未自动加载数据源
+	data-inline="true" 设置横纵排列样式
+	</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+
+</div>
+</div>
+
+
+</div>
+</div>
+#end
+
+#define js()
+<script>
+
+$(function(){
+})
+</script>
+#end

@@ -1,0 +1,77 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-4">
+	<h1>主从表管理demo</h1>
+	<span> #(pageData.totalRow?? 0) 条记录</span>
+	</div>
+	<div class="col-3">
+		<form class="form-inline" id="masterSlaveForm" action="/demo/masterslave"  data-pjaxsubmit method="get"></form>
+	</div>
+	<div class="col-5">
+	<a href="/mainupdate" target="_blank" class="pull-right btn btn-danger" ><i class="fa fa-cog"></i> 测试主更新接口</a>
+	<button data-area="600,400" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增版本" data-url="/admin/jboltversion/add" class="pull-right jbolt_table_addbtn btn btn-success" ><i class="fa fa-plus"></i> 新增</button>
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content">
+<div class="jbolt_master_slave_box">
+<div class="jbolt_master_container">
+<div class="table-responsive">
+<table class="table table-bordered table-hover table-striped table-center table-sm">
+<thead>
+<tr><th style="width: 60px">序号</th><th style="width: 150px">版本号</th><th style="width: 150px">发布时间</th><th style="width: 150px">创建时间</th><th style="width: 100px">是否最新版</th><th style="width: 120px">操作</th></tr>
+</thead>
+<tbody>
+#if(pageData)
+#for(data:pageData.list)
+<tr data-id="#(data.id)">
+<td>#(for.index+1)</td>
+<td>#(data.version??)</td>
+<td>#date(data.publishTime??,"yyyy-MM-dd HH:mm")</td>
+<td>#date(data.createTime??,"yyyy-MM-dd HH:mm")</td>
+<td><img src="#(data.isNew?'/assets/img/switch/default/on.png':'/assets/img/switch/default/off.png')" data-switchbtn data-handler="refreshPjaxContainer"  data-url="/admin/jboltversion/toggleIsNew/#(data.id)"/></td>
+<td>
+<a  tooltip  title="编辑"  href="/admin/jboltversion/edit/#(data.id)" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="编辑" data-area="600,400" class="jbolt_table_editbtn"><i class="fa fa-pencil c-primary"></i></a>
+<a  tooltip  title="删除"  href="/admin/jboltversion/delete/#(data.id)" data-handler="removeTr" class="jbolt_table_delbtn"><i class="fa fa-remove c-danger"></i></a>
+</td>
+</tr>
+#end
+#end
+</tbody>
+</table>	
+</div>
+
+</div>
+<div class="jbolt_master_page">
+#include("../../common/_page.html",pageEleId="jboltversionPage")
+</div>
+<div class="jbolt_slave_container">
+<div class="jbolt_slave_content">
+<nav>
+  <div class="nav nav-tabs" role="tablist">
+    <a class="nav-item nav-link active" id="nav-mainfile-tab" data-toggle="tab" href="#nav-mainfile" role="tab" aria-controls="nav-mainfile" aria-selected="true">可更新主文件</a>
+    <a class="nav-item nav-link" id="nav-changelog-tab" data-toggle="tab" href="#nav-changelog" role="tab" aria-controls="nav-changelog" aria-selected="false">Changelog</a>
+  </div>
+</nav>
+<div class="tab-content">
+  <div data-ajaxportal data-orign-url="/demo/masterslave/mainFiles" data-url="/demo/masterslave/mainFiles" class="tab-pane fade show active" id="nav-mainfile" role="tabpanel" aria-labelledby="nav-mainfile-tab"></div>
+  <div data-ajaxportal data-orign-url="/demo/masterslave/changelog" data-url="/demo/masterslave/changelog" class="tab-pane fade" id="nav-changelog" role="tabpanel" aria-labelledby="nav-changelog-tab"></div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+#end
+#define js()
+<script>
+$(function(){
+	initPage("jboltversionPage",#(pageData.totalPage??),#(pageData.pageNumber??),"masterSlaveForm");
+});
+</script>
+#end
+

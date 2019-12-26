@@ -1,0 +1,139 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="#(pmkey)">
+<div class="jbolt_page_title">
+	<div class="row">
+	<div class="col-9">
+	<h1>系统资源权限管理</h1>
+	<span> #(dataList.size()) 条记录</span>
+	<span style="color:red;font-weight: bold;">[注意：非开发人员请勿操作本页面]</span>
+	</div>
+	<div class="col-3">
+		<button data-ajaxbtn data-confirm="确认初始化权限资源的顺序吗？" data-handler="refreshPjaxContainer" data-title="初始化排序" data-url="/admin/permission/initRank" class="pull-right  btn btn-primary" ><i class="fa fa-sort"></i> 初始化排序</button>
+		<button data-area="800,600" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增权限资源" data-url="/admin/permission/add/0-1" class="pull-right jbolt_table_addbtn btn btn-success" ><i class="fa fa-plus"></i> 新增</button>
+	</div>
+	</div>
+</div>
+<div class="jbolt_page_content">
+<div class="table-responsive">
+<table class="table table-bordered table-hover table-striped table-center">
+       		<thead>
+       			<tr>
+	        	<th  style="width: 90px;">序号</th>
+				<th  style="width:250px;">资源</th>
+				<th  style="width:200px;">URL</th>
+				<th  style="width:130px;">打开方式</th>
+				<th  style="width:100px;">KEY</th>
+				<th  style="width:100px;">资源类型</th>
+				<th  style="width:100px;">超管默认</th>
+				<th  style="width: 140px;">操作</th>
+				<th ></th>
+			</tr>
+		</thead>
+        <tbody >
+        #for(data:dataList)
+            <tr>
+            	 <td >
+                	#(for.index+1)
+                </td>
+                <td class="text-left">
+                	<i class="#(data.icons??)"></i> #(data.title??)
+                </td>
+                <td  class="text-left">
+                	#(data.url??)
+                </td>
+                <td  class="text-center">
+                	#if(data.url??)#(data.isTargetBlank?"新窗口打开":"当前窗口加载")#end
+                </td>
+                <td  class="text-left">
+                	#(data.permissionKey??)
+                </td>
+                <td >
+                	<span class="badge badge-primary">#((data.isMenu??)?"菜单":"非菜单")</span>
+                </td>
+                  <td >
+                	<img data-switchbtn data-confirm="确定切换此权限是否是超管默认使用权限？" data-value="#(data.isSystemAdminDefault)"  data-handler="refreshPjaxContainer"  data-url="/admin/permission/toggleSystemAdminDefault/#(data.id)"/>
+                </td>
+                <td class="text-right">
+                    <a href="/admin/permission/add/#(data.id)-2" data-area="800,600"  tooltip data-title="添加下级资源"   data-handler="refreshPjaxContainer"  dialog-title="添加下级资源" class="jbolt_table_editbtn"><i class="fa fa-plus"></i></a>
+                    <a href="/admin/permission/edit/#(data.id)" data-area="800,600"  tooltip data-title="编辑"  data-handler="refreshPjaxContainer" dialog-title="编辑资源" class="jbolt_table_editbtn"><i class="fa fa-pencil"></i></a>
+                    <a href="/admin/permission/delete/#(data.id)" data-ajaxbtn data-loading="执行中 " tooltip data-title="删除" data-handler="refreshPjaxContainer" data-confirm="确定删除这条数据？" class="jbolt_table_delbtn"><i class="fa fa-remove  c-danger"></i></a>
+                    <a href="/admin/permission/up/#(data.id)" data-ajaxbtn data-loading="执行中 " tooltip data-title="上移" data-handler="refreshPjaxContainer"   class="jbolt_table_btn"><i class="fa fa-arrow-up c-info"></i></a>
+                    <a href="/admin/permission/down/#(data.id)" data-ajaxbtn data-loading="执行中 " tooltip data-title="下移" data-handler="refreshPjaxContainer"  class="jbolt_table_btn"><i class="fa fa-arrow-down c-info"></i></a>
+                </td>
+                <td></td>
+            </tr>
+            #for(son:data.items)
+				<tr  data-removekey="tr_#(son.id)">
+            	 <td >
+                </td>
+                <td class="text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red;font-size:14px;top:-5px;">├ </span>#(son.title)</td>
+                <td  class="text-left">
+                	#(son.url??)
+                </td>
+                 <td  class="text-center">
+                	#if(son.url??)#(son.isTargetBlank?"新窗口打开":"当前窗口加载")#end
+                </td>
+                <td  class="text-left">
+                	#(son.permissionKey??)
+                </td>
+                <td >
+                	<span class="badge badge-success">#((son.isMenu??)?"子菜单":"非菜单")</span>
+                </td>
+                  <td >
+                	<img data-switchbtn data-confirm="确定切换此权限是否是超管默认使用权限？" data-value="#(son.isSystemAdminDefault)"  data-handler="refreshPjaxContainer"  data-url="/admin/permission/toggleSystemAdminDefault/#(son.id)-#(data.id)"/>
+                </td>
+                <td class="text-right">
+                	<a href="/admin/permission/add/#(son.id)-3" data-area="800,600"  tooltip data-title="添加下级资源" data-handler="refreshPjaxContainer"   dialog-title="添加下级资源" class="jbolt_table_editbtn"><i class="fa fa-plus"></i></a>
+                    <a href="/admin/permission/edit/#(son.id)" data-area="800,600"  tooltip data-title="编辑" data-handler="refreshPjaxContainer"   dialog-title="编辑" class="jbolt_table_editbtn"><i class="fa fa-pencil"></i></a>
+                    <a href="/admin/permission/delete/#(son.id)" data-ajaxbtn data-loading="执行中 " tooltip data-title="删除" data-removekey="tr_#(son.id)" data-handler="removeByKey" data-confirm="确定删除这条数据？" class="jbolt_table_delbtn"><i class="fa fa-remove  c-danger"></i></a>
+                    <a href="/admin/permission/up/#(son.id)" data-ajaxbtn data-loading="执行中 " tooltip data-title="上移" data-handler="refreshPjaxContainer"   class="jbolt_table_btn"><i class="fa fa-arrow-up  c-info"></i></a>
+                    <a href="/admin/permission/down/#(son.id)" data-ajaxbtn data-loading="执行中 " tooltip data-title="下移" data-handler="refreshPjaxContainer"   class="jbolt_table_btn"><i class="fa fa-arrow-down  c-info"></i></a>
+                </td>
+                <td></td>
+            </tr>
+            	#for(grandson:son.items)
+				<tr  data-removekey="tr_#(son.id)">
+            	 <td >
+                </td>
+                <td class="text-left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="color:red;font-size:14px;top:-5px;">├ </span>#(grandson.title)</td>
+                <td  class="text-left">
+                	#(grandson.url??)
+                </td>
+                <td  class="text-center">
+                #if(grandson.isMenu??)
+                	#if(grandson.url??)#(grandson.isTargetBlank?"新窗口打开":"当前窗口加载")#end
+                #end
+                </td>
+                <td  class="text-left">
+                	#(grandson.permissionKey??)
+                </td>
+                <td >
+                	<span class="badge badge-info">#((grandson.isMenu??)?"子菜单":"非菜单")</span>
+                </td>
+                <td >
+                <img data-switchbtn data-confirm="确定切换此权限是否是超管默认使用权限？" data-value="#(grandson.isSystemAdminDefault)"  data-handler="refreshPjaxContainer"  data-url="/admin/permission/toggleSystemAdminDefault/#(grandson.id)-#(son.id)-#(data.id)"/>
+                </td>
+                <td class="text-right">
+                    <a href="/admin/permission/edit/#(grandson.id)" data-area="800,600"  tooltip data-title="编辑"  data-handler="refreshPjaxContainer"  dialog-title="编辑角色" class="jbolt_table_editbtn"><i class="fa fa-pencil"></i></a>
+                    <a href="/admin/permission/delete/#(grandson.id)" data-ajaxbtn data-loading="执行中 " tooltip data-title="删除" data-handler="removeTr" data-confirm="确定删除这条数据？" class="jbolt_table_delbtn"><i class="fa fa-remove  c-danger"></i></a>
+                    <a href="/admin/permission/up/#(grandson.id)" data-ajaxbtn data-loading="执行中 " tooltip data-title="上移" data-handler="moveUp"    class="jbolt_table_btn"><i class="fa fa-arrow-up  c-info"></i></a>
+                    <a href="/admin/permission/down/#(grandson.id)" data-ajaxbtn data-loading="执行中 " tooltip data-title="下移" data-handler="moveDown"   class="jbolt_table_btn"><i class="fa fa-arrow-down  c-info"></i></a>
+                </td>
+                <td></td>
+            </tr>
+			#end
+			#end
+            #end
+        </tbody>
+     </table>
+     </div>
+     </div>
+</div>
+#end
+#define js()
+<script>
+$(function(){
+});
+</script>
+#end

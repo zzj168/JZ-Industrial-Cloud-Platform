@@ -1,0 +1,56 @@
+#@adminLayout()
+#define main()
+<div class="jbolt_page" data-key="/demo/html5date">
+<div class="jbolt_page_title">
+	<h1>Demo-Html5原生date组件 演示</h1>
+</div>
+<div class="jbolt_page_content">
+
+<div class="row">
+<div class="col-6">
+<div class="card">
+	<div class="card-header">时间组件-原生</div>
+	<div class="card-body">
+	<form action="/demo/html5date/submit" method="post" onsubmit="return FormChecker.check(this)">
+	 <div class="form-group" >
+		<label>选择日期:</label>
+		 <input type="date" name="date" value="#(date??)">
+		 <input type="date" name="dt.demoDate" value="#datetime(dt.demoDate??,'yyyy-MM-dd')">
+		</div>
+		<div class="form-group" >
+		<label>选择时间#(dt.demoTime??):</label>
+		 <input type="time" name="time" value="#(time??)">
+		 <input type="time" name="dt.demoTime" value="#(dt.demoTime??)">
+		</div>
+		<div class="form-group" >
+		<label>选择日期+时间:#datetime(dt.demoDateTime??)</label>
+		
+		 <input type="datetime-local" name="datetime" value="#(datetime??)">
+		 <input type="datetime-local" name="dt.demoDateTime" value="#datetime(dt.demoDateTime??,'yyyy-MM-ddTHH:mm')">
+		</div>
+		<div class="form-group" >
+		<label>选择年月:</label>
+		 <input type="month" name="month" value="#(month??)">
+		</div>
+		<div class="form-group" >
+		<label>选择周:</label>
+		 <input type="week" name="week" value="#(week??)">
+		</div>
+	<div class="alert alert-info">通过设置不同的type 和不同的格式化 显示不同的样式和选择</div>
+	<div class="form-group text-right"><button class="btn btn-primary" type="submit">Test It</button></div>
+	</form>
+	</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+#end
+
+#define js()
+<script>
+
+$(function(){
+})
+</script>
+#end

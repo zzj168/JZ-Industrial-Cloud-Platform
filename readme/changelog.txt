@@ -1,0 +1,438 @@
+===JBolt 2019年12月10日17:30:00 更新===
+1、cn.jbolt.common.gen下增加了JFinalModelGenerator用来生成Model和BaseModel 支持多个类型数据库
+针对Eclipse和Idea用户，都可以完美的实现代码生成，无需安装插件了。
+进入JFinalModelGenerator.java 右键运行即可
+2、日志改用JFinal4.8新加的Slf4j,去掉Hutool的log使用
+3、去掉原先无用的类注释声明，JBolt开发平台，针对计划内成员，完全开放，可以学习，可以二开，可以为自己、企业、客户
+定制开发项目产品，但是请尊重开发者成果，请勿直接复制传播给他人或者变卖销售。
+
+===JBolt 2019年12月08日16:15:00 更新===
+1、jb_wechat_reply_content表里字段mediaId改成了media_id
+请更新代码后，数据库表结构更正一下即可
+
+===JBolt 2019年12月08日15:46:00 更新===
+0、老用户没有执行过项目/readme/updatesql/2019-12-04/update.sql的 请先执行
+1、增加JBoltAutoCache注解 给Model配置上之后可以实现默认ID-Object缓存自动化处理，findById、deletexxx、update等操作自动处理缓存
+除了ID-Object还提供了针对GlobalConfig、UserConfig、DictionaryType表中使用configKey TypeKey字段做缓存KEY获取数据的场景进行了自动化支持
+
+2、修复电商模块添加商品-第一步选择分类，点击下一步按钮后弹出confirm之后选择取消按钮后，再次点击下一步按钮无效的BUG
+3、IJBoltParaValidator校验接口提取与实现
+4、增加String ID的全局唯一生成器，使用HUtool提供的IdUtil，支持单机应用UUID，ObjectId生成，支持分布式Twitter 雪花算法
+5、增加JBoltAutoUpgrade.java 在MainConfig.java的onstart启动后调用，会在每次更新后执行一些初始化和自动更新操作
+6、增加两个全局配置 actionReport输出位置和JBoltAutoCache debug Log输出配置 这两个会在本次升级更新代码 启动的时候自动更新处理
+7、在log4j2.xml增加针对ActionReport的配置 
+8、在log4j2.xml增加对JBoltAutoCache的配置 开启需要输出缓存操作和结果的日志的全局配置时，可以看到针对缓存的操作和结果，json格式输出结果，方便调试
+9、其他多个小细节优化，更好用 更省心，后续教程补上
+
+===JBolt 2019年12月04日16:00:00 更新===
+1、底层调整适配mysql、sqlserver、orale、postgresql四大数据库
+2、JBolt插件1.9.0中提供了针对JBoltBaseModel的生成规则以及char(1) to Boolean
+3、数据库配置文件独立出来配置dbconfig文件夹下面
+4、用户管理修改、删除、重置密码都加了针对超管员角色操作限制，如果是操作超管的这些数据，需要验证当前用户是否是超管，只有超管才能操作另一个超管
+理论上可以为系统配置多个超管。
+5、增加头像个人设置里的头像修改 需要自行增加一个权限菜单：
+├ 修改头像	/admin/user/avatar	当前窗口加载	useravatar	子菜单
+6、Autocomplete组件增加data-limit属性，用于自定义查询返回的数据量
+7、baseService里的多个方法进行优化调整
+8、global_config表中增加value_type字段 用于标识值类型 需要执行升级sql
+/readme/updatesql/2019-12-04/update.sql
+9、针对sql注入，安全问题，进一步优化处理
+10、增加UnProcessBoolean注解，默认JBolt中的Model继承BaseModel，BaseModel统一继承JBoltBaseModel，这部分工作交给了生成器
+但是如果不需要处理Boolean类型字段与char(1) 映射关系的特殊情况，可以使用注解消除掉这个默认处理。
+11、增加JBoltActionReportLogWriter.java 处理将JFinal的action report输出到日志和控制台
+使用日志系统接管。
+
+
+===JBolt 2019年11月29日23:38:00 更新===
+1、完善开发平台对Sql注入的抵御能力 针对sql有所改动
+2、修复JBoltLayer中Input type="file"点击无效的问题，以及导致imgUploader和FileUploader失效的问题
+3、修复右上角头像的src取值 BUG 
+5、修复Select2组件在JboltLayer中无法显示选项的BUG
+
+===JBolt 2019年11月19日21:50:00 更新===
+1、修复极端情况下刷新页面 在多选项卡模式下 刷新页面不出选项卡的bug
+2、增加CURD带分页和CURD不带分页的两个DEMO页面，完整CURD操作 分页关键词查询等。
+3、多文件上传组件修复可自定义上传URL，自定限制数量,支持配置最大上传尺寸，上传处理回调等
+4、多文件上传支持异步文件队列上传和同步批量上传，有回调处理 增加DEMO
+增加菜单：在demo-Jbolt组件列表中
+ ├ 多文件同步上传	/demo/multiplefilesyncuploader	当前窗口加载	demo_multiple_file_sunc_upload	子菜单
+
+===JBolt 2019年11月18日19:50:00 更新===
+1、内置表单校验规则扩展支持常用的N多正则校验规则
+2、增加data-ajax-check-url="/demo/checkInput" 设置input输入框onblur事件执行ajax后台请求校验输入正确性。
+3、在Demo教程展示 JBolt组件列表中增加了-表单校验(内置)，里面有20多个常用校验规则的演示Demo
+请在权限管理下自行添加这个子菜单权限
+├ 表单校验(内置)	/demo/formcheck	当前窗口加载	demo_formcheck	子菜单
+
+===JBolt 2019年11月16日23:55:00 更新===
+1、修复：多选项卡模式下，选项卡右键菜单被Neditor编辑器遮挡不显示的bug
+2、修复：JBoltLayer组件z-index无法遮挡Neditor的BUG
+3、修复：JBoltLayer组件z-Index无法遮挡选项卡右键菜单的BUG
+4、集成Bootstrap-fileinput组件做多文件上传案例，并修复BUG使其可以在PJAX和多选项卡模式下使用
+5、将静态资源在jfinal模板文件中定义为共享函数 __jboltassets.html 方便JBoltAssetsCompressor和JBoltMineAssetsCompressor每次针对静态资源压缩后只修改这一个文件
+
+===JBolt 2019年11月15日18:00:00 更新===
+1、Autocomplete组件 除了能给隐藏域赋值，今天增加了针对Editor组件的赋值
+Neditor Summernote都支持 demo有演示neditor组件和Summernote组件演示页面。
+2、集成Bootstrap-fileinput组件用于多文件上传组件，案例是multiplefileuploader.html
+需要在JBolt组件demo列表中加入子菜单权限即可访问
+├ 多文件上传组件	/demo/multiplefileuploader	当前窗口加载	demo_multiple_file_upload	子菜单
+
+===JBolt 2019年11月14日17:30:00 更新===
+1、系统完善，使用Slf4J+log4j2实现Druid的日志输出，以及整合HUtool中的日志工具类，默认使用Slf4JLogFactory
+2、分表操作Service-BaseRecordService中增加了分表处理的多个实用封装
+3、优化Sql模板函数
+4、上传最新的jbolt_mysql.sql初始化sql，新项目使用它初始化，注意 编码统一utf8mb4
+
+===JBolt 2019年11月13日23:20:00 更新===
+1、BaseService里提供findByIdWithoutColumns(id,withoutColums) 获取数据的时候指定不需要的列，案例就是在获取系统用户的cache数据时不要password字段
+2、BaseService里提供getCommonListWithoutColumns 获取list数据指定不需要的列，例如查询用户列表相关
+3、BaseService里提供getTableSelectColumnsWithout(withoutColums) 用于获取除了指定不需要的列，其它剩下的列的组合转拼接字符串
+4、针对oracle适配完善特别是针对char(1) to Boolean的处理 增加了JBoltBaseModel.java 暂时没替换Jbolt的base，等待更完善的测试
+和IDE插件的共同处理
+5、修复Autocomplete组件在设置显示多列数据并且只有一个隐藏域 且隐藏域不使用默认值而是使用data-value-attr自定义取值属性时，无效的bug
+
+===JBolt 2019年11月12日23:00:00 更新===
+1、修复了 左侧导航收缩以后 二级三级菜单 如果高度超过浏览器下方会隐藏不显示的问题
+2、修复窗口resize时候jboltlayer设置data-height之后不随着高度变更的问题
+===JBolt 2019年11月11日15:00:00 更新===
+1、修复权限permission命令校验BUG
+2、增加SqlServer支持 还在继续完善
+3、user管理增加分页和关键词查询
+
+===JBolt 2019年11月10日17:16:00 更新===
+1、jbolt-admin.js进行优化升级改造，提升性能，执行顺序调整
+2、修复昨天上传造成的问题
+3、静态资源压缩器自动识别项目目录 无需人工配置了
+
+===JBolt 2019年11月09日21:39:00 更新===
+1、针对Jbolt整体Model和Service里使用dao的方式做了集体变更，使用波总推荐的JFinal最佳实践方式
+2、增加ByteRender已经在Controller层封装了各种renderByte***
+3、jbolt-admin.js调整组件初始化和加载顺序更合理 加载速度提升
+4、增加了JBoltStater.java 用于配置启动器和Undertow参数 mainConfig中的main方法保留 但是调用的也是JBoltStarter.java
+暂时对JBolt插件的右键运行兼容
+5、jfinal.sh jfinal.bat里面启动class指向cn.jbolt.JBoltStarter
+
+===JBolt 2019年11月08日18:20:00 更新===
+1、增加两个Demo imguploader.html和fileupload.html 需要自行添加两个权限在Demo-Jbolt组件列表下
+ ├ ImgUploader组件	/demo/imguploader	当前窗口加载	demo_imguploader	子菜单		   	
+ ├ FileUploader组件	/demo/fileuploader	当前窗口加载	demo_fileuploader	子菜单
+ 
+2、修复超管默认权限设置的bug，极端情况，没有将权限设置超管默认，但是无权的情况
+3、权限都进入CACHE，cache中原来存list对象 现在改成set 提升权限判断性能
+
+
+
+===JBolt 2019年11月07日23:09:00 更新===
+1、Sql.java和Conditon.java 升级迭代，更好用，性能更好，快速准确生成Sql，自动适配Mysql、oracle、SqlServer
+2、在BaseService和BaseRecordService里使用Sql.java
+3、将系统内除了Sql模板之外，其他使用手写Sql的地方，全部使用Sql.java 修改完善
+4、公众平台模块自动回复规则里的校验重名BUG修复，两个公众号校验应该互不影响，相互独立才行
+5、增加jbolt-mine.js和jbolt-mine.css用于让开发者自己写的JS和CSS 不侵染jbolt-admin.js和jbolt-admin.css
+6、静态资源压缩器，分成两个，一个是我维护使用的jbolt核心用的，一个是提供给二次开发用的可以只生成压缩替换jbolt-mine.js和jbolt-mine.css
+7、修复AutoSelect组件bug，可以在Dialog里使用select2风格和多选模式
+8、各个模块java代码均有优化
+9、修复非管理员用户后台右上角用户个性化设置页面空白的BUG
+10、修复电商模块-商品类型-拼音属性自动生成无效的BUG
+11、修改左侧菜单样式
+12、修复BUG：当页面进入后台主页，默认自动打开第一个可用链接作为主页 原来只能打开一级和二级的，现在也能识别三级菜单
+
+===JBolt 2019年10月31日00:09:00 更新===
+1、修复Radio和Checkbox显示text为undifined的bug
+与Select组件用法保持一致 增加data-text-attr和data-value-attr用法
+具体用法说明教程：https://www.jianshu.com/p/6aed2265ca1d
+
+===JBolt 2019年10月29日19:30:00 更新===
+1、修复UserService中save的参数校验BUG
+2、增加WebCam组件集成，可以用于在线调用摄像头拍照上传的业务，比如单据拍照，考勤拍照等
+3、具体访问地址在WebcamDemoController.java 在后台权限管理Demo组件列表中自己添加一个权限菜单
+地址是/demo/webcam key是 demo_webcam，然后相关角色分配权限即可使用访问。
+
+===JBolt 2019年10月28日18:25:00 更新===
+1、本次更新需要先执行/readme/updatesql/2019-10-28/update.sql 完成数据库结构升级
+2、User表sex字段修改为INT类型 相关界面和表单已经修改完成
+3、Permission表增加is_system_admin_default字段，用户设置超级管理员默认权限
+4、默认权限在超管登录的时候默认出现
+5、超管不能删除，可以不分配角色，其它User必须分配角色和权限才能进入系统
+6、角色Role中增加pid，用户角色无限分级，上级角色绑定了什么权限资源，在给下级分配的时候
+只能分配上级有的，上级没有的不会被分配。
+7、用户多角色分配，组件改为select2的树结构多选
+8、user表增加is_system_admin字段 用于内定超级管理员
+9、拦截器优化针对超管默认权限做了处理
+
+===JBolt 2019年10月19日21:13:00 更新===
+1、增加API中心应用的一个新配置，配置是否开启sign校验，开启-增强安全性 关闭-便于开发调试
+2、升级需要执行readme/updatesql/2019-10-19中的sql脚本
+3、AutoSelect组件增加多选支持 在Demo里有最新
+
+===JBolt 2019年10月17日23:13:00 更新===
+1、API应用开发中心升级，增加了chenSignature校验，优化JWT生成和校验逻辑，提升安全性，有效防止API接口被CSRF攻击和XSS攻击
+2、封装小程序端JboltSDK，无需开发者干预自动处理Token和sign签名等
+
+===JBolt 2019年10月16日00:25:00 更新===
+1、将字典模块改为支持一级或无限级
+2、将AutoSelect组件更改为自动适配一级和无限级
+3、将AutoSelect组件的select2风格更改为自动适配一级和无限级
+4、AutoSelect组件Demo中增加N级联动Demo
+
+===JBolt 2019年10月15日15:57:00 更新===
+1、修复多选项卡下商品管理左侧tree和商品分类管理中tree的js加载冲突问题
+2、去掉第三方右键菜单组件，在选项卡上右键操作全部改为自己实现右键菜单，使用Bootstrap原生组件制作，修复了对Mac上浏览器不兼容问题
+3、新增两个风格全局风格，全局配置和右上角用户个性设置中都可以启用新风格样式
+
+===JBolt 2019年10月10日22:00:00 更新===
+1、Autocomplete组件支持data-hiddeninput="userId,pinyin"这种多input绑定赋值 具体在Demo列表的Autocomplete组件演示页面有案例
+
+===JBolt 2019年10月08日22:00:00 更新===
+1、AutoComplete组件单个列数据较长出现缩略的BUG已经解决
+2、Demo大页面拆分成单个组件有自己的单页展示学习
+3、修复Dialog上自定义按钮后刷新页面重复添加的问题
+4、Demo继续拆分单个组件页面教程，具体拆分的菜单需要到reamme/updatesql/2019-10-8里面找到sql执行
+然后给角色分配上权限就可以了 如果没执行2019-10-2里的文件 先执行2019-10-2这个
+5、针对HTML5里的type=date type=time type=datetime-local做了DateTimeDirective.java这个自定义指令
+适配完美处理
+6、增加switchbtn四种样式
+
+===JBolt 2019年10月01日22:40:00 更新===
+1、neditor编辑器 涂鸦板IE兼容性优化
+2、后台主页顶部操作按钮CSS针对IE浏览器优化
+3、AutoLoadSelect 增加data-select-type="select2"属性 ，可以在原有基础上增加select2组件特性
+后续也会专门推出Select2专版
+4、Autocomplete组件修复text长度显示不够的问题
+5、Demo模块拆分工作开始 AutoSelect和Autocomplete组件Demo单独拆出来
+具体拆分的菜单需要到reamme/updatesql/2019-10-2里面找到sql执行
+然后给角色分配上权限就可以了
+
+
+===JBolt 2019年09月30日00:40:19 更新===
+1、增加全局配置中的[登录页面背景图配置]可以设置本地地址 可以设置其他可访问的网络地址
+本地位于/assets/css/img/login_bgx.jpg 其中x是1-7 默认是login_bg.jpg;如需要更换，可以使用
+Jbolt自带的改一个序号，也可以自己提供一个放在这里或者其他网络可访问地方
+
+
+===JBolt 2019年09月27日14:20:19 更新===
+1、JBolt的所有表jb_开头 重弄生成了全部的BaseModel和Model
+2、所有字段取消驼峰 使用下划线 为了多数据库适配
+3、具体升级方案请查看/readme/updatesql/2019-9-27/升级必看.docx
+4、公众平台底层API调用错误反馈信息，准确在前端提示出来
+5、优化全局配置可视化UI操作，更方便
+6、增加锁屏功能-在右上角有按钮
+7、优化后台主页顶部按钮图标
+8、增加用户个性化设置功能-在右上角有按钮
+9、提取ControllerKit为公用
+10、新增两个登录页面背景图，可以自行替换 后面增加到全局配置里
+11、登录页增加后台可设置属性-背景高斯模糊效果
+12、全局配置中增加验证码类型配置，默认-GIF验证码-气泡PNG
+
+
+===JBolt 2019年09月17日14:20:19 更新===
+1、ueditor增加打印按钮
+2、data-imgviewer组件 增加在Dialog弹出层里适配
+3、针对IE浏览器出现未实现URL多标签页出现空白页后导航不能点击的bug
+4、增加新表application表 见readme中updatesql下的2019-9-17下的升级说明
+5、增加新模块Api应用开发中心，用于创建对接API应用，在cn.jbolt.base.api包里，
+完整实现JWT的生成、校验、过期、传递规则等
+6、完善公众号管理中的文本回复内容，支持回车换行 支持超链接 支持emoji表情
+7、时间选择组件 增加data-changehandler="changeValue" 用于点击切换事件响应
+8、时间选择组件 增加data-donechandler="changeValueDone" 用于点击确认选择按钮事件响应
+
+
+===JBolt 2019年09月11日17:02:19 更新===
+1、增加viewer.js组件的集成 可以做单图、幻灯片、相册的组件使用(重点为了可旋转)，一个属性轻松配置搞定
+具体看demo模块里的实例和说明。
+2、增加主从表使用的DEMO，具体看demo模块里的实例，需要先自行添加一个菜单方可进入。
+教程：http://www.jfinal.com/share/1807
+在模块 【 Demo教程展示】 下增加
+菜单名字：主从表DEMO	
+URL：/demo/masterslave	
+打开方式：当前窗口加载	
+KEY：demo_masterslave
+
+3、修复基础数据 sn编号的空异常bug
+4、pom里fastjson升级为最新版 避免安全威胁
+
+===JBolt 2019年09月07日21:07:19 更新===
+1、全局配置表里增加了是否启用登录页面验证码的配置
+方便开发阶段去掉输入验证码，节省时间
+
+===JBolt 2019年09月07日19:48:19 更新===
+1、替换新版的Morris和raphael的js库，解决Resize窗口造成的重绘报错问题
+2、Autocomplete增加data-width用来手动指定选项列表的宽度，用于适配多列选项的时候默认长度不够的问题，如果不填
+现在也可以自动计算合适长度处理。
+3、在多选项卡模式下，增加右键菜单，关闭当前、刷新选项卡、关闭其它、关闭左侧、关闭右侧、关闭全部等
+
+===JBolt 2019年09月05日19:25:19 更新===
+1、精简引入的JS库 合并到jbolt-admin.js里
+2、增加Autocomplete组件 demo在demo模块里 教程在这里https://my.oschina.net/imhoodoo/blog/3102509
+3、BaseService中增加对Autocomplete组件的底层支持
+4、BaseRecordService中增加对Autocomplete组件的底层支持 支持分表
+5、加入cn.jbolt.common.db.sql包 Sql.java工具类 可以快速创建Sql语句的工具类
+
+===JBolt 2019年09月03日20:15:19 更新===
+1、修改neditor上的word复制进来的图片默认图 提示自行修改 暂时没法实现自动上传
+2、data-photobtn 上如果图片资源不存在 报错的窗口按钮问题显示异常的bug 已经修复 是layer自身bug
+3、优化Neditor的自动化处理
+===JBolt 2019年09月03日11:25:19 更新===
+1、JBolt系统内置增加SummernoteUploadAdminController处理summernote组件的图片上传自动化
+2、富文本编辑器增加对NEditor的支持（Ueditor的升级改造版）
+3、JBolt系统内置增加NEditorUploadAdminController处理NEditor组件的图片、视频、涂鸦、附件的上传自动化
+4、后台Demo模块页面增加了针对Summernote和NEditor的Demo 用法演示和说明
+
+===JBolt 2019年08月22日18:46:19 更新===
+1、电商 商品分类-增加排序
+2、电商 商品分类-增加字段pinyin、remark 增加关键词搜索 增加分页
+3、分页组件升级 增加可变、可选的PageSize组件 可以自由选择而不再是固定指定每页条数
+4、优化权限拦截器返回值，根据是ajax、pjax、ajaxPortal等不同类型请求，返回不同类型的消息 体验更完美
+5、字典表增加排序功能sortRan字段 增加编号字段sn 可以批量添加字典项
+6、加入Druid监控中心 增加权限druid_monitor
+7、Jbolt项目里所有以前直接使用PageSize.java中定义每页数据量的地方 都改成了getPageSize()适配 新的分页组件
+8、有排序行为的模块，增加删除任意一条数据后，给被删除数据后面的数据重新自动排序
+9、pom里升级使用JFinal4.4、JFinal-undertow 1.9、cos 2019.8
+10、具体升级请按照readme>updatesql>2019-7-21文件夹下的升级说明 
+
+
+===JBolt 2019年08月21日00:06:19 更新===
+1、JS封装JBoltLayer滑出层组件，可以在左侧和右侧滑出ajaxPortal层，有遮罩，具体看JBolt demo页面演示
+2、增加data-jboltlayertrigger触发器 触发JBoltLayer滑出层组件
+
+===JBolt 2019年08月20日19:09:19 更新===
+1、增加data-tabtrigger 可以使得一个元素成为选项卡触发器，点击弹出一个新选项卡 在jboltDemo里有演示
+并且商品管理中添加和修改按钮链接 在判断开启了多选项卡模式后 也有了这个属性。
+2、自动加载数据源的select组件 增加data-onlyleaf="true" 用来设置，只能选择叶子节点 如果数据源是多级数据的话
+
+===JBolt 2019年08月20日10:11:12 更新===
+1、增加在模板中使用随机数-RandomUtil
+2、电商部分完美适配单页和多选项卡两种模式 自由切换
+3、增加tabtrigger可以在任何地方弹出一个选项卡
+4、增加Form表单提交到一个ajaxPortal
+5、增加tabtrigger的data-target属性 
+_self就是提交到ajaxPortal _blank就是打开新的选项卡
+
+===JBolt 2019年08月08日13:16:12 更新===
+1、Dialog里的表单提交 增加放置快速点击确定按钮重复提交数据的限制
+2、修复自动Select组件 不设置URL报错的BUG
+3、自动Select组件增加新特定，支持自定option的value和text 使用数据里的哪个属性字段，不用后端提供数据
+非得实现Option接口或者提供text和value这两个固定属性。
+而且支持text设置多个属性
+
+===JBolt 2019年08月06日20:10:12 更新===
+1、修复增加多选项卡造成dialog中分页组件事件绑定失败的问题
+2、完善电商模块关于增加多选项卡后的内页适配问题
+3、xss攻击 处理模块 tomcat下失败报类型转换HashMap异常问题
+4、增加全局配置登录页根据不同背景图风格 切换开启透明玻璃风格功能
+
+===JBolt 2019年08月05日10:55:12 更新===
+1、config.properties和config-pro.properties中增加summernote_imghost配置项目，
+这个主要用在文章如果在微信小程序里渲染查看需要使用全路径
+2、summernote富文本html配置增加data-maxsize 单位是KB 
+用来限制富文本里上传图片和直接剪贴板粘贴图片的图片资源大小。
+3、全局配置表增加一键切换是否启用多选项卡的后台管理样式风格 
+相关的JS、CSS里封装都做了自动处理，无缝丝滑切换
+4、几个底层小问题完善优化
+5、公众号管理模块完善关注回复可以返回多图文格式
+
+===JBolt 2019年07月25日22:01:12 更新===
+1、增加左侧导航三级菜单的定义与显示
+
+===JBolt 2019年07月21日12:54:12 更新===
+1、微信公众平台增加微信用户管理UI 和 同步拉取用户信息到本地的功能
+2、BaseService又增加了一个兄弟 BaseRecordService 用户处理分表操作CUED等
+3、增加WechatUserSex指令用户在页面里根据微信用户的1 男 2 女 0 未知 获取对应的字符值
+
+===JBolt 2019年07月14日23:22:12 更新===
+1、电商模块的goodsType在操作关联Brand信息后更新相关的brandCount字段
+2、全局配置表增加Jbolt_style配置 后台首页右上角增加两个切换样式的功能
+
+===JBolt 2019年07月14日00:51:13 更新===
+1、电商模块中商品类型管理中关联的品牌管理模块完成组件搞定 视频演示已经群里发过了
+数据库表更新：
+goods_type_brand表中的id字段 请设置为自增字段
+
+
+===JBolt 2019年07月05日11:41:13 更新===
+1、自定义组件laydate 支持选择时间不带秒 支持自定义分钟显示
+2、关键词回复完善
+===JBolt 2019年07月04日13:59:13 更新===
+1、关注回复 关键词回复 默认回复已经基本实现完成 细节还有一点
+2、实现一次交互 多条信息回复，微信做了限制，关键词回复只能返回一条图文消息
+通过技术封装实现了多条回复消息，可以同时回复一个图文 一个语音 一个视频 一个文本 一个音乐 一张图片 爽
+3、实现可以根据不同节假日 设置启用不同的关注和默认回复 以及关键词回复 可随机一条 可多条回复
+满足多样化运营需求
+4、完善看图组件 支持相册模式查看
+5、demo演示增加看图和相册演示Demo
+
+===JBolt 2019年06月29日01:27:13 更新===
+1、解决Table在列多了显示异常问题 使用Bootstrap table-responsive解决
+2、电商模块品牌管理改为分页查询
+3、电商模块 商品列表 商品图片优化点击可以查看大图了
+4、电商模块 品牌列表 品牌LOGO图片优化点击可以查看大图了
+5、全部rank字段修改为sortRank 兼容mysql8.x
+6、修改案例-JBolt版本管理中的列表查询里 changelog管理的弹出dialog中富文本 改成了html配置版
+7、sql模板调用 底层封装了jfinal最新版中的template操作 调用更省代码
+8、模板引擎是否支持热加载 devMode的配置 在config.propertis中增加 配置项 engine_devMode 默认是false
+9、微信公众平台管理中增加素材库里的图文、语音、视频、音频数据的本地化同步，方便在后面
+的自定义关键词、关注回复里设计使用，作为快速选择回复内容的备选信息。
+10、关注回复、关键词回复、默认回复的规则设置管理与回复内容管理 在线添加多种类型可回复内容
+基于JBolt可以快速开发公众号管理平台，JFinal学院官方公众号正在用它改造。
+
+
+
+===JBolt 2019年06月06日01:28:18 更新===
+1、修改Jbolt-admin.js 之前关于二级联动 注释了 现在解开。
+2、增加了二级联动Demo，DictionaryAdminController中增加了二级联动数据获取的action。
+
+===JBolt 2019年05月16日16:44:57 更新===
+更新内容：
+1、系统增加全局配置项目 用于不修改代码，快速修改系统的名称、LOGO、title、copyright信息等 后期增加后台UI样式各种配置
+2、增加全局配置的缓存、模板指令、GlobalConfigKey.java等
+3、使用参考：https://www.jianshu.com/p/10bd55dd467d
+4、增强前端JS、CSS发布体验，AssetsCompressor.java 可以快速压缩静态JS css文件后 替换掉指定的几个html文件里的引用
+       自动增加版本号，例如"***.min.js?v=201906160023034" 防止浏览器缓存JS CSS文件 提升开发和部署体验。
+注意：这是针对后端开发者的体验优化，不是针对专业前端工程webpack之类的
+
+
+===JBolt 2019年05月15日20:20:53 更新===
+更新内容：
+1、完善自定义菜单界面UI和逻辑 增加支持小程序跳转菜单和调用系统相册拍照等菜单类型
+
+===JBolt 2019年05月14日22:41:38 更新===
+更新内容：
+1、完善公众号多账号管理、小程序账号配置、基础和支付配置
+2、开发了一套新的公证号的自定义菜单可视化管理器 可以快速为多个运营公众号自定义菜单
+
+===JBolt 2019年05月14日11:50:00 更新===
+更新内容：
+1、demo页面增加 可控制LayerDialog按钮显示隐藏和更换title的demo 还可以动态添加多个Dialog操作按钮
+2、公众平台管理中 各种类型公众号、企业号、小程序的CURD管理实现
+3、公众平台管理中 各种类型公众号、企业号、小程序的基础开发信息配置和支付配置实现
+4、实现数据库配置多公众号，系统服务启动时加载初始化，增加对接WechatMsgController 接收用户消息和事件处理 
+5、测试通过了公众号的被动消息返回
+6、后续公众号菜单、自定义回复马上实现完成、小程序电商第一版出世
+
+===JBolt 2019年05月11日23:44:26 更新===
+更新内容：
+1、demo页面增加按钮类Demo教程
+2、js增加LayerTipsUtil封装 用于弹出tips特效，demo:在公众号管理中的简介和备注信息的查看按钮 点出效果
+3、公众平台CURD
+4、图片查看组件的封装 demo:在公众号管理中的头像logo和二维码的点击查看效果 
+5、修复了后台管理权限菜单的层级切换导致bug的问题
+
+===JBolt 2019年05月09日23:27:49 更新===
+更新内容：
+1、之前系统的所有模块需要添加SystemLog系统日志的地方，都修改为调用baseService底层添加日志方法
+2、修复用户点击重置密码BUG
+3、优化ArrayUtil工具类中从List<Model>中获取字段数组结果的方法
+4、操作台后台首页UI样式调整适应手机版
+
+===JBolt 2019年05月09日02:16:48 更新===
+更新内容：
+1、权限管理permission表增加isTargetBlank字段（默认false），标识链接的打开方式是新窗口还是当前窗口
+2、左侧导航菜单支持一级菜单直接为一个超链接，而且超链接可以是系统内的也可以是外站链接，支持新窗口打开
+3、更新jbolt.sql
+4、增加微信模块的Model、数据库表、BaseModel、package、Service等代码
+5、微信模块的公众平台管理CURD相关的Controller和Service完成
+6、jbolt_admin.js jbolt_admin.min.js更新
+7、jbolt_admin.css jbolt_admin.min.css更新
+8、BaseService增加日志底层封装addSystemLog等系列方法  
+   RoleService.java中的save update delete操作都调用了新的封装
+9、更换新LOGO 修改Goods模块切换热销和推荐物品的bug

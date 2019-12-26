@@ -1,0 +1,72 @@
+#define adminDialogLayout()
+<!DOCTYPE html>
+<html>
+	<head>
+		<base href="#(basepath??)" />
+		<meta charset="utf-8" />
+		 #if(need_always_https)
+	    	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+		 #end
+		<meta name="renderer" content="webkit">
+		<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		#@bootstrapcss?()
+		<!-- viewer.js图片查看器组件css资源 如果系统不使用viewer组件 可以注释掉这个地方 -->
+		#@viewercss?()
+		<!-- jstree树形组件css资源 如果系统不使用jstree 可以注释掉这个地方 -->
+		#@jstreecss?()
+		<!-- summernote编辑器css资源 如果系统不使用summernote编辑器 可以注释掉这个地方 -->
+		#@summernotecss?()
+		<!-- morris图表css资源 如果系统不使用morris 可以注释掉这个地方 -->
+		#@morriscss?()
+		<!-- Select2组件css资源 如果系统不使用select2 可以注释掉这个地方 -->
+		#@select2css?()
+		<!-- bootstrap-fileinput css资源 如果系统不使用可以注释掉这个地方 -->
+		#@multipleFileUploadcss?()
+		<!-- 系统后台管理核心封装CSS 与Bootstrap-->
+		#@maincss?()
+		<!-- 系统后台本项目特殊使用封装CSS -->
+		#@minecss?()
+		#@jqueryjs?()
+		<script type="text/javascript">var needPjax=false;</script>
+		
+		 #@css?()
+		<style type="text/css">
+		.note-editable p{
+		margin-bottom: 0px;
+		}  
+		html,body{
+		height:auto;
+		overflow:auto; 
+		}
+ 		 </style>
+		
+	</head>
+	<body>
+		#@main?() 
+		#@bootstrapjs?()
+		#@jboltmainjslib?()
+		<!-- viewer.js看图组件js资源 如果系统不使用viewer.js看图组件 可以注释掉这个地方 -->
+		#@viewerjs?()
+		<!-- jstree树形组件js资源 如果系统不使用jstree树形组件 可以注释掉这个地方 -->
+		#@jstreejs?()
+		<!-- summernote编辑器js资源 如果系统不使用summernote编辑器 可以注释掉这个地方 -->
+		#@summernotejs?()
+		<!-- morris图表js资源 如果系统不使用morris 可以注释掉这个地方 -->
+		#@morrisjs?()
+		<!-- select2组件js -->
+		#@select2js?()
+		<!-- neditor编辑器js资源 如果系统不使用neditor编辑器 可以注释掉这个地方 -->
+		#@neditorjs?()
+		<!-- bootstrap-fileinput js资源 如果系统不使用可以注释掉这个地方 -->
+		#@multipleFileUploadjs?()
+		#@jslib?()
+		<!-- 系统后台核心JS封装库 -->
+		#@mainjs?()
+		<!-- 系统后台本项目特殊使用封装JS -->
+		#@minejs?()
+		#@js?()
+	</body>
+</html>
+#end

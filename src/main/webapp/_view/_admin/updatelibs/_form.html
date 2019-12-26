@@ -1,0 +1,54 @@
+<form onsubmit="return false;" id="uplibsForm" action="#(action)" method="post">
+	#if(updateLib.id??)
+		<input type="hidden" name="updateLib.id" value="#(updateLib.id)" />
+	#end
+	<div class="form-group">
+		<label>下载地址</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" data-tips="请输入下载地址" maxlength="255" name="updateLib.url" value="#(updateLib.url??)">
+	</div>
+	<div class="form-group">
+		<label>保存相对路径</label>
+		<input type="text" autocomplete="off"  class="form-control" data-rule="required" data-tips="请输入相对路径" maxlength="255" name="updateLib.target" value="#(updateLib.target??)">
+	</div>
+	
+	<div class="form-group row" data-radio data-rule="radio"  data-value="#(updateLib.deleteAll??)" data-name="updateLib.deleteAll" data-default="true">
+	<label class="col-auto col-form-label" style="width: 130px;">清空文件夹：</label>
+		<div class="col-9"  style="padding-top: 1px;">
+				<div class="radio radio-primary  radio-inline">
+				<input  id="r1" type="radio" name="updateLib.deleteAll"   value="true"/>
+				<label for="r1">是</label>
+				</div>
+				<div class="radio radio-primary  radio-inline">
+				<input  id="r2" type="radio" name="updateLib.deleteAll"   value="false"/>
+				<label for="r2">否</label>
+				</div>
+		</div>
+	</div>
+	
+	<div class="form-group row" 
+	data-radio 
+	data-rule="radio"  
+	data-value="#(updateLib.isMust??)" 
+	data-name="updateLib.isMust" 
+	data-default="false">
+	<label class="col-auto col-form-label" style="width: 130px;">强制更新：</label>
+		<div class="col-9"  style="padding-top: 1px;">
+			<div class="radio radio-primary  radio-inline">
+				<input  id="r3" type="radio" name="updateLib.isMust"   value="true"/>
+				<label for="r3">是</label>
+			</div>
+			
+			<div class="radio radio-primary  radio-inline">
+				<input  id="r4" type="radio" name="updateLib.isMust"   value="false"/>
+				<label for="r4">否</label>
+			</div>
+		</div>
+	</div>
+	
+	 
+	
+	 
+</form>
+#define js()
+#include("/_view/_admin/common/_formjs.html",formId="uplibsForm")
+#end
