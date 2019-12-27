@@ -22,9 +22,15 @@
 		<span> #(pageData.totalRow?? 0)条记录</span>
 	</div>
 	<div class="col-3">
-		<button class="pull-right btn btn-primary"><i class="fa fa-cloud-download"></i> 下载</button>
-		<button class="pull-right btn btn-danger mr-2"><i class="fa fa-paper-plane-o"></i> 上传</button>
+		<a href="/admin/supplymanage/downloadToExcel">导出excel</a>
+		<button class="pull-right btn btn-primary" type="button"><i class="fa fa-cloud-download"></i> 下载</button>
+		<button type="submit" class="pull-right btn btn-danger mr-2"><i class="fa fa-paper-plane-o"></i> 上传</button>
 		<button data-area="600,800" data-scroll="yes" data-handler="refreshPjaxContainer" data-title="新增入库信息" data-url="/admin/supplymanage/add" class="pull-right jbolt_table_addbtn btn btn-success mr-2" ><i class="fa fa-plus"></i> 新增</button>
+	</div>
+	<div class="j_upload_file_box" data-name="file" data-maxsize="20480"
+		data-handler="uploadFile" data-url="/admin/supplymanage/uploadExcel"
+		data-hiddeninput="fileUploaderDemo"
+		data-filenameinput="fileNameInput" data-sizeinput="fileSizeInput">
 	</div>
 	</div>
 </div>

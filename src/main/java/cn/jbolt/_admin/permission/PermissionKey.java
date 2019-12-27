@@ -296,4 +296,8 @@ public class PermissionKey {
 	 * FileUploader组件
 	 */
 	public static final String DEMO_FILEUPLOADER = "demo_fileuploader";
+	/**
+	 * 表格测试组件
+	 */
+	public static final String TEST = "test";
 }

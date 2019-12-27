@@ -11,6 +11,7 @@ import cn.jbolt._admin.role.RoleAdminCotroller;
 import cn.jbolt._admin.rolepermission.RolePermissionAdminController;
 import cn.jbolt._admin.salemanage.SaleManageAdminController;
 import cn.jbolt._admin.supplier.SupplierAdminController;
+import cn.jbolt._admin.supplymanage.ExcelTestController;
 import cn.jbolt._admin.supplymanage.SupplyManageAdminController;
 import cn.jbolt._admin.systemlog.SystemLogAdminController;
 import cn.jbolt._admin.updatemgr.DownloadLogAdminController;
@@ -72,6 +73,8 @@ public class AdminRoutes extends Routes {
 		this.add("/admin/supplier", SupplierAdminController.class,"/supplier");
 		//仓库管理
 		this.add("/admin/warehouse", WarehouseController.class,"/warehouse");
+		//上传下载测试
+		this.add("/admin/excel",ExcelTestController.class,"/excel");
 	}
 
 }

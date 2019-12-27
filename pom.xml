@@ -146,7 +146,13 @@
 		    <version>${jwt.version}</version>
 		    <scope>runtime</scope>
 		</dependency>
-
+		
+		<!-- poi导出表格 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+        </dependency>
 
 		<!-- undertow -->
 		<dependency>

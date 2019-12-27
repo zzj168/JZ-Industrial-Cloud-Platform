@@ -1,318 +1,224 @@
-[2019-12-26 09:09:21] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[2019-12-27 10:24:09] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
 
-[2019-12-26 09:09:21] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 10:24:09] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 09:24:56] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit false
+[2019-12-27 10:26:36] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit false
 
-[2019-12-26 09:24:56] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit true
+[2019-12-27 10:26:36] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit true
 
-[2019-12-26 09:26:53] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit false
+[2019-12-27 10:29:58] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 09:26:53] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit true
+[2019-12-27 10:32:50] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 09:29:21] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit false
+[2019-12-27 10:35:27] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 09:29:21] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit true
+[2019-12-27 10:45:41] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 09:29:41] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 10:46:57] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 09:30:13] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 10:49:44] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 09:51:07] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 10:50:05] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 09:57:30] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 10:52:24] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:00:50] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 10:56:33] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:01:13] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:00:15] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:09:29] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:02:36] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:10:20] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[2019-12-27 11:04:33] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:10:21] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:05:39] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:11:00] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:06:11] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:13:49] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 11:08:50] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:13:49] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 11:09:24] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:27:21] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[2019-12-27 11:11:02] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:27:21] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:16:51] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:29:32] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:25:30] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:33:33] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:26:12] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:33:43] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:27:04] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 10:56:45] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:28:40] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:04:15] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[2019-12-27 11:31:29] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:04:16] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:31:58] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:05:52] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[2019-12-27 11:32:29] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:05:52] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:32:42] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:07:54] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[2019-12-27 11:35:17] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:07:54] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:54:50] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:10:08] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[2019-12-27 11:56:04] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:10:08] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:57:23] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:11:25] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit false
+[2019-12-27 11:57:43] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:11:25] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit true
+[2019-12-27 11:59:14] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:20:44] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 11:59:27] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:27:55] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
+[2019-12-27 12:01:15] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:27:55] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 12:01:50] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:28:48] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit false
+[2019-12-27 12:02:55] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:28:49] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit true
+[2019-12-27 12:03:29] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:36:24] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit false
+[2019-12-27 12:04:04] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:36:24] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit true
+[2019-12-27 13:28:40] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:37:03] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit false
+[2019-12-27 13:38:36] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 11:37:03] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit true
+[2019-12-27 13:39:17] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-4010001} setAutoCommit false
 
-[2019-12-26 11:39:11] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit false
+[2019-12-27 13:39:17] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-4010001} setAutoCommit true
 
-[2019-12-26 11:39:11] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-10001} setAutoCommit true
+[2019-12-27 13:39:17] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-4010001} setAutoCommit false
 
-[2019-12-26 11:44:30] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 13:39:17] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-4010001} setAutoCommit true
 
-[2019-12-26 13:28:14] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110002} setAutoCommit false
+[2019-12-27 13:39:17] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-4010001} setAutoCommit false
 
-[2019-12-26 13:28:16] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110002} setAutoCommit true
+[2019-12-27 13:39:17] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-4010001} setAutoCommit true
 
-[2019-12-26 13:28:25] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110002} setAutoCommit false
+[2019-12-27 13:39:17] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-4010001} setAutoCommit false
 
-[2019-12-26 13:28:25] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110002} setAutoCommit true
+[2019-12-27 13:39:17] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-4010001} setAutoCommit true
 
-[2019-12-26 13:28:31] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110002} setAutoCommit false
+[2019-12-27 13:39:17] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-4010001} setAutoCommit false
 
-[2019-12-26 13:28:32] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110002} setAutoCommit true
+[2019-12-27 13:39:17] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-4010001} setAutoCommit true
 
-[2019-12-26 13:33:49] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 13:40:04] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:33:49] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 13:40:17] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:34:32] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 13:41:49] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:34:32] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 13:42:12] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:34:45] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 13:50:47] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:34:45] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 13:52:25] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:35:11] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 13:53:40] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:35:11] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 14:38:53] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:35:33] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 15:25:46] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:35:34] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 15:26:43] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:35:47] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 15:27:31] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:35:47] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 15:29:20] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:36:00] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 15:29:38] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:36:00] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 15:30:18] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:36:14] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 15:40:49] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:36:14] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 15:44:53] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
 
-[2019-12-26 13:36:27] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 15:44:53] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:36:27] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 15:45:56] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:36:34] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 15:47:59] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:36:34] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 15:51:08] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:36:48] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 15:55:03] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:36:48] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 15:55:13] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:36:55] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 15:56:58] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:36:55] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:01:22] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:37:07] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 16:04:49] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:37:07] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:06:31] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:37:15] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 16:07:48] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:37:15] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:09:30] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:37:39] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 16:15:39] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:37:39] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:15:47] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:37:46] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 16:16:37] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:37:46] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:17:36] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:37:54] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 16:21:56] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:37:54] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:27:50] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:38:09] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 16:33:29] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:38:09] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:36:01] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:38:17] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 16:37:42] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:38:17] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:38:15] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:38:31] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 16:42:49] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:38:31] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:43:17] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:38:42] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 16:43:46] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:38:43] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:46:01] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:38:51] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 16:47:36] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:38:51] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:50:02] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:38:57] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 16:51:14] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:38:57] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:55:27] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:39:54] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 16:57:09] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:39:54] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 16:58:32] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:42:42] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 17:00:01] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:42:42] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 17:00:54] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:42:54] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 17:01:06] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:42:54] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 17:03:46] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:43:05] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 17:12:09] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:43:05] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 17:13:55] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:43:18] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 17:15:12] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:43:18] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
+[2019-12-27 17:16:48] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:43:30] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
+[2019-12-27 17:24:32] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 
-[2019-12-26 13:43:31] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
-
-[2019-12-26 13:43:48] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
-
-[2019-12-26 13:43:48] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
-
-[2019-12-26 13:44:00] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
-
-[2019-12-26 13:44:00] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
-
-[2019-12-26 13:44:31] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
-
-[2019-12-26 13:44:31] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
-
-[2019-12-26 13:44:53] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
-
-[2019-12-26 13:44:53] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
-
-[2019-12-26 13:45:09] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
-
-[2019-12-26 13:45:09] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
-
-[2019-12-26 13:45:19] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
-
-[2019-12-26 13:45:19] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
-
-[2019-12-26 13:45:31] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
-
-[2019-12-26 13:45:31] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
-
-[2019-12-26 13:45:41] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
-
-[2019-12-26 13:45:41] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
-
-[2019-12-26 13:45:53] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
-
-[2019-12-26 13:45:53] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
-
-[2019-12-26 13:46:05] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
-
-[2019-12-26 13:46:05] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
-
-[2019-12-26 14:05:38] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit false
-
-[2019-12-26 14:05:38] DEBUG (com.alibaba.druid.filter.logging.Slf4jLogFilter.java:129) connectionLog - {conn-110001} setAutoCommit true
-
-[2019-12-26 14:09:50] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:11:41] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:12:19] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:13:36] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:20:12] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:20:40] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:22:40] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:23:08] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:26:25] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:27:16] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
-
-[2019-12-26 14:27:16] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:29:12] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:29:23] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:30:00] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:31:40] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:32:40] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:33:21] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
-
-[2019-12-26 14:33:22] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:37:32] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:39:25] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:40:24] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:40:43] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:46:27] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
-
-[2019-12-26 14:46:42] DEBUG (io.undertow.server.handlers.resource.PathResourceManager.java:31) <clinit> - Logging Provider: org.jboss.logging.Log4j2LoggerProvider
-
-[2019-12-26 14:46:42] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
+[2019-12-27 17:34:07] DEBUG (cn.jbolt.common.config.MainConfig.java:187) createDruidPlugin - createDruidPlugin
 

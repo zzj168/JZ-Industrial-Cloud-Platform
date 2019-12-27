@@ -1,8 +1,13 @@
 package cn.jbolt._admin.supplymanage;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import com.jfinal.kit.Ret;
+import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Page;
 
 import cn.jbolt.base.BaseService;
@@ -13,10 +18,10 @@ import cn.jbolt.common.model.SystemLog;
 
 public class SupplyManageService extends BaseService<Supplymanage> {
 	
-	
+	private Supplymanage dao = new Supplymanage().dao();
 	@Override
 	protected Supplymanage dao() {
-		return Supplymanage.dao;
+		return dao;
 	}
 	
 	public Page<Supplymanage> paginateAdminData(Integer pageNumber, int pageSize) {
@@ -96,4 +101,38 @@ public class SupplyManageService extends BaseService<Supplymanage> {
 		return ret;
 	}
 
+	/**
+	 * 查询数据
+	 */
+	public List<Map<String,Object>> selectAllMapList() {
+		List<Supplymanage> list = dao.findAll();
+		List<Map<String, Object>> dataList = new ArrayList<Map<String,Object>>();
+		for (Supplymanage supplymanage : list) {
+			HashMap<String,Object> map = new HashMap<String,Object>();
+			map.put("id",supplymanage.getId());
+			map.put("supplierName", supplymanage.getSupplierName());
+			map.put("receiptDate", supplymanage.getReceiptDate());
+			map.put("model", supplymanage.getModel());
+			map.put("num", supplymanage.getNum());
+			map.put("numPerBox", supplymanage.getNumPerBox());
+			map.put("totalNum", supplymanage.getTotalNum());
+			map.put("pice", supplymanage.getPrice());
+			map.put("totalMoney", supplymanage.getTotalMoney());
+			map.put("payMoney", supplymanage.getPayMoney());
+			map.put("payDate", supplymanage.getPayDate());
+			map.put("waitPay", supplymanage.getWaitPay());
+			map.put("waitReceipt", supplymanage.getWaitReceipt());
+			map.put("createTime", supplymanage.getCreateTime());
+			dataList.add(map);
+		}
+		return dataList;
+	}
+	/**
+	 * 按编号和名称查询
+	 * @return 
+	 */
+	public Integer selectByIdAndName(int supplierld,String supplierName) {
+		String sql = "select count(*) from supplymanage where supplierId=? and supplierName=?";
+		return Db.queryInt(sql,supplierld,supplierName);
+	}
 }
