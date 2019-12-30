@@ -62,12 +62,12 @@ public class ExcelTestController extends BaseController {
 	 * @throws Exception
 	 */
 	public void uploadFile() {
-		try {
+//		try {
 			// 获取上传文件
-			UploadFile file = getFile("file");
-			String[] fileName = {"materialName","materialType","materialModel","productionProcesses"};
-			List<Bom> list = ExcelUtils.uploadExcel(file, fileName, Bom.class);
-			System.out.println("-------------->"+list);
+//			UploadFile file = getFile("file");
+//			String[] fileName = {"materialName","materialType","materialModel","productionProcesses"};
+			//List<Bom> list = ExcelUtils.uploadExcel(file, fileName, Bom.class);
+			//System.out.println("-------------->"+list);
 //			File upfile = file.getFile();
 //			// 判断文件格式是否正确
 //			if (checkExcel(file, upfile)) {
@@ -125,55 +125,55 @@ public class ExcelTestController extends BaseController {
 //					//list.add(bom);
 //					System.out.println(bom);
 //				}
-			if (list.size() > 0) {
-				System.out.println("原始数据" + list);
-				// 用来记录错误数据
-				List<Bom> filterList = new ArrayList<Bom>();
-				List<Integer> exList = null;
-				System.out.println("原始数据大小：" + list.size());
-				// for (int i = 0; i < list.size(); i++) {
-				Iterator<Bom> iterator = list.iterator();
-				while (iterator.hasNext()) {
-					Bom b = iterator.next();
-					// 校验数据去重
-					System.out.println("即将被检验的数据---------->" + b.getMaterialName());
-					if (checkExistDb(b)) {
-						// 将重复数据存入filterlist
-						filterList.add(b);
-						// 从list中移除重复数据
-						// list.remove(b);
-						list.remove(b);
-					}
-				}
+//			if (list.size() > 0) {
+//				System.out.println("原始数据" + list);
+//				// 用来记录错误数据
+//				List<Bom> filterList = new ArrayList<Bom>();
+//				List<Integer> exList = null;
+//				System.out.println("原始数据大小：" + list.size());
+//				// for (int i = 0; i < list.size(); i++) {
+//				Iterator<Bom> iterator = list.iterator();
+//				while (iterator.hasNext()) {
+//					Bom b = iterator.next();
+//					// 校验数据去重
+//					System.out.println("即将被检验的数据---------->" + b.getMaterialName());
+//					if (checkExistDb(b)) {
+//						// 将重复数据存入filterlist
+//						filterList.add(b);
+//						// 从list中移除重复数据
+//						// list.remove(b);
+//						list.remove(b);
+//					}
+//				}
 //
-				if (filterList.size() > 0) {
-					// 有多少个数据不符合要求 或者是已经存在 不能重复导入
-					System.out.println("去除重复数据" + filterList.size() + "个");
-					System.out.println("被去除的数据：" + filterList);
-				}
-				if (list.size() > 0) {
-					// 入库
-					System.out.println("入库文件个数--->" + list.size());
-					System.out.println("准备入库的数据：" + list);
-					exList = new LinkedList<Integer>();
-					for (int i=0;i<list.size();i++) {
-						try {
-							 list.get(i).save();
-						} catch (Exception e) {
-							//保存出错
-							System.out.println("错误数据"+list.get(i));
-							exList.add(i+2);
-						}
-					}
-					
-				}
-				renderJsonFail("上传成功"+list.size()+"个，去除重复文件"+filterList.size()+"个,第"+exList+"行信息错误");
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			renderJsonFail("文件解析失败，请上传Excel文件");
-			return;
-		}
+//				if (filterList.size() > 0) {
+//					// 有多少个数据不符合要求 或者是已经存在 不能重复导入
+//					System.out.println("去除重复数据" + filterList.size() + "个");
+//					System.out.println("被去除的数据：" + filterList);
+//				}
+//				if (list.size() > 0) {
+//					// 入库
+//					System.out.println("入库文件个数--->" + list.size());
+//					System.out.println("准备入库的数据：" + list);
+//					exList = new LinkedList<Integer>();
+//					for (int i=0;i<list.size();i++) {
+//						try {
+//							 list.get(i).save();
+//						} catch (Exception e) {
+//							//保存出错
+//							System.out.println("错误数据"+list.get(i));
+//							exList.add(i+2);
+//						}
+//					}
+//					
+//				}
+//				renderJsonFail("上传成功"+list.size()+"个，去除重复文件"+filterList.size()+"个,第"+exList+"行信息错误");
+//			}
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			renderJsonFail("文件解析失败，请上传Excel文件");
+//			return;
+//		}
 	}
 	/**
 	 * 判断表格值类型
