@@ -15,7 +15,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 
 import org.apache.poi.hssf.usermodel.HSSFDateUtil;
@@ -40,55 +39,6 @@ import com.jfinal.upload.UploadFile;
  * @version 2019年12月26日 操作数据库表格的工具类
  */
 public class ExcelUtils {
-
-	/**
-	 * 下载数据库表到excel文件
-	 * 
-	 * @throws IOException
-	 */
-	public static void downLoadExcel(HttpServletResponse response, String fileName, String[] headList,
-			String[] fieldList, List<Map<String, Object>> dataList) throws IOException {
-		// 获得输出流
-		ServletOutputStream os = response.getOutputStream();
-		// 设置头信息告知浏览器用什么样的应用打开文件
-		// 告诉浏览器用什么软件可以打开此文件
-		response.setHeader("Content-Type", "application/vnd.ms-excel");
-		// 下载文件的默认名称
-		response.setHeader("Content-Disposition",
-				"attachment;filename=" + URLEncoder.encode(fileName + ".xlsx", "utf-8"));
-		// 创建可写入的Excel工作薄，且内容将写入到输出流，并通过输出流输出给客户端浏览
-		// 创建新的Excel 工作簿
-		XSSFWorkbook workbook = new XSSFWorkbook();
-		// 创建一个工作表
-		XSSFSheet sheet = workbook.createSheet();
-		// 在索引0的位置创建行（最顶端的行）创建第一行
-		XSSFRow row = sheet.createRow(0);
-		// 设置表头
-		for (int i = 0; i < headList.length; i++) {
-			// 创建列并且给列赋值
-			row.createCell(i).setCellValue(headList[i]);
-		}
-		// 从第二列开始存放真实数据
-		for (int i = 0; i < dataList.size(); i++) {
-			// 创建数据行
-			XSSFRow dataRow = sheet.createRow(i + 1);
-			// 每一行数据都是一个map
-			Map<String, Object> dataMap = dataList.get(i);
-			// 遍历要取的数据库字段列
-			for (int j = 0; j < fieldList.length; j++) {
-				// 创建列并存放数据
-				dataRow.createCell(j).setCellValue(
-						(dataMap.get(fieldList[i])) != null ? (dataMap.get(fieldList[i])).toString() : "");
-			}
-		}
-		workbook.write(os);
-		os.flush();
-		// 操作结束，关闭文件
-		os.close();
-		// 关闭workbook
-		workbook.close();
-	}
-
 	/**
 	 * 导出excel
 	 * 
@@ -165,7 +115,9 @@ public class ExcelUtils {
 
 	/**
 	 * 上传excel
-	 * 
+	 * file:文件
+	 * fileName:上传文件对应的字段名数组
+	 *tClass：表对应的java模型
 	 * @throws Exception
 	 */
 	public static <T extends Model<T>> ExcelBean<T> uploadExcel(UploadFile file, String[] fileName, Class<T> tClass) throws Exception
@@ -222,12 +174,16 @@ public class ExcelUtils {
 							// 给属性赋值
 							t.set(fileName[j], null);
 						} else {
+								//数据库字段类型为int
 							if (columnType == Integer.class&&StringUtil.isNumeric(cellValue)) {
 								t.set(fileName[j], Integer.parseInt(cellValue));
+								//数据库字段类型为varchar
 							} else if (columnType == String.class&&!StringUtil.isNumeric(cellValue)) {
 								t.set(fileName[j], cellValue);
+								//数据库字段类型为timestamp
 							} else if (columnType == Timestamp.class) {
 								t.set(fileName[j], new SimpleDateFormat("yyyy-MM-dd").parse(cellValue));
+								//数据库字段类型为bigdecimal
 							} else if (columnType == BigDecimal.class) {
 								t.set(fileName[j], new BigDecimal(cellValue));
 							}else {
@@ -295,7 +251,7 @@ public class ExcelUtils {
 	}
 
 	/**
-	 * 校验文件格式
+	 * 校验文件格式是不是excel
 	 * 
 	 * @param upfile
 	 * @param fileName

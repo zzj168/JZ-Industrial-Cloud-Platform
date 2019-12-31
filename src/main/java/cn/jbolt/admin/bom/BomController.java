@@ -32,6 +32,7 @@ import cn.jbolt.base.BaseController;
 import cn.jbolt.common.bean.PageSize;
 import cn.jbolt.common.config.UploadFolder;
 import cn.jbolt.common.model.Bom;
+import cn.jbolt.common.util.ExcelUtils;
 
 @CheckPermission(PermissionKey.BOM)
 public class BomController extends BaseController {
@@ -87,77 +88,25 @@ public class BomController extends BaseController {
 	}	
 	/**
 	 * 导出为excel
-	 * @throws IOException 
-	 * @throws IORuntimeException 
 	 * @throws Exception 
 	 */
-	public void export() throws IORuntimeException, IOException{
-		//表名
-//		String excelName = "bom_title";
-//		//表头
-//		String[] headList = new String[] {"编号","材质","类型"};
-//		String[] fieldList = new String[] {"id","materialName","materialType"};
-//		List<Map<String,Object>> dataList = new ArrayList<>();
-//		List<Bom> list = service.dao().findAll();
-//		for (Bom bom : list) {
-//			Map<String, Object> m = new HashMap<>();
-//			m.put("id",bom.getId());
-//			m.put("materialName",bom.getMaterialName());
-//			m.put("materialType", bom.getMaterialType());
-//			dataList.add(m);
-//		}
-//		try {
-//			ExcelUtils.createExcel(this.getResponse(), excelName, headList, fieldList, dataList);
-//		} catch (Exception e) {
-//			set("msg", "数据为空！");
-//			e.printStackTrace();
-//		}
-		List<Bom> rows = service.findAll();
-		System.out.println(rows);
-		HttpServletResponse response = getResponse();
-		ServletOutputStream out = response.getOutputStream();
-		// 通过工具类创建writer，默认创建xls格式
-		ExcelWriter writer = ExcelUtil.getWriter();
-		// 一次性写出内容，使用默认样式，强制输出标题
-		writer.write(rows);
-		//out为OutputStream，需要写出到的目标流
-		//response为HttpServletResponse对象
-		response.setContentType("application/vnd.ms-excel;charset=utf-8"); 
-		//test.xls是弹出下载对话框的文件名，不能为中文，中文请自行编码
-		response.setHeader("Content-Disposition","attachment;filename=test.xls"); 
-		writer.flush(out);
-		// 关闭writer，释放内存
-		writer.close();
-		//此处记得关闭输出Servlet流
-		IoUtil.close(out);
-	}
-	/**
-	 * 上传表格
-	 * @throws Exception 
-	 */
-	public void uploadFile() throws Exception{
-		UploadFile file=getFile("file","bom");
-		if(file==null) {
-			renderJsonFail("上传失败");
-			return;
+	public void downloadExcel() throws Exception{
+		String excelName="bom";
+		String[] headList= {"物料编号","物料名称","种类","型号","产品规格"};
+		String[] fieldList= {"id","materialName","materialType","materialModel","productionProcesses"};
+		List<Map<String, Object>> dataList = new ArrayList<Map<String,Object>>();
+		List<Bom> list = service.findAll();
+		for (Bom bom : list) {
+			HashMap<String,Object> map = new HashMap<String,Object>();
+			map.put("id", bom.getId());
+			map.put("materialName", bom.getMaterialName());
+			map.put("materialType", dictionaryService.findById(bom.getMaterialType()).getName());
+			map.put("materialModel", dictionaryService.findById(bom.getMaterialModel()).getName());
+			map.put("productionProcesses", dictionaryService.findById(bom.getProductionProcesses()).getName());
+			dataList.add(map);
 		}
-		//System.out.println("文件路径"+file.getUploadPath()+"/"+file.getFileName());
-		ExcelReader reader = ExcelUtil.getReader(file.getUploadPath()+"/"+file.getFileName());
-		List<Map<String, Object>> list = reader.readAll();
-		service.saveBomExcel(list);
-		//System.out.println("excel集合"+list);
-		for (Map<String, Object> map : list) {
-			Bom mapToBean = BeanUtil.mapToBean(map, Bom.class, true);
-			Bom bom = new Bom();
-			bom.setMaterialName(map.get("materialName")+"");
-			bom.setMaterialType(Integer.parseInt(map.get("materialType").toString()));
-			bom.setMaterialModel(Integer.parseInt(map.get("materialModel").toString()));
-			bom.setProductionProcesses(Integer.parseInt(map.get("productionProcesses").toString()));
-			bom.save();
-		}
-		Kv kv=Kv.create();
-		kv.set("fileUrl", JFinal.me().getConstants().getBaseUploadPath()+"/bom/"+file.getFileName());
-		kv.set("fileName",file.getFileName());
-		renderJsonData(kv);
+		//导出物料信息
+		ExcelUtils.createExcel(getResponse(), excelName, headList, fieldList, dataList);
 	}
+	
 }

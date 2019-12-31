@@ -1,6 +1,11 @@
 package cn.jbolt.admin.customer;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import com.jfinal.aop.Inject;
 
 import cn.jbolt._admin.dictionary.DictionaryService;
@@ -9,6 +14,7 @@ import cn.jbolt._admin.permission.PermissionKey;
 import cn.jbolt.base.BaseController;
 import cn.jbolt.common.bean.PageSize;
 import cn.jbolt.common.model.Customer;
+import cn.jbolt.common.util.ExcelUtils;
 
 @CheckPermission(PermissionKey.CUSTOMER)
 public class CustomerController extends BaseController {
@@ -62,5 +68,25 @@ public class CustomerController extends BaseController {
 	public void dictionary(){
 		renderJsonData(dictionaryService.getOptionListByType(get("key")));
 	}
-	
+	/**
+	 * 导出客户信息为excel
+	 * @throws Exception 
+	 */
+	public void downloadExcel() throws Exception {
+		String excelName = "customer";
+		String[] headList= {"编号","客户名称","区域/地区","等级","添加时间"};
+		String[] fieldList= {"id","customerName","customerArea","customerLevel","createTime"};
+		List<Map<String, Object>> dataList = new ArrayList<Map<String,Object>>();
+		List<Customer> list = service.findAll();
+		for (Customer customer : list) {
+			HashMap<String,Object> map = new HashMap<String,Object>();
+			map.put("id", customer.getId());
+			map.put("customerName",customer.getCustomerName());
+			map.put("customerArea",dictionaryService.findById(customer.getCustomerArea()).getName());
+			map.put("customerLevel",dictionaryService.findById(customer.getCustomerLevel()).getName());
+			map.put("createTime",customer.getCreateTime());
+			dataList.add(map);
+		}
+		ExcelUtils.createExcel(getResponse(), excelName, headList, fieldList, dataList);
+	}
 }

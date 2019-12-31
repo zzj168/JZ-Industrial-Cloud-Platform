@@ -99,8 +99,8 @@ public class SupplyManageAdminController extends BaseController {
 	 */
 	public void uploadExcel() throws Exception{
 		UploadFile file = getFile("file");
-		String[] fileName = {"supplierId","supplierName","receiptDate","model","num","numPerBox","totalNum","price","totalMoney","payMoney",
-				"payDate","waitPay","waitReceipt","createTime"};
+		String[] fileName = {"supplierId","supplierName","receiptDate","model","num","numPerBox","totalNum","price","payMoney",
+				"payDate","waitPay"};
 		ExcelBean<Supplymanage> excelBean = ExcelUtils.uploadExcel(file, fileName,Supplymanage.class);
 		List<Supplymanage> list = excelBean.getCorrectList();
 		List<Integer> errorList = excelBean.getErrorList();
@@ -117,82 +117,6 @@ public class SupplyManageAdminController extends BaseController {
 			}
 		renderJsonFail("上传成功，去掉重复文件"+count+"个,错误数据行数"+errorList);
 		}
-	}
-	//上传
-	public void upFile() throws Exception {
-		UploadFile file = getFile("file");
-		String[] fileName = {"supplierId","supplierName","receiptDate","model","num","numPerBox","totalNum","price","totalMoney","payMoney",
-				"payDate","waitPay","waitReceipt","createTime"};
-		// 判断文件格式是否正确
-		File upfile = file.getFile();
-		if (checkExcel(file,upfile)) {
-			throw new Exception("文件格式不正确，请上传Excel文件(后缀为*.xls或*.xlsx)");
-		}
-		// 解析工作簿
-		System.out.println("解析工作簿");
-		Workbook workbook = WorkbookFactory.create(upfile);
-		Sheet sheet;
-		Row row;
-		// 解析工作表
-		int size = workbook.getNumberOfSheets();
-		System.out.println("有" + size + "个工作表");
-		// 创建对象集合 存原始数据 防止并发访问出现问题 使用CopyOnWriteArrayList
-		//List<T> list = new CopyOnWriteArrayList<T>();
-		// 循环读取工作表的数据
-		for (int i = 0; i < size; i++) {
-			// 拿到具体的工作表
-			sheet = workbook.getSheetAt(i);
-			System.out.println("当前工作表是" + sheet.getSheetName());
-			// 读取数据
-			// 得到有效行数
-			int rowNumber = sheet.getPhysicalNumberOfRows();
-			System.out.println("有效行数" + rowNumber);
-			for (int rowIndex = 0; rowIndex < rowNumber; rowIndex++) {
-				System.out.println("正在读取第" + (rowIndex + 1) + "行");
-				// 跳过表头
-				if (rowIndex == 0) {
-					continue;
-				}
-				// 拿到每一行
-				row = sheet.getRow(rowIndex);
-				//每一行就是一个对象
-				Supplymanage supplymanage = new Supplymanage();
-				for (int j = 0; j < fileName.length; j++) {
-					// 获得列
-					Cell cell = row.getCell(j);
-					//获得列值
-					String value = ExcelUtils.getCellValue(cell);
-				}
-			}
-		}
-		// 关闭工作簿
-		workbook.close();
-		// 操作完毕删除临时文件
-		upfile.delete();
-	}
-	/**
-	 * 校验文件格式
-	 * 
-	 * @param upfile
-	 * @param fileName
-	 * @return
-	 * @throws IOException
-	 */
-	@NotAction
-	private static boolean checkExcel(UploadFile file, File upfile) throws IOException {
-		String fileName = file.getFileName();
-		boolean isExcel = fileName.endsWith(".xls") || fileName.endsWith(".xlsx");
-		if (isExcel == true) {
-			return false;
-		}
-		InputStream in = new FileInputStream(upfile);
-		// 判断数据流是不是xls
-		if (POIFSFileSystem.hasPOIFSHeader(in) == false) {
-			in.close();
-			return false;
-		}
-		in.close();
-		return true;
 	}
 	/**
 	 * 数据校验

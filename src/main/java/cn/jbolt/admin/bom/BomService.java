@@ -1,22 +1,29 @@
 package cn.jbolt.admin.bom;
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 import com.jfinal.kit.Ret;
 import com.jfinal.plugin.activerecord.Page;
 
+import cn.jbolt._admin.dictionary.DictionaryService;
 import cn.jbolt.base.BaseService;
 import cn.jbolt.common.config.Msg;
 import cn.jbolt.common.model.Bom;
+import cn.jbolt.common.model.Dictionary;
 import cn.jbolt.common.model.SystemLog;
+import cn.jbolt.common.util.CACHE;
 
 public class BomService extends BaseService<Bom>{
 	
-	@Override
+	private Bom dao = new Bom().dao();
+	private DictionaryService dictionaryService=new DictionaryService();
+ 	@Override
 	protected Bom dao() {
-		return Bom.dao;
+		return dao;
 	}
 	
 	public Page<Bom> paginateAdminData(Integer pageNumber, int pageSize) {

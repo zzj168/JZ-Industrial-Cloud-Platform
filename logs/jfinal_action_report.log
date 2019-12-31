@@ -1,5 +1,5 @@
-[2019-12-30 09:10:27] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 09:10:27 --------------------------
+[2019-12-31 09:48:03] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:48:03 --------------------------
 Url         : GET /
 Controller  : cn.jbolt.index.IndexController.(IndexController.java:1)
 Method      : index
@@ -9,8 +9,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 09:10:27] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 09:10:27 --------------------------
+[2019-12-31 09:48:03] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:48:03 --------------------------
 Url         : GET /admin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : index
@@ -21,30 +21,30 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 09:10:27] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 09:10:27 --------------------------
+[2019-12-31 09:48:03] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:48:03 --------------------------
 Url         : GET /admin/tologin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : tologin
 --------------------------------------------------------------------------------
 
-[2019-12-30 09:10:28] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 09:10:28 --------------------------
+[2019-12-31 09:48:04] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:48:04 --------------------------
 Url         : GET /admin/captcha
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : captcha
 --------------------------------------------------------------------------------
 
-[2019-12-30 09:10:36] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 09:10:36 --------------------------
+[2019-12-31 09:48:11] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:48:11 --------------------------
 Url         : POST /admin/login
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : login
-Parameter   : password=123456  captcha=5xp5  username=admin  
+Parameter   : password=123456  captcha=5yef  username=admin  
 --------------------------------------------------------------------------------
 
-[2019-12-30 09:10:37] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 09:10:37 --------------------------
+[2019-12-31 09:48:12] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:48:12 --------------------------
 Url         : GET /admin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : index
@@ -55,8 +55,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 09:10:37] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 09:10:37 --------------------------
+[2019-12-31 09:48:13] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:48:13 --------------------------
 Url         : GET /admin/dashboard
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : dashboard
@@ -64,11 +64,11 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577668237971  
+Parameter   : t=1577756893199  
 --------------------------------------------------------------------------------
 
-[2019-12-30 09:10:47] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 09:10:47 --------------------------
+[2019-12-31 09:48:15] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:48:15 --------------------------
 Url         : GET /admin/supplymanage
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : index
@@ -76,11 +76,23 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577668247070  
+Parameter   : t=1577756894823  
 --------------------------------------------------------------------------------
 
-[2019-12-30 09:12:45] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 09:12:45 --------------------------
+[2019-12-31 09:49:35] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:49:35 --------------------------
+Url         : GET /admin/salemanage
+Controller  : cn.jbolt._admin.salemanage.SaleManageAdminController.(SaleManageAdminController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577756975779  
+--------------------------------------------------------------------------------
+
+[2019-12-31 09:49:38] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:49:38 --------------------------
 Url         : GET /admin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : index
@@ -91,8 +103,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 09:12:46] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 09:12:46 --------------------------
+[2019-12-31 09:49:39] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:49:39 --------------------------
 Url         : GET /admin/dashboard
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : dashboard
@@ -100,11 +112,11 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577668366353  
+Parameter   : t=1577756979305  
 --------------------------------------------------------------------------------
 
-[2019-12-30 09:12:48] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 09:12:48 --------------------------
+[2019-12-31 09:49:41] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:49:41 --------------------------
 Url         : GET /admin/supplymanage
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : index
@@ -112,11 +124,11 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577668368181  
+Parameter   : t=1577756981101  
 --------------------------------------------------------------------------------
 
-[2019-12-30 09:12:57] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 09:12:57 --------------------------
+[2019-12-31 09:49:54] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:49:54 --------------------------
 Url         : POST /admin/supplymanage/uploadExcel
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : uploadExcel
@@ -126,63 +138,20 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 10:14:32] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 10:14:32 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
+[2019-12-31 09:50:24] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:50:24 --------------------------
+Url         : GET /admin/salemanage
+Controller  : cn.jbolt._admin.salemanage.SaleManageAdminController.(SaleManageAdminController.java:1)
+Method      : index
 Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577757024368  
 --------------------------------------------------------------------------------
 
-[2019-12-30 10:30:32] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 10:30:32 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 10:45:05] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 10:45:05 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 10:56:56] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 10:56:56 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 11:24:40] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:24:40 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 11:25:33] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:25:33 --------------------------
+[2019-12-31 09:50:27] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:50:27 --------------------------
 Url         : GET /admin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : index
@@ -193,8 +162,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 11:25:33] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:25:33 --------------------------
+[2019-12-31 09:50:27] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:50:27 --------------------------
 Url         : GET /admin/dashboard
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : dashboard
@@ -202,11 +171,11 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577676333964  
+Parameter   : t=1577757027721  
 --------------------------------------------------------------------------------
 
-[2019-12-30 11:25:47] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:25:47 --------------------------
+[2019-12-31 09:50:29] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:50:29 --------------------------
 Url         : GET /admin/supplymanage
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : index
@@ -214,44 +183,23 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577676347187  
+Parameter   : t=1577757029979  
 --------------------------------------------------------------------------------
 
-[2019-12-30 11:34:38] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:34:38 --------------------------
-Url         : POST /admin/supplymanage/upfile
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : upfile
+[2019-12-31 09:55:37] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:55:37 --------------------------
+Url         : GET /admin/salemanage
+Controller  : cn.jbolt._admin.salemanage.SaleManageAdminController.(SaleManageAdminController.java:1)
+Method      : index
 Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577757337651  
 --------------------------------------------------------------------------------
 
-[2019-12-30 11:35:46] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:35:46 --------------------------
-Url         : POST /admin/supplymanage/upfile
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : upfile
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 11:39:41] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:39:41 --------------------------
-Url         : POST /admin/supplymanage/upfile
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : upfile
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 11:45:48] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:45:48 --------------------------
+[2019-12-31 09:55:39] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:55:39 --------------------------
 Url         : GET /admin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : index
@@ -262,8 +210,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 11:45:48] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:45:48 --------------------------
+[2019-12-31 09:55:40] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:55:40 --------------------------
 Url         : GET /admin/dashboard
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : dashboard
@@ -271,11 +219,11 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577677548944  
+Parameter   : t=1577757340427  
 --------------------------------------------------------------------------------
 
-[2019-12-30 11:46:26] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:46:26 --------------------------
+[2019-12-31 09:55:41] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:55:41 --------------------------
 Url         : GET /admin/supplymanage
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : index
@@ -283,11 +231,11 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577677586721  
+Parameter   : t=1577757341871  
 --------------------------------------------------------------------------------
 
-[2019-12-30 11:46:31] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:46:31 --------------------------
+[2019-12-31 09:55:48] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:55:48 --------------------------
 Url         : POST /admin/supplymanage/uploadExcel
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : uploadExcel
@@ -297,8 +245,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 11:54:22] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:54:22 --------------------------
+[2019-12-31 09:56:00] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:56:00 --------------------------
 Url         : GET /admin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : index
@@ -309,42 +257,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 11:54:22] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:54:22 --------------------------
-Url         : GET /admin/tologin
-Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
-Method      : tologin
---------------------------------------------------------------------------------
-
-[2019-12-30 11:54:22] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:54:22 --------------------------
-Url         : GET /admin/captcha
-Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
-Method      : captcha
---------------------------------------------------------------------------------
-
-[2019-12-30 11:54:32] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:54:32 --------------------------
-Url         : POST /admin/login
-Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
-Method      : login
-Parameter   : password=123456  captcha=iu3v  username=admin  
---------------------------------------------------------------------------------
-
-[2019-12-30 11:54:34] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:54:34 --------------------------
-Url         : GET /admin
-Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
-Method      : index
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-              cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 11:54:34] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:54:34 --------------------------
+[2019-12-31 09:56:01] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:56:01 --------------------------
 Url         : GET /admin/dashboard
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : dashboard
@@ -352,11 +266,11 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577678074513  
+Parameter   : t=1577757361220  
 --------------------------------------------------------------------------------
 
-[2019-12-30 11:54:36] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:54:36 --------------------------
+[2019-12-31 09:56:02] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 09:56:02 --------------------------
 Url         : GET /admin/supplymanage
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : index
@@ -364,55 +278,11 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577678076566  
+Parameter   : t=1577757362755  
 --------------------------------------------------------------------------------
 
-[2019-12-30 11:54:45] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 11:54:45 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 12:01:55] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 12:01:55 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 12:09:26] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 12:09:26 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 13:32:02] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 13:32:02 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 14:02:20] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:02:20 --------------------------
+[2019-12-31 10:07:31] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:07:31 --------------------------
 Url         : GET /admin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : index
@@ -423,8 +293,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 14:02:21] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:02:21 --------------------------
+[2019-12-31 10:07:32] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:07:32 --------------------------
 Url         : GET /admin/dashboard
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : dashboard
@@ -432,11 +302,11 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577685741505  
+Parameter   : t=1577758052244  
 --------------------------------------------------------------------------------
 
-[2019-12-30 14:02:25] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:02:25 --------------------------
+[2019-12-31 10:07:34] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:07:34 --------------------------
 Url         : GET /admin/supplymanage
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : index
@@ -444,88 +314,11 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577685745375  
+Parameter   : t=1577758054254  
 --------------------------------------------------------------------------------
 
-[2019-12-30 14:14:05] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:14:05 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 14:32:10] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:32:10 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 14:34:40] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:34:40 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 14:38:41] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:38:41 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 14:48:33] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:48:33 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 14:49:29] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:49:29 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 14:51:11] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:51:11 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 14:52:27] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:52:27 --------------------------
+[2019-12-31 10:08:49] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:08:49 --------------------------
 Url         : GET /admin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : index
@@ -536,8 +329,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 14:52:28] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:52:28 --------------------------
+[2019-12-31 10:08:49] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:08:49 --------------------------
 Url         : GET /admin/dashboard
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : dashboard
@@ -545,11 +338,11 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577688748374  
+Parameter   : t=1577758129668  
 --------------------------------------------------------------------------------
 
-[2019-12-30 14:52:32] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:52:32 --------------------------
+[2019-12-31 10:08:51] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:08:51 --------------------------
 Url         : GET /admin/supplymanage
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : index
@@ -557,11 +350,167 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577688752367  
+Parameter   : t=1577758131624  
 --------------------------------------------------------------------------------
 
-[2019-12-30 14:52:37] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:52:37 --------------------------
+[2019-12-31 10:09:47] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:09:47 --------------------------
+Url         : GET /admin
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+              cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 10:09:47] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:09:47 --------------------------
+Url         : GET /admin/dashboard
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : dashboard
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577758187943  
+--------------------------------------------------------------------------------
+
+[2019-12-31 10:09:51] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:09:51 --------------------------
+Url         : GET /admin/supplymanage
+Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577758191221  
+--------------------------------------------------------------------------------
+
+[2019-12-31 10:10:17] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:10:17 --------------------------
+Url         : GET /admin
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+              cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 10:10:17] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:10:17 --------------------------
+Url         : GET /admin/dashboard
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : dashboard
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577758217673  
+--------------------------------------------------------------------------------
+
+[2019-12-31 10:10:20] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:10:20 --------------------------
+Url         : GET /admin/supplymanage
+Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577758220335  
+--------------------------------------------------------------------------------
+
+[2019-12-31 10:10:48] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:10:48 --------------------------
+Url         : GET /admin
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+              cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 10:10:48] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:10:48 --------------------------
+Url         : GET /admin/dashboard
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : dashboard
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577758248716  
+--------------------------------------------------------------------------------
+
+[2019-12-31 10:12:13] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:12:13 --------------------------
+Url         : GET /admin/supplymanage
+Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577758333510  
+--------------------------------------------------------------------------------
+
+[2019-12-31 10:12:57] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:12:57 --------------------------
+Url         : GET /admin
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+              cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 10:12:58] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:12:58 --------------------------
+Url         : GET /admin/dashboard
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : dashboard
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577758378066  
+--------------------------------------------------------------------------------
+
+[2019-12-31 10:21:05] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:21:05 --------------------------
+Url         : GET /admin/supplymanage
+Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577758865378  
+--------------------------------------------------------------------------------
+
+[2019-12-31 10:21:14] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 10:21:14 --------------------------
+Url         : GET /admin/salemanage
+Controller  : cn.jbolt._admin.salemanage.SaleManageAdminController.(SaleManageAdminController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577758874488  
+--------------------------------------------------------------------------------
+
+[2019-12-31 11:16:46] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 11:16:46 --------------------------
 Url         : POST /admin/supplymanage/uploadExcel
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : uploadExcel
@@ -571,8 +520,20 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 14:53:33] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:53:33 --------------------------
+[2019-12-31 11:31:33] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 11:31:33 --------------------------
+Url         : GET /admin/warehousemanage
+Controller  : cn.jbolt._admin.warehousemanage.WarehouseManageAdminController.(WarehouseManageAdminController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577763093847  
+--------------------------------------------------------------------------------
+
+[2019-12-31 12:05:18] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 12:05:18 --------------------------
 Url         : GET /admin/supplymanage/downloadToExcel
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : downloadToExcel
@@ -582,8 +543,212 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 14:55:31] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:55:31 --------------------------
+[2019-12-31 14:02:39] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 14:02:39 --------------------------
+Url         : GET /admin/warehousemanage/edit/1
+Controller  : cn.jbolt._admin.warehousemanage.WarehouseManageAdminController.(WarehouseManageAdminController.java:1)
+Method      : edit
+UrlPara     : 1
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 14:02:39] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 14:02:39 --------------------------
+Url         : GET /admin/warehousemanage/dictionary
+Controller  : cn.jbolt._admin.warehousemanage.WarehouseManageAdminController.(WarehouseManageAdminController.java:1)
+Method      : dictionary
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : key=materialType  
+--------------------------------------------------------------------------------
+
+[2019-12-31 14:02:39] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 14:02:39 --------------------------
+Url         : GET /admin/warehousemanage/dictionary
+Controller  : cn.jbolt._admin.warehousemanage.WarehouseManageAdminController.(WarehouseManageAdminController.java:1)
+Method      : dictionary
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : key=materialModel  
+--------------------------------------------------------------------------------
+
+[2019-12-31 14:02:39] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 14:02:39 --------------------------
+Url         : GET /admin/warehousemanage/dictionary
+Controller  : cn.jbolt._admin.warehousemanage.WarehouseManageAdminController.(WarehouseManageAdminController.java:1)
+Method      : dictionary
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : key=productionProcesses  
+--------------------------------------------------------------------------------
+
+[2019-12-31 14:12:09] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 14:12:09 --------------------------
+Url         : GET /admin/bom
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577772729205  
+--------------------------------------------------------------------------------
+
+[2019-12-31 14:12:38] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 14:12:38 --------------------------
+Url         : GET /admin/supplier
+Controller  : cn.jbolt._admin.supplier.SupplierAdminController.(SupplierAdminController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577772758614  
+--------------------------------------------------------------------------------
+
+[2019-12-31 14:12:39] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 14:12:39 --------------------------
+Url         : GET /admin/customer
+Controller  : cn.jbolt.admin.customer.CustomerController.(CustomerController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577772759046  
+--------------------------------------------------------------------------------
+
+[2019-12-31 14:12:39] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 14:12:39 --------------------------
+Url         : GET /admin/warehouse
+Controller  : cn.jbolt.admin.warehouse.WarehouseController.(WarehouseController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577772759565  
+--------------------------------------------------------------------------------
+
+[2019-12-31 14:12:40] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 14:12:40 --------------------------
+Url         : GET /admin/excel
+Controller  : cn.jbolt._admin.supplymanage.ExcelTestController.(ExcelTestController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577772760117  
+--------------------------------------------------------------------------------
+
+[2019-12-31 15:33:31] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:33:31 --------------------------
+Url         : GET /admin/bom/edit/1010000064
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : edit
+UrlPara     : 1010000064
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 15:33:32] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:33:32 --------------------------
+Url         : GET /admin/bom/dictionary
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : dictionary
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : key=materialType  
+--------------------------------------------------------------------------------
+
+[2019-12-31 15:33:32] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:33:32 --------------------------
+Url         : GET /admin/bom/dictionary
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : dictionary
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : key=materialModel  
+--------------------------------------------------------------------------------
+
+[2019-12-31 15:33:32] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:33:32 --------------------------
+Url         : GET /admin/bom/dictionary
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : dictionary
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : key=productionProcesses  
+--------------------------------------------------------------------------------
+
+[2019-12-31 15:33:43] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:33:43 --------------------------
+Url         : GET /admin/bom/edit/1010000064
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : edit
+UrlPara     : 1010000064
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 15:33:44] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:33:44 --------------------------
+Url         : GET /admin/bom/dictionary
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : dictionary
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : key=materialType  
+--------------------------------------------------------------------------------
+
+[2019-12-31 15:33:44] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:33:44 --------------------------
+Url         : GET /admin/bom/dictionary
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : dictionary
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : key=materialModel  
+--------------------------------------------------------------------------------
+
+[2019-12-31 15:33:44] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:33:44 --------------------------
+Url         : GET /admin/bom/dictionary
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : dictionary
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : key=productionProcesses  
+--------------------------------------------------------------------------------
+
+[2019-12-31 15:57:43] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:57:43 --------------------------
 Url         : GET /admin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : index
@@ -594,8 +759,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 14:55:32] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:55:32 --------------------------
+[2019-12-31 15:57:44] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:57:44 --------------------------
 Url         : GET /admin/dashboard
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : dashboard
@@ -603,56 +768,46 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577688932266  
+Parameter   : t=1577779064348  
 --------------------------------------------------------------------------------
 
-[2019-12-30 14:55:34] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:55:34 --------------------------
-Url         : GET /admin/supplymanage
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
+[2019-12-31 15:57:46] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:57:46 --------------------------
+Url         : GET /admin/bom
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
 Method      : index
 Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577688934633  
+Parameter   : t=1577779066377  
 --------------------------------------------------------------------------------
 
-[2019-12-30 14:55:39] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:55:39 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
+[2019-12-31 15:57:48] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:57:48 --------------------------
+Url         : GET /admin/bom/downloadExcel
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : downloadExcel
 Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 14:57:24] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 14:57:24 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
+[2019-12-31 15:58:37] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 15:58:37 --------------------------
+Url         : GET /admin/supplier
+Controller  : cn.jbolt._admin.supplier.SupplierAdminController.(SupplierAdminController.java:1)
+Method      : index
 Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577779117265  
 --------------------------------------------------------------------------------
 
-[2019-12-30 15:01:13] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 15:01:13 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 15:03:03] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 15:03:03 --------------------------
+[2019-12-31 16:06:24] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:06:24 --------------------------
 Url         : GET /admin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : index
@@ -663,8 +818,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 15:03:04] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 15:03:04 --------------------------
+[2019-12-31 16:06:24] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:06:24 --------------------------
 Url         : GET /admin/dashboard
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : dashboard
@@ -672,166 +827,34 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577689384054  
+Parameter   : t=1577779584685  
 --------------------------------------------------------------------------------
 
-[2019-12-30 15:03:11] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 15:03:11 --------------------------
-Url         : GET /admin/supplymanage
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
+[2019-12-31 16:06:26] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:06:26 --------------------------
+Url         : GET /admin/bom
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
 Method      : index
 Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577689391408  
+Parameter   : t=1577779586419  
 --------------------------------------------------------------------------------
 
-[2019-12-30 15:03:15] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 15:03:15 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
+[2019-12-31 16:06:28] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:06:28 --------------------------
+Url         : GET /admin/bom/downloadExcel
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : downloadExcel
 Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 15:04:00] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 15:04:00 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 15:08:52] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 15:08:52 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 15:50:29] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 15:50:29 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 15:51:13] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 15:51:13 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 15:52:10] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 15:52:10 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 15:57:07] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 15:57:07 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 15:58:17] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 15:58:17 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 16:24:52] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 16:24:52 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 16:27:08] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 16:27:08 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 16:38:07] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 16:38:07 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 16:58:55] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 16:58:55 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 16:59:46] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 16:59:46 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 17:06:09] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:06:09 --------------------------
+[2019-12-31 16:08:19] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:08:19 --------------------------
 Url         : GET /admin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : index
@@ -842,42 +865,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 17:06:09] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:06:09 --------------------------
-Url         : GET /admin/tologin
-Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
-Method      : tologin
---------------------------------------------------------------------------------
-
-[2019-12-30 17:06:09] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:06:09 --------------------------
-Url         : GET /admin/captcha
-Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
-Method      : captcha
---------------------------------------------------------------------------------
-
-[2019-12-30 17:06:17] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:06:17 --------------------------
-Url         : POST /admin/login
-Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
-Method      : login
-Parameter   : password=123456  captcha=d4ri  username=admin  
---------------------------------------------------------------------------------
-
-[2019-12-30 17:06:19] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:06:19 --------------------------
-Url         : GET /admin
-Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
-Method      : index
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-              cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 17:06:19] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:06:19 --------------------------
+[2019-12-31 16:08:20] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:08:20 --------------------------
 Url         : GET /admin/dashboard
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : dashboard
@@ -885,11 +874,11 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577696779578  
+Parameter   : t=1577779700147  
 --------------------------------------------------------------------------------
 
-[2019-12-30 17:06:22] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:06:22 --------------------------
+[2019-12-31 16:08:21] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:08:21 --------------------------
 Url         : GET /admin/supplymanage
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : index
@@ -897,11 +886,46 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577696782421  
+Parameter   : t=1577779701453  
 --------------------------------------------------------------------------------
 
-[2019-12-30 17:06:56] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:06:56 --------------------------
+[2019-12-31 16:08:24] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:08:24 --------------------------
+Url         : GET /admin/bom
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577779704019  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:08:25] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:08:25 --------------------------
+Url         : GET /admin/bom/downloadExcel
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : downloadExcel
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:09:21] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:09:21 --------------------------
+Url         : GET /admin/customer
+Controller  : cn.jbolt.admin.customer.CustomerController.(CustomerController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577779761537  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:09:24] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:09:24 --------------------------
 Url         : GET /admin
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : index
@@ -912,8 +936,8 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
 --------------------------------------------------------------------------------
 
-[2019-12-30 17:06:57] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:06:57 --------------------------
+[2019-12-31 16:09:24] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:09:24 --------------------------
 Url         : GET /admin/dashboard
 Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
 Method      : dashboard
@@ -921,11 +945,362 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577696817359  
+Parameter   : t=1577779764713  
 --------------------------------------------------------------------------------
 
-[2019-12-30 17:06:59] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:06:59 --------------------------
+[2019-12-31 16:09:26] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:09:26 --------------------------
+Url         : GET /admin/bom
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577779766404  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:09:32] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:09:32 --------------------------
+Url         : GET /admin/bom/downloadExcel
+Controller  : cn.jbolt.admin.bom.BomController.(BomController.java:1)
+Method      : downloadExcel
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:11:29] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:11:29 --------------------------
+Url         : GET /admin/supplier
+Controller  : cn.jbolt._admin.supplier.SupplierAdminController.(SupplierAdminController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577779889278  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:21:17] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:21:17 --------------------------
+Url         : GET /admin
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+              cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:21:17] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:21:17 --------------------------
+Url         : GET /admin/dashboard
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : dashboard
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577780477976  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:21:19] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:21:19 --------------------------
+Url         : GET /admin/supplier
+Controller  : cn.jbolt._admin.supplier.SupplierAdminController.(SupplierAdminController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577780479757  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:21:21] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:21:21 --------------------------
+Url         : GET /admin/supplier/downloadExcel
+Controller  : cn.jbolt._admin.supplier.SupplierAdminController.(SupplierAdminController.java:1)
+Method      : downloadExcel
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:23:10] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:23:10 --------------------------
+Url         : GET /admin
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+              cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:23:10] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:23:10 --------------------------
+Url         : GET /admin/dashboard
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : dashboard
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577780590578  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:23:12] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:23:12 --------------------------
+Url         : GET /admin/supplier
+Controller  : cn.jbolt._admin.supplier.SupplierAdminController.(SupplierAdminController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577780592309  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:23:13] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:23:13 --------------------------
+Url         : GET /admin/supplier/downloadExcel
+Controller  : cn.jbolt._admin.supplier.SupplierAdminController.(SupplierAdminController.java:1)
+Method      : downloadExcel
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:24:39] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:24:39 --------------------------
+Url         : GET /admin/supplier/downloadExcel
+Controller  : cn.jbolt._admin.supplier.SupplierAdminController.(SupplierAdminController.java:1)
+Method      : downloadExcel
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:25:17] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:25:17 --------------------------
+Url         : GET /admin/customer
+Controller  : cn.jbolt.admin.customer.CustomerController.(CustomerController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577780717459  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:38:01] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:38:01 --------------------------
+Url         : GET /admin
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+              cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:38:02] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:38:02 --------------------------
+Url         : GET /admin/dashboard
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : dashboard
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577781482389  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:38:05] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:38:05 --------------------------
+Url         : GET /admin/customer
+Controller  : cn.jbolt.admin.customer.CustomerController.(CustomerController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577781485598  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:38:07] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:38:07 --------------------------
+Url         : GET /admin/customer/downloadExcel
+Controller  : cn.jbolt.admin.customer.CustomerController.(CustomerController.java:1)
+Method      : downloadExcel
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:39:24] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:39:24 --------------------------
+Url         : GET /admin/warehouse
+Controller  : cn.jbolt.admin.warehouse.WarehouseController.(WarehouseController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577781564481  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:48:43] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:48:43 --------------------------
+Url         : GET /admin
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+              cn.jbolt.base.JBoltNoUrlPara.(JBoltNoUrlPara.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:48:43] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:48:43 --------------------------
+Url         : GET /admin/dashboard
+Controller  : cn.jbolt.index.AdminIndexController.(AdminIndexController.java:1)
+Method      : dashboard
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577782123650  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:48:46] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:48:46 --------------------------
+Url         : GET /admin/warehouse
+Controller  : cn.jbolt.admin.warehouse.WarehouseController.(WarehouseController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577782126661  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:48:48] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:48:48 --------------------------
+Url         : GET /admin/warehouse/downloadExcel
+Controller  : cn.jbolt.admin.warehouse.WarehouseController.(WarehouseController.java:1)
+Method      : downloadExcel
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:51:43] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:51:43 --------------------------
+Url         : GET /demo/multiplefilesyncuploader
+Controller  : cn.jbolt._admin.demo.MultipleFileSyncUploaderDemoController.(MultipleFileSyncUploaderDemoController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577782303171  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:51:44] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:51:44 --------------------------
+Url         : GET /demo/formcheck
+Controller  : cn.jbolt._admin.demo.FormCheckDemoController.(FormCheckDemoController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577782304242  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:51:44] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:51:44 --------------------------
+Url         : GET /admin/user/options
+Controller  : cn.jbolt._admin.user.UserAdminCotroller.(UserAdminCotroller.java:1)
+Method      : options
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:51:44] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:51:44 --------------------------
+Url         : GET /admin/user/options
+Controller  : cn.jbolt._admin.user.UserAdminCotroller.(UserAdminCotroller.java:1)
+Method      : options
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:51:44] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:51:44 --------------------------
+Url         : GET /admin/user/options
+Controller  : cn.jbolt._admin.user.UserAdminCotroller.(UserAdminCotroller.java:1)
+Method      : options
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:51:45] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:51:45 --------------------------
+Url         : GET /demo/multiplefileuploader
+Controller  : cn.jbolt._admin.demo.MultipleFileUploaderDemoController.(MultipleFileUploaderDemoController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577782305921  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:51:46] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:51:46 --------------------------
+Url         : GET /demo/fileuploader
+Controller  : cn.jbolt._admin.demo.FileUploaderDemoController.(FileUploaderDemoController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577782306717  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:51:47] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:51:47 --------------------------
+Url         : GET /demo/imguploader
+Controller  : cn.jbolt._admin.demo.ImgUploaderDemoController.(ImgUploaderDemoController.java:1)
+Method      : index
+Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
+              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
+              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
+              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577782307580  
+--------------------------------------------------------------------------------
+
+[2019-12-31 16:52:28] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:52:28 --------------------------
 Url         : GET /admin/supplymanage
 Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
 Method      : index
@@ -933,58 +1308,39 @@ Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInView
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
-Parameter   : t=1577696819577  
+Parameter   : t=1577782348075  
 --------------------------------------------------------------------------------
 
-[2019-12-30 17:07:15] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:07:15 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
+[2019-12-31 16:52:29] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:52:29 --------------------------
+Url         : GET /admin/salemanage
+Controller  : cn.jbolt._admin.salemanage.SaleManageAdminController.(SaleManageAdminController.java:1)
+Method      : index
 Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577782349300  
 --------------------------------------------------------------------------------
 
-[2019-12-30 17:07:25] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:07:25 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
+[2019-12-31 16:52:37] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:52:37 --------------------------
+Url         : GET /admin/warehousemanage
+Controller  : cn.jbolt._admin.warehousemanage.WarehouseManageAdminController.(WarehouseManageAdminController.java:1)
+Method      : index
 Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
               cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
+Parameter   : t=1577782357582  
 --------------------------------------------------------------------------------
 
-[2019-12-30 17:09:31] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:09:31 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 17:11:04] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:11:04 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
-Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
-              cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
-              cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)
-              cn.jbolt._admin.interceptor.AdminAuthInterceptor.(AdminAuthInterceptor.java:1)
---------------------------------------------------------------------------------
-
-[2019-12-30 17:11:27] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
-JFinal-4.8 action report -------- 2019-12-30 17:11:27 --------------------------
-Url         : POST /admin/supplymanage/uploadExcel
-Controller  : cn.jbolt._admin.supplymanage.SupplyManageAdminController.(SupplyManageAdminController.java:1)
-Method      : uploadExcel
+[2019-12-31 16:52:47] DEBUG cn.jbolt.base.JBoltSlf4jLog 44 debug - 
+JFinal-4.8 action report -------- 2019-12-31 16:52:47 --------------------------
+Url         : GET /admin/salemanage/edit/3
+Controller  : cn.jbolt._admin.salemanage.SaleManageAdminController.(SaleManageAdminController.java:1)
+Method      : edit
+UrlPara     : 3
 Interceptor : com.jfinal.ext.interceptor.SessionInViewInterceptor.(SessionInViewInterceptor.java:1)
               cn.jbolt.index.PjaxInterceptor.(PjaxInterceptor.java:1)
               cn.jbolt.index.AjaxPortalInterceptor.(AjaxPortalInterceptor.java:1)

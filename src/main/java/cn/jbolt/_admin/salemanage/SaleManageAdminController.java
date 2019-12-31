@@ -60,5 +60,16 @@ public class SaleManageAdminController extends BaseController {
 	public void dictionary(){
 		renderJsonData(dictionaryService.getOptionListByType(get("key")));
 	}
-
+	/**
+	 * 上传excel
+	 */
+	public void uploadExcel() {
+		
+	}
+	/**
+	 * 导出为excel
+	 */
+	public void downloadExcel() {
+		
+	}
 }

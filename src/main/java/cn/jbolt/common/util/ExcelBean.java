@@ -4,9 +4,7 @@ package cn.jbolt.common.util;
 * @version 2019年12月30日
 * 返回正确和错误的数据
 */
-
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ExcelBean<T>{
 
